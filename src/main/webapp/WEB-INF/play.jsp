@@ -25,6 +25,8 @@
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+
+
 </head>
 <body>
 <div class="row col-md-12">
@@ -33,61 +35,56 @@
 </div>
 <br>
 <br>
-<div>
-    <a href="/index">
-    <button type="button" class="btn btn-default" aria-label="Left Align">
-        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-    </button>
-    </a>
-</div>
-<div class="row">
-    <div class="col-md-3"  style="border: 1px solid red;float: left;">
-        <div class='course-sidebar-layout' id='courseSidebar'>
-            <dl>
-                <button type="button" class="btn btn-lg btn-danger"
-                        data-toggle="popover" title="Popover title"
-                        data-content="And here's some amazing content. It's very engaging. Right?">
-                    点我弹出/隐藏弹出框
+<div style="margin:20px;border-radius: 15px">
+    <div class="row" style="border-radius: 15px">
+        <div style="float: left;">
+            <a href="/index">
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
                 </button>
-            </dl>
+            </a>
+        </div>
+        <div class="col-md-2" style="float: left;font-size: 23px">
+            <span style="text-align: center">第一节：课程简介</span>
         </div>
     </div>
-    <div class="col-md-6" style="border: 1px solid red;float: left;background-color: #1c1b17;">
-        <video id="div" width="100%" height="100%" controls>
-            <source src="video/z.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <div class="row" style="border-radius: 15px">
+        <div class="col-md-12" style="height: 20px;"></div>
     </div>
-    <div class="col-md-3" style="border: 1px solid red;float: right;">
-            ceshi
+
+    <div class="row" style="background-color: #1c1b17;border-radius: 15px">
+        <div class="col-md-2"  style="float: left;border-radius: 15px">
+            <div style="border-radius: 15px;height: 450px">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button type="button" class="btn btn-primary btn-lg active">章节</button><br>
+                <br>
+                <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
+                <br>
+                <button type="button" class="btn btn-primary btn-lg active">讨论</button><br>
+
+            </div>
+        </div>
+        <div class="col-md-7" style="height: 450px;float: left;background-color: black;
+                                     border-radius: 15px;margin:15px auto auto auto" id="vedio">
+            <p align="center" style="margin:10px auto auto auto;border-radius: 10px">
+                <video  id="div" width="80%" height="90%" controls="controls">
+                    <source src="video/001.mp4" type="video/mp4">
+                    你的播放器不支持本视频播放，建议使用谷歌浏览器电脑版
+                </video>
+            </p>
+        </div>
+        <div class="col-md-3" style="float: right;height: 500px;border-radius: 15px;border: 1px solid red">
+               <h1 style="text-align: center"><span style="color: #fefefb">测试</span></h1>
+            <span style="color: white;font-size: 25px">此处添加简介、教师等信息</span>
+        </div>
     </div>
 </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <!-- 引入footer.jsp -->
 <jsp:include page="/footer.jsp"></jsp:include>
 </body>

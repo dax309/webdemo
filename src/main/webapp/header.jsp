@@ -37,25 +37,43 @@
             padding: 15px;
         }
     </style>
+    <script type="text/javascript">
+        function loginOut(){
+            var flag = confirm("确认退出登录吗？");
+            if(flag){
+                location.href='${pageContext.request.contextPath }/userCentre?method=loginOut ';
+            }
+        }
+
+
+
+    </script>
 </head>
 <body>
 <div class="col-md-12">
     <div class="col-md-2" style="float: left;">
-        <img src="images/logo2.png">
+        <a href="/index"><img src="images/logo2.png"></a>
     </div>
-    <div class="col-md-5">
-        <a href="#"><span id="div4" style="text-align: center;font-size: 20px">文件列表</span></a>
-        <a href="#"><span id="div4" style="text-align: center;font-size: 20px">文件列表</span></a>
-        <a href="#"><span id="div4" style="text-align: center;font-size: 20px">文件列表</span></a>
-        <a href="#"><span id="div4" style="text-align: center;font-size: 20px">文件列表</span></a>
-        <a href="#"><span id="div4" style="text-align: center;font-size: 20px">文件列表</span></a>
-    <%-- <img src="images/header.png"/>--%>
+    <div class="col-md-5" style="text-align: center;
+                                border: 1px solid red;
+                                 float: left;
+                                 padding: 15px;">
+        <a href="#"><span style="text-align: center;font-size: 20px">占位符</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><span style="text-align: center;font-size: 20px">占位符</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><span style="text-align: center;font-size: 20px">占位符</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><span style="text-align: center;font-size: 20px">占位符</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
-    <div class="col-md-5" id="div1">
-        <c:if test="${empty user }">
+    <div class="col-md-5" id="div1" style="border: 1px solid red;float: right">
+        <c:if test="${empty sessionScope.student }">
             <div class="col-md-3" id="div2">
                 <a href="login.jsp"><span style="text-align: center;font-size: 20px">登录</span></a>&nbsp;&nbsp;/&nbsp;&nbsp;
                 <a href="register.jsp"><span style="text-align: center;font-size: 20px">注册</span></a>
+            </div>
+        </c:if>
+        <c:if test="${!empty sessionScope.student }">
+            <div class="col-md-5" id="div2" style="border: 1px solid red">
+                <a href="#"><span style="text-align: center;font-size: 20px">个人中心</span></a>&nbsp;&nbsp;/&nbsp;&nbsp;
+                <a href="javascript:void(0)"  onclick="loginOut()" ><span style="text-align: center;font-size: 20px">退出</span></a>
             </div>
         </c:if>
     </div>
