@@ -1,6 +1,5 @@
 package cn.daxalfred.demo.Contraller;
 
-
 import cn.daxalfred.demo.Entity.Student;
 import cn.daxalfred.demo.Servlce.UserService;
 import com.wf.captcha.Captcha;
@@ -94,12 +93,13 @@ public class UserController {
 
     @RequestMapping("/index")
     public String index(){
+
         return "index";
     }
 
     //登陆验证
-    //@PostMapping("/userlogin")
-    @RequestMapping(value ="/userlogin")
+    @PostMapping("/userlogin")
+//    @RequestMapping(value ="/userlogin")
     public String userlogin(HttpServletRequest request,HttpSession session){
         String checkCode = request.getParameter("checkCode");
         String sessionCheckCode = (String) session.getAttribute("captcha");
@@ -122,8 +122,16 @@ public class UserController {
             return "forward:login.jsp";
         }
     }
+
     @RequestMapping("/play")
     public String play(){
+
         return "play";
+    }
+
+    @RequestMapping("/logOut")
+    public String logOut(HttpSession session){
+        session.removeAttribute("student");
+        return "redirect:index.jsp";
     }
 }

@@ -41,12 +41,9 @@
         function loginOut(){
             var flag = confirm("确认退出登录吗？");
             if(flag){
-                location.href='${pageContext.request.contextPath }/userCentre?method=loginOut ';
+                location.href='${pageContext.request.contextPath }/logOut';
             }
         }
-
-
-
     </script>
 </head>
 <body>

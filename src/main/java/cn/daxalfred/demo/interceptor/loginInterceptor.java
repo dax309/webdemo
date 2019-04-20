@@ -12,8 +12,9 @@ public class loginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         String requestURI = httpServletRequest.getRequestURI();
-        Object obj = httpServletRequest.getSession().getAttribute("student");
-        if(obj!=null){
+        Object obj1 = httpServletRequest.getSession().getAttribute("student");
+        Object obj2 = httpServletRequest.getSession().getAttribute("admin");
+        if(obj!=null||obj2!=null){
             return true;
         }else if (requestURI.endsWith("login")||requestURI.endsWith("checkCode")||requestURI.endsWith("register")||requestURI.contains("userCentre")) {
             return true;
