@@ -14,7 +14,7 @@ public class loginInterceptor implements HandlerInterceptor {
         String requestURI = httpServletRequest.getRequestURI();
         Object obj1 = httpServletRequest.getSession().getAttribute("student");
         Object obj2 = httpServletRequest.getSession().getAttribute("admin");
-        if(obj!=null||obj2!=null){
+        if(obj1!=null||obj2!=null){
             return true;
         }else if (requestURI.endsWith("login")||requestURI.endsWith("checkCode")||requestURI.endsWith("register")||requestURI.contains("userCentre")) {
             return true;

@@ -91,11 +91,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping("/index")
-    public String index(){
 
-        return "index";
-    }
 
     //登陆验证
     @PostMapping("/userlogin")
@@ -123,11 +119,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping("/play")
-    public String play(){
 
-        return "play";
-    }
 
     @RequestMapping("/logOut")
     public String logOut(HttpSession session){

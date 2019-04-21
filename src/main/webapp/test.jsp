@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: dax30
-  Date: 2019/4/21
-  Time: 11:10
+  Date: 2019/4/20
+  Time: 16:23
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -16,7 +16,7 @@
     <title>头部</title>
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -36,14 +36,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/index">主&nbsp;页</a>
+            <a class="navbar-brand" href="#">主&nbsp;页</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/index">Link1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="/index">Link2</a></li>
+                <li><a href="#">Link1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link2</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下拉菜单 <span class="caret"></span></a>
                     <ul class="dropdown-menu">

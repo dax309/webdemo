@@ -79,7 +79,7 @@
 
 <div class="row col-md-12">
     <!-- 引入header.jsp -->
-    <jsp:include page="/header.jsp"></jsp:include>
+    <jsp:include page="/header1.jsp"></jsp:include>
 </div>
 
 
