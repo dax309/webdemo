@@ -12,7 +12,6 @@
 <title>学员注册</title>
 <%--<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>--%>
 <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/jquery.validate.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $.validator.addMethod("isExist", function(value, element, params) {
@@ -139,7 +138,7 @@
 <body>
 
 <!-- 引入header.jsp -->
-<jsp:include page="/header1.jsp"></jsp:include>
+<jsp:include page="/header.jsp"></jsp:include>
 
 <div class="container">
     <div class="row">

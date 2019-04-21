@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -15,6 +16,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>头部</title>
 
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -24,6 +26,16 @@
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+        function loginOut(){
+            var flag = confirm("确认退出登录吗？");
+            if(flag){
+                location.href='${pageContext.request.contextPath }/logOut';
+            }
+        }
+    </script>
+
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -66,6 +78,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Link</a></li>
+                <c:if test="${!empty sessionScope.student }">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -73,9 +86,15 @@
                         <li><a href="#">退出登录</a></li>
                         <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">退出登录</a></li>
+
+                        <li><a href="javascript:void(0)"  onclick="loginOut()" ><span style="text-align: center;">退出</span></a></li>
                     </ul>
                 </li>
+                </c:if>
+                <c:if test="${empty sessionScope.student }">
+                    <li><a href="login.jsp">登陆</a> </li>
+                    <li><a href="register.jsp">注册</a> </li>
+                </c:if>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -84,6 +103,6 @@
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
