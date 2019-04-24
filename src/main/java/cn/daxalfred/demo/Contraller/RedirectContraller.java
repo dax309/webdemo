@@ -23,4 +23,13 @@ public class RedirectContraller {
 
         return "play";
     }
+
+
+    @RequestMapping("/studentupdate")
+    public String studentupdate(){
+
+        return "/student/update";
+    }
+
+
 }
