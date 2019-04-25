@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>主页</title>
+
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>

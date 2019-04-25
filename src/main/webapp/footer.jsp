@@ -18,8 +18,8 @@
             <li><a href="#">后台登陆</a></li>
         </ul>
     </div>
-    <%--<div style="text-align: center;margin-top: 5px;margin-bottom:20px;">
-        &copy;毕设模板 2019-3-1
-    </div>--%>
+    <div style="text-align: center;margin-top: 5px;margin-bottom:20px;">
+        &copy;  2019  毕业设计 视频资源来源网络，侵删
+    </div>
 </div>
 </html>

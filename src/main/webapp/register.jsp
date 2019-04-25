@@ -109,8 +109,8 @@
     });
 </script>
 
-<!-- 引入自定义css文件 style.css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<!-- 引入自定义css文件 registerstyle.css -->
+<link rel="stylesheet" href="css/registerstyle.css" type="text/css" />
 
 <style>
     body {
