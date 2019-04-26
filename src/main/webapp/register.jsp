@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>学员注册</title>
 <%--<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>--%>
-<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/jquery.validate.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $.validator.addMethod("isExist", function(value, element, params) {
@@ -191,10 +191,10 @@
                     <label for="inlineRadio1" class="col-sm-2 control-label">性别</label>
                     <span class="col-sm-6">
                         <label class="radio-inline">
-                            <input type="radio" name="gender" id="inlineRadio1" value="男" checked>男
+                            <input type="radio" name="gender" id="inlineRadio1" value="0" checked>男
 						</label>
                         <label class="radio-inline">
-                            <input type="radio"name="gender" id="inlineRadio" value="女">女
+                            <input type="radio"name="gender" id="inlineRadio" value="1">女
 						</label>
                         <labelErr for="gender" generated="true" class="error" style="display: none"></labelErr>
                     </span>
@@ -203,7 +203,7 @@
                     <label for="date" class="col-sm-2 control-label">出生日期</label>
                     <span
                             class="col-sm-6"> <input type="date" class="form-control"
-                                                     name="birthday">
+                                                     name="birthday" value="1997-03-09">
                     </span>
                 </div>
 

@@ -80,9 +80,9 @@
                 <li><a href="#">Link</a></li>
                 <c:if test="${!empty sessionScope.student }">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${sessionScope.student.getRealname()} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/studentupdate">修改资料</a></li>
+                        <li><a href="/studentinfo">个人中心</a></li>
                         <li><a href="#">退出登录</a></li>
                         <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>

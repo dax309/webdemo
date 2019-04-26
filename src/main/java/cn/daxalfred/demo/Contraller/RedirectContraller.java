@@ -25,11 +25,26 @@ public class RedirectContraller {
     }
 
 
-    @RequestMapping("/studentupdate")
-    public String studentupdate(){
+    /*学生*/
 
-        return "/student/update";
+    //个人中心
+    @RequestMapping("/studentinfo")
+    public String studentinfo(){
+        return "/student/infoindex";
     }
 
+
+
+
+
+
+
+    /*管理员*/
+
+//    管理员主页
+    @RequestMapping("/admin")
+    public String admin(){
+        return "/admin/index";
+    }
 
 }

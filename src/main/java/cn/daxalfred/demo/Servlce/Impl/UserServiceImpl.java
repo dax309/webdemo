@@ -6,6 +6,7 @@ import cn.daxalfred.demo.Servlce.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 @Service("UserService")
 public class UserServiceImpl implements UserService {
@@ -36,5 +37,16 @@ public class UserServiceImpl implements UserService {
     public Student login(String username, String password) {
 
         return this.studentMapper.login(username,password);
+    }
+
+    @Override
+    public Student getinfo(String name) {
+        return this.studentMapper.getinfo(name);
+    }
+
+    @Override
+    public int updateinfo(String username, String email, String realname, int gender, Date birthday) {
+
+        return this.studentMapper.updateinfo(username,email,realname,gender,birthday);
     }
 }

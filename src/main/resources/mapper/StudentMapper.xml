@@ -14,4 +14,12 @@
     <select id="login" resultType="student">
         SELECT * FROM student WHERE username=#{username} AND password=#{password}
     </select>
+
+    <select id="getinfo" resultType="student">
+        SELECT * FROM student WHERE username=#{name}
+    </select>
+
+    <update id="updateinfo">
+        update student  set email=#{email},realname=#{realname},gender=#{gender},birthday=#{birthday} where username=#{username}
+    </update>
 </mapper>

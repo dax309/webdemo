@@ -2,6 +2,7 @@ package cn.daxalfred.demo.Contraller;
 
 import cn.daxalfred.demo.Entity.Student;
 import cn.daxalfred.demo.Servlce.UserService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wf.captcha.Captcha;
 import com.wf.captcha.SpecCaptcha;
 import com.wf.captcha.utils.CaptchaUtil;
@@ -17,13 +18,15 @@ import java.awt.*;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Controller
-public class UserController {
+public class StudentController {
 
     @Autowired
     private UserService userService;
 
+    //生成验证码
     @RequestMapping("/checkCode")
     public void captcha(HttpServletRequest request, HttpServletResponse response ,int page) throws Exception {
         // 设置请求头为输出图片类型
@@ -63,15 +66,17 @@ public class UserController {
     //注册验证
     @PostMapping("/register")
     public String register(HttpServletRequest request) throws ParseException {
-        Student student = new Student();
+
         String checkCode = request.getParameter("checked");
         HttpSession session = request.getSession();
         String sessionCheckCode = (String) session.getAttribute("captcha");
         if(checkCode!=null&&checkCode.equals(sessionCheckCode)){
             session.removeAttribute("captcha");
+            Student student=new Student();
             student.setUsername(request.getParameter("username"));
             student.setPassword(request.getParameter("password"));
-            student.setGender(request.getParameter("gender"));
+            String gender= request.getParameter("gender");
+            student.setGender(Integer.parseInt(gender));
             String birthday = request.getParameter("birthday");
             java.text.SimpleDateFormat formatter = new SimpleDateFormat( "yyyy-MM-dd");
             student.setBirthday(formatter.parse(birthday));
@@ -91,11 +96,8 @@ public class UserController {
         }
     }
 
-
-
     //登陆验证
     @PostMapping("/userlogin")
-//    @RequestMapping(value ="/userlogin")
     public String userlogin(HttpServletRequest request,HttpSession session){
         String checkCode = request.getParameter("checkCode");
         String sessionCheckCode = (String) session.getAttribute("captcha");
@@ -119,11 +121,63 @@ public class UserController {
         }
     }
 
-
-
+    //退出
     @RequestMapping("/logOut")
     public String logOut(HttpSession session){
         session.removeAttribute("student");
         return "redirect:index.jsp";
     }
+
+    //学生信息查找
+    @RequestMapping("/studentupdate")
+    public String studentupdate(HttpSession session){
+        Student student= (Student) session.getAttribute("student");
+        /*String name = student.getUsername();
+        Student s = userService.getinfo(name);*/
+        return "/student/update";
+    }
+
+    //学生信息修改
+    @RequestMapping("/updateStudent")
+    public void updateStudent(HttpServletRequest request,HttpSession session,HttpServletResponse response) throws ParseException, IOException {
+        String username = request.getParameter("username");
+        String email = request.getParameter("email");
+        String realname = request.getParameter("realname");
+        int gender = Integer.parseInt(request.getParameter("gender"));
+        String birthday = request.getParameter("birthday");
+        java.text.SimpleDateFormat formatter = new SimpleDateFormat( "yyyy-MM-dd");
+        Date birth = formatter.parse(birthday);
+        int i = userService.updateinfo(username, email, realname, gender, birth);
+        boolean info;
+        ObjectMapper mapper = new ObjectMapper();
+        if(i<1){
+            info = false;
+        }else {
+            request.setAttribute("info", "true");
+            Student student = new Student();
+            student.setGender(gender);
+            student.setRealname(realname);
+            student.setBirthday(birth);
+            student.setEmail(email);
+            Student student1 = (Student) session.getAttribute("student");
+            student.setUsername(student1.getUsername());
+            session.setAttribute("student",student);
+            info = true;
+        }
+        String json = "{\"info\":" + info + "}";
+        response.getWriter().write(json);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }

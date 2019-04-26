@@ -12,8 +12,12 @@
     <meta charset="UTF-8">
     <title>在线教学</title>
     <link rel="stylesheet" href="css/indexCSS.css">
+
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 </head>
 <body>
+
+<jsp:include page="header.jsp"></jsp:include>
 <!--主体-->
 <div class="main" id="main">
     <!--菜单-->

@@ -7,7 +7,7 @@ public class Student implements Serializable {
     private int ID;
     private String username;
     private String password;
-    private String gender;
+    private int gender;
     private Date birthday;
     private String email;
     private String realname;
@@ -16,7 +16,7 @@ public class Student implements Serializable {
 
     }
 
-    public Student(int ID, String username, String password, String gender, Date birthday, String email, String realname) {
+    public Student(int ID, String username, String password, int gender, Date birthday, String email, String realname) {
         this.ID = ID;
         this.username = username;
         this.password = password;
@@ -50,11 +50,11 @@ public class Student implements Serializable {
         this.password = password;
     }
 
-    public String getGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 

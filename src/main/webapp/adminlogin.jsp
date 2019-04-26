@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>会员登录</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
-    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/jquery.validate.min.js" type="text/javascript"></script>
     <script type="text/javascript">
