@@ -47,4 +47,11 @@ public class RedirectContraller {
         return "/admin/index";
     }
 
+
+
+
+    /*课程*/
+
+
+
 }

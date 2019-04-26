@@ -14,13 +14,6 @@ public class UserServiceImpl implements UserService {
     @Resource
     private StudentMapper studentMapper;
 
-
-    /*@Override
-    public Student login(String username, String password) {
-
-        return this.studentMapper.login(username,password);
-    }*/
-
     @Override
     public int selOne(String usernmae) {
 

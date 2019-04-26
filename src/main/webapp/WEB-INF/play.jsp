@@ -73,7 +73,7 @@
         </div>
         <div class="col-md-3" style="float: right;height: 500px;border-radius: 15px;border: 1px solid red">
                <h1 style="text-align: center"><span style="color: #fefefb">测试</span></h1>
-            <span style="color: white;font-size: 25px">此处添加简介、教师等信息</span>
+            <span style="color: white;font-size: 25px">讲师：<%=%></span>
         </div>
     </div>
 </div>

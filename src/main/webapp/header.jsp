@@ -55,11 +55,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/index">Link1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="/index">Link2</a></li>
+                <li><a href="/classdir">课程目录</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下拉菜单 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">下拉1</a></li>
+                        <li><a href="#">课程目录</a></li>
                         <li><a href="#">下拉2</a></li>
                         <li><a href="#">下拉3</a></li>
                         <li role="separator" class="divider"></li>
