@@ -16,10 +16,9 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-        $(function () {
-            $('button').on('click','button',function() {
-                function sdemo(id) {
-                    var pcode = id;
+        
+                function sdemo(th) {
+                    var pcode = $(th).attr('id');
                     $.post("/classinfos", {pcode: pcode}, function (date) {
                         var result = "";
                         for (var i = 0; i < date.length; i++) {
@@ -37,8 +36,10 @@
                         $("#child").html(result);
                     }, "json");
                 }
-            })
-        });
+
+        $(function () {
+            
+        })
     </script>
 </head>
 <body>
@@ -50,7 +51,7 @@
     <br>
     <br>
         <div style="width: 100%;text-align: right;margin-right: 50px">
-                <button type="button" id="${classinfo.code}" class="btn btn-primary btn-lg active" onclick='javascript:sdemo(this.id);'>${classinfo.name}</button>
+                <button type="button" id="${classinfo.code}" class="btn btn-primary btn-lg active" onclick='javascript:sdemo(this);'>${classinfo.name}</button>
         </div>
     </c:forEach>
 </div>
