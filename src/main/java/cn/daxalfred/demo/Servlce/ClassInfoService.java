@@ -7,4 +7,5 @@ import java.util.List;
 public interface ClassInfoService {
     public List<classinfo> selAllp();
     public List<classinfo> selAll( String pcode);
+    public List<classinfo> selAl();
 }

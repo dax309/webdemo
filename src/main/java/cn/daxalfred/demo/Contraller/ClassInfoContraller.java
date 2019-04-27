@@ -29,6 +29,11 @@ public class ClassInfoContraller {
     @RequestMapping("/classinfos")
     @ResponseBody
     public List<classinfo> classinfos(HttpServletRequest request){
-        return classInfoService.selAll(request.getParameter("pcode"));
+        String pcode = request.getParameter("pcode");
+        if(pcode.equals("all")){
+            return classInfoService.selAl();
+        }else {
+            return classInfoService.selAll(pcode);
+        }
     }
 }

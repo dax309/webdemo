@@ -10,4 +10,5 @@ import java.util.List;
 public interface ClassMapper {
     public List<classinfo> selAllp();
     public List<classinfo> selAll(String pcode);
+    public List<classinfo> selAl();
 }

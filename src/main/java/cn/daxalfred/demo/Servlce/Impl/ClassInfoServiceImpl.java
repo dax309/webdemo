@@ -24,4 +24,9 @@ public class ClassInfoServiceImpl implements ClassInfoService {
     public List<classinfo> selAll(String pcode) {
         return this.classMapper.selAll(pcode);
     }
+
+    @Override
+    public List<classinfo> selAl() {
+        return this.classMapper.selAl();
+    }
 }

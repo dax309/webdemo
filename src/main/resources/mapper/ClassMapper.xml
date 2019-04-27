@@ -8,4 +8,7 @@
     <select id="selAll" resultType="classinfo">
         select * from p_course where pcode = #{pcode}
     </select>
+    <select id="selAl" resultType="classinfo">
+        select * from p_course
+    </select>
 </mapper>
