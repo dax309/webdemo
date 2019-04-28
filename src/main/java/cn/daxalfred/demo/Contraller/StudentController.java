@@ -2,6 +2,7 @@ package cn.daxalfred.demo.Contraller;
 
 import cn.daxalfred.demo.Entity.Student;
 import cn.daxalfred.demo.Servlce.UserService;
+import cn.daxalfred.demo.Utils.MD5Utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wf.captcha.Captcha;
 import com.wf.captcha.SpecCaptcha;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -66,7 +68,6 @@ public class StudentController {
     //注册验证
     @PostMapping("/register")
     public String register(HttpServletRequest request) throws ParseException {
-
         String checkCode = request.getParameter("checked");
         HttpSession session = request.getSession();
         String sessionCheckCode = (String) session.getAttribute("captcha");
@@ -74,7 +75,7 @@ public class StudentController {
             session.removeAttribute("captcha");
             Student student=new Student();
             student.setUsername(request.getParameter("username"));
-            student.setPassword(request.getParameter("password"));
+            student.setPassword(MD5Utils.md5(request.getParameter("password")));
             String gender= request.getParameter("gender");
             student.setGender(Integer.parseInt(gender));
             String birthday = request.getParameter("birthday");
@@ -98,17 +99,29 @@ public class StudentController {
 
     //登陆验证
     @PostMapping("/userlogin")
-    public String userlogin(HttpServletRequest request,HttpSession session){
+    public String userlogin(HttpServletRequest request,HttpSession session,HttpServletResponse response){
         String checkCode = request.getParameter("checkCode");
         String sessionCheckCode = (String) session.getAttribute("captcha");
         if(checkCode!=null&&checkCode.equals(sessionCheckCode)) {
             session.removeAttribute("captcha");
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-            Student user = userService.login(username, password);
+            Student user = userService.login(username,MD5Utils.md5( password));
             if (user != null) {
+
+                String rember = request.getParameter("rember");
+                if (rember.length()<= 0){
+                }else if (rember.equals("y")){
+                    Cookie uname = new Cookie("uname", username);
+                    uname.setMaxAge(60*60*24*7);
+                    uname.setPath("/");
+                    response.addCookie(uname);
+                    Cookie pword = new Cookie("pword", password);
+                    pword.setMaxAge(60*60*24*7);
+                    pword.setPath("/");
+                    response.addCookie(pword);
+                }
                 session.setAttribute("student", user);
-                session.setMaxInactiveInterval(1800);
                 return "redirect:index";
             } else {
                 request.setAttribute("loginError", "用户名或密码错误");
@@ -120,7 +133,6 @@ public class StudentController {
             return "forward:login.jsp";
         }
     }
-
     //退出
     @RequestMapping("/logOut")
     public String logOut(HttpSession session){
@@ -132,8 +144,6 @@ public class StudentController {
     @RequestMapping("/studentupdate")
     public String studentupdate(HttpSession session){
         Student student= (Student) session.getAttribute("student");
-        /*String name = student.getUsername();
-        Student s = userService.getinfo(name);*/
         return "/student/update";
     }
 
@@ -166,18 +176,5 @@ public class StudentController {
         }
         String json = "{\"info\":" + info + "}";
         response.getWriter().write(json);
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

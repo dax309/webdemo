@@ -8,9 +8,17 @@ import java.util.Date;
 
 @Mapper
 public interface StudentMapper {
-    public int selOne(String username);
-    public int insRegister(Student student);
-    public Student login(@Param("username") String username, @Param("password") String password);
-    public Student getinfo(String name);
-    public int updateinfo(@Param("username") String username, @Param("email") String email, @Param("realname") String realname, @Param("gender") int gender,@Param("birthday") Date birthday);
+     int selOne(String username);
+
+     int insRegister(Student student);
+
+     Student login(@Param("username") String username, @Param("password") String password);
+
+     Student getinfo(String name);
+
+     int updateinfo(@Param("username") String username,
+                    @Param("email") String email,
+                    @Param("realname") String realname,
+                    @Param("gender") int gender,
+                    @Param("birthday") Date birthday);
 }

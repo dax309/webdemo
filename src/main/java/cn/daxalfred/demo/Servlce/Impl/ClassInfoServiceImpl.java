@@ -1,7 +1,8 @@
 package cn.daxalfred.demo.Servlce.Impl;
 
 import cn.daxalfred.demo.Dao.ClassMapper;
-import cn.daxalfred.demo.Entity.classinfo;
+import cn.daxalfred.demo.Entity.Classinfo;
+import cn.daxalfred.demo.Entity.PageInfo;
 import cn.daxalfred.demo.Servlce.ClassInfoService;
 import org.springframework.stereotype.Service;
 
@@ -16,17 +17,30 @@ public class ClassInfoServiceImpl implements ClassInfoService {
     private ClassMapper classMapper;
 
     @Override
-    public List<classinfo> selAllp() {
-        return (List<classinfo>) this.classMapper.selAllp();
+    public List<Classinfo> selAllp() {
+        return (List<Classinfo>) this.classMapper.selAllp();
     }
 
     @Override
-    public List<classinfo> selAll(String pcode) {
+    public List<Classinfo> selAll(String pcode) {
         return this.classMapper.selAll(pcode);
     }
 
     @Override
-    public List<classinfo> selAl() {
-        return this.classMapper.selAl();
+    public List<Classinfo> selAlltwo() {
+        return this.classMapper.selAlltwo();
+    }
+
+    @Override
+    public PageInfo showPage(String pcode,int pageSize, int pageNumber) {
+        PageInfo pi = new PageInfo();
+        pi.setPageNumber(pageNumber);
+        pi.setPageSize(pageSize);
+        int pageStart = pageSize * (pageNumber - 1);
+        pi.setList(this.classMapper.selByPage(pcode,pageStart,pageSize));
+        long count = this.classMapper.selCount();
+        //总条数
+        pi.setTotal(count%pageSize == 0?count/pageSize:count/pageSize+1);
+        return pi;
     }
 }

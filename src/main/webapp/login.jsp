@@ -73,6 +73,23 @@
 
     </style>
 </head>
+<%
+    //判断是否存在用户名cookie,存在就输出,不存在跳转到登录页面
+    String uname = "";
+    String pword = "";
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null) {
+        for (Cookie c : cookies) {
+           if(c.getName().equals("uname")){
+               uname = c.getValue();
+           }else if(c.getName().equals("pword")){
+               pword = c.getValue();
+               System.out.println(pword);
+           }
+        }
+    }
+
+%>
 <body>
     <!-- 引入header.jsp -->
     <jsp:include page="/header.jsp"></jsp:include>
@@ -81,7 +98,6 @@
      style="width: 100%; height: 460px; background: #FF2C4C url('images/loginbg.jpg') no-repeat;">
     <div class="row">
         <div class="col-md-7">
-
         </div>
 
         <div class="col-md-5">
@@ -97,14 +113,14 @@
                         <label for="username" class="col-sm-2 control-label">用户名</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" name="username" id="username"
-                                   placeholder="请输入用户名">
+                                   value="<%=uname%>">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="password" class="col-sm-2 control-label">密码</label>
                         <div class="col-sm-6">
                             <input type="password" class="form-control" name="password" id="password"
-                                   placeholder="请输入密码">
+                                   value="<%=pword%>">
                         </div>
                     </div>
                     <div class="form-group" >
@@ -127,6 +143,7 @@
                     <div class="form-group">
                         <label for="username" class="col-sm-2 control-label"></label>
                         <div class="col-sm-6">
+                            <input type="checkbox" name="rember" value="y">七天免登陆
                             <input type="submit" width="100" value="登录" name="submit" class="btn btn-success"
                                    style=" height: 35px; width: 185px; color: #fefafa;">
                         </div>

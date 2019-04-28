@@ -3,7 +3,7 @@ package cn.daxalfred.demo.Entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class classinfo implements Serializable {
+public class Classinfo implements Serializable {
     private int ID;
     private String name;
     private String code;
@@ -15,10 +15,10 @@ public class classinfo implements Serializable {
     private int updateuser;
     private int del;
 
-    public classinfo() {
+    public Classinfo() {
     }
 
-    public classinfo(int ID, String name, String code, String pcode, int sort, Date createtime, int createuser, Date updatetime, int updateuser, int del) {
+    public Classinfo(int ID, String name, String code, String pcode, int sort, Date createtime, int createuser, Date updatetime, int updateuser, int del) {
         this.ID = ID;
         this.name = name;
         this.code = code;
@@ -113,7 +113,7 @@ public class classinfo implements Serializable {
 
     @Override
     public String toString() {
-        return "classinfo{" +
+        return "Classinfo{" +
                 "ID=" + ID +
                 ", name='" + name + '\'' +
                 ", code='" + code + '\'' +
