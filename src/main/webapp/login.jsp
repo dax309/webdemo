@@ -40,6 +40,8 @@
                 },
                 errorElement:"labelErr"
             });
+
+
         });
     </script>
 
@@ -70,7 +72,6 @@
         labelErr {
             color: red;
         }
-
     </style>
 </head>
 <%
@@ -84,7 +85,6 @@
                uname = c.getValue();
            }else if(c.getName().equals("pword")){
                pword = c.getValue();
-               System.out.println(pword);
            }
         }
     }
@@ -143,7 +143,7 @@
                     <div class="form-group">
                         <label for="username" class="col-sm-2 control-label"></label>
                         <div class="col-sm-6">
-                            <input type="checkbox" name="rember" value="y">七天免登陆
+                            <input type="checkbox" id="ckeckb" name="rember" checked>七天免登陆
                             <input type="submit" width="100" value="登录" name="submit" class="btn btn-success"
                                    style=" height: 35px; width: 185px; color: #fefafa;">
                         </div>

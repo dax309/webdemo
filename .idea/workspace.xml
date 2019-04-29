@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="04395201-3319-4dba-b1f4-5938f6a9c24e" name="Default Changelist" comment="课程信息查询">
       <change afterPath="$PROJECT_DIR$/src/main/resources/static/video/001.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/webdemo.kotlin_module" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/AdminContraller.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/ClassInfoContraller.class" afterDir="false" />
@@ -14,8 +13,8 @@
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Dao/StudentMapper.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/DemoApplication.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/Admin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/PageInfo.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/classinfo.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/AdminService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/ClassInfoService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/AdminServiceImpl.class" afterDir="false" />
@@ -24,6 +23,7 @@
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/UserService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/ServletInitializer.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Utils/LogConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Utils/MD5Utils.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/interceptor/loginAdapter.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/interceptor/loginInterceptor.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/logback-spring.xml" afterDir="false" />
@@ -79,20 +79,10 @@
       <change afterPath="$PROJECT_DIR$/target/classes/static/video/001.mp4" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/cn/daxalfred/demo/DemoApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/classinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -123,32 +113,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/StudentMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="-54">
+              <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#captcha#0;class#StudentController#0" />
-              </folding>
+            <state relative-caret-position="-660">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="84" column="45" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="45" />
+            <state relative-caret-position="301">
+              <caret line="64" column="17" lean-forward="true" selection-end-line="81" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -186,7 +172,6 @@
       <find>regi</find>
       <find>loginbg</find>
       <find>form</find>
-      <find>images</find>
       <find>cool-v</find>
       <find>video</find>
       <find>div1</find>
@@ -194,6 +179,7 @@
       <find>height</find>
       <find>style.css</find>
       <find>inn</find>
+      <find>images</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,8 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/hello.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Utils/LogConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index_test.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/indexCSS.css" />
@@ -221,14 +205,12 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/adminlogin.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/student/infoindex.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index_test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/classinfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfo.java" />
@@ -251,8 +233,12 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Utils/MD5Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/StudentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/swiper.min.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/certify.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
       </list>
     </option>
   </component>
@@ -302,6 +288,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,91 +313,6 @@
               <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="Contraller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlce" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlce" type="462c0819:PsiDirectoryNode" />
-              <item name="Impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -419,22 +322,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="class" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -447,7 +339,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -461,19 +353,19 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="cn.daxalfred.demo.Servlce.Impl" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\admin" />
-      <recent name="G:\ideaProject\ponlineteaching\src\main\webapp\WEB-INF\admin" />
-      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\images" />
-      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\css" />
-      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\ideaProject\ponlineteaching\src\main\webapp" />
       <recent name="G:\ideaProject\webdemo\src\main\webapp" />
       <recent name="G:\ideaProject\webdemo\src\main\resources\static\js" />
       <recent name="G:\ideaProject\webdemo\src\main\resources\static\bootstrap\css" />
       <recent name="G:\ideaProject\webdemo\src\main\resources\static\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\js" />
+      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\images\swiper" />
+      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\css" />
+      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\admin" />
+      <recent name="G:\ideaProject\ponlineteaching\src\main\webapp\WEB-INF\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -582,7 +474,11 @@
       <workItem from="1556377102286" duration="497000" />
       <workItem from="1556411534455" duration="11712000" />
       <workItem from="1556433430554" duration="4090000" />
-      <workItem from="1556437602414" duration="9586000" />
+      <workItem from="1556437602414" duration="9832000" />
+      <workItem from="1556500563410" duration="4932000" />
+      <workItem from="1556506412573" duration="623000" />
+      <workItem from="1556508002276" duration="536000" />
+      <workItem from="1556526749042" duration="2087000" />
     </task>
     <task id="LOCAL-00001" summary="完成注册">
       <created>1554732943884</created>
@@ -724,11 +620,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556332929416</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="登陆验证">
+      <created>1556461780478</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1556461780479</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286794000" />
+    <option name="totallyTimeSpent" value="295218000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -743,7 +646,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.20268457" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.20536913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -757,7 +660,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.64387465" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.7738255" visible="true" weight="0.44729346" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.7738255" weight="0.51424503" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32905984" />
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -831,7 +734,8 @@
     <MESSAGE value="基于Spring Boot的项目" />
     <MESSAGE value="课程信息查询" />
     <MESSAGE value="课程查询啊" />
-    <option name="LAST_COMMIT_MESSAGE" value="课程查询啊" />
+    <MESSAGE value="登陆验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="登陆验证" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,64 +768,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/student/infoindex.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc;n#jsp:root#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/hello.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index_test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="e#1067#3274#0#HTML" />
-            <element signature="e#1381#3266#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="57" column="38" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/classinfo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -953,13 +799,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1199,16 +1038,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Utils/MD5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Utils/MD5Util.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Utils/MD5Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1226,13 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/StudentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1240,21 +1063,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/swiper.min.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery.mCustomScrollbar.concat.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="84" column="45" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="45" />
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-1.11.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-3.3.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/swiper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3444">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/StudentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
+        <state relative-caret-position="2046">
+          <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#captcha#0;class#StudentController#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/swiper.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="11" column="2707" selection-start-line="11" selection-start-column="2707" selection-end-line="11" selection-end-column="2707" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/certify.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="54" column="67" lean-forward="true" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="117" column="26" lean-forward="true" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="64" column="17" lean-forward="true" selection-end-line="81" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>

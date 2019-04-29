@@ -108,10 +108,19 @@ public class StudentController {
             String password = request.getParameter("password");
             Student user = userService.login(username,MD5Utils.md5( password));
             if (user != null) {
-
-                String rember = request.getParameter("rember");
-                if (rember.length()<= 0){
-                }else if (rember.equals("y")){
+                String rember = null;
+                if(request.getParameter("rember") == null){
+                    Cookie[] cookies = request.getCookies();
+                    if (cookies != null) {
+                        for (Cookie c : cookies) {
+                            if(c.getName().equals("uname")){
+                                c.setMaxAge(0);
+                            }else if(c.getName().equals("pword")){
+                                c.setMaxAge(0);
+                            }
+                        }
+                    }
+                }else{
                     Cookie uname = new Cookie("uname", username);
                     uname.setMaxAge(60*60*24*7);
                     uname.setPath("/");
