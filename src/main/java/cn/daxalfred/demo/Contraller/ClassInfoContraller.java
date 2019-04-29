@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -28,35 +27,12 @@ public class ClassInfoContraller {
     /*获取子目录*/
     @RequestMapping("/classinfos")
     @ResponseBody
-    public List<Classinfo> classinfos(HttpServletRequest request){
+    public PageInfo classinfos(HttpServletRequest request){
         String pcode = request.getParameter("pcode");
-        List<Classinfo> list =new ArrayList<Classinfo>();
-        List<Classinfo> list1 =new  ArrayList<Classinfo>();
+        PageInfo pageInfo = null;
         if(pcode.equals("all")){
-            for (Classinfo classInfo:classInfoService.selAllp()){
-                list1 = classInfoService.selAll(classInfo.getCode());
-                if(list1.size()!=0){
-                    for(Classinfo classInfo1:list1){
-                        list.add(classInfo1);
-                    }
-                }
-            }
-
-        }else {
-            System.out.println(pcode);
-            int pagenumber;
-            String currentPage = request.getParameter("currentPage");
-            if(currentPage ==null||currentPage.equals("")){
-                pagenumber = 1;
-            }else {
-              pagenumber  = Integer.parseInt(currentPage);
-            }
-            PageInfo pageInfo = classInfoService.showPage(pcode, 5, pagenumber);
-            list1= (List<Classinfo>) pageInfo.getList();
-            for (Classinfo classInfo:list1){
-                list.add(classInfo);
-            }
+          pageInfo = classInfoService.selAlltwoByPage(1,5,1);
         }
-        return list;
+        return pageInfo;
     }
 }

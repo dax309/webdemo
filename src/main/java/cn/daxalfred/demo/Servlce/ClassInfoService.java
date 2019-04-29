@@ -8,6 +8,6 @@ import java.util.List;
 public interface ClassInfoService {
      List<Classinfo> selAllp();
      List<Classinfo> selAll(String pcode);
-     List<Classinfo> selAlltwo();
      PageInfo showPage(String pcode,int pageSize,int pageNumber);
+     PageInfo selAlltwoByPage(int flower,int pageSize,int pageNumber);
 }

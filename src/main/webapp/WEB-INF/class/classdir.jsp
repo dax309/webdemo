@@ -32,20 +32,33 @@
                             "<br>" +
                             "<br>";
                         if(pcode == "all"){
-                            for (var i = 0; i < data.length; i++) {
+                            for (var i = 0; i < data.getList().length; i++) {
                                     result += "<span id="+data[i].code+" onclick='javascript:sdemo(this);'>";
                                     result += data[i].name;
-                                    result += "</span> ";
-                                    if ((i+1)%5 ==0){
-                                        result+="<br>";
-                                    }
+                                    result += "</span><br>";
                             }
+                            result+="<nav aria-label=\"Page navigation\">\n" +
+                                "  <ul class=\"pagination\">\n" +
+                                "    <li>\n" +
+                                "      <a href=\"#\" aria-label=\"Previous\">\n" +
+                                "        <span aria-hidden=\"true\">&laquo;</span>\n" +
+                                "      </a>\n" +
+                                "    </li>";
+                            for (var i = 1; i <= data.getTotal();i++) {
+                                result+="<li><a href='#'>"+ i +"</a></li>";
+                            }
+                            result+="<li>\n" +
+                                "      <a href=\"#\" aria-label=\"Next\">\n" +
+                                "        <span aria-hidden=\"true\">&raquo;</span>\n" +
+                                "      </a>\n" +
+                                "    </li>\n" +
+                                "  </ul>\n" +
+                                "</nav>";
                         }else {
                             for (var i = 0; i < data.length; i++) {
                                 result += "<span id="+data[i].code+" onclick='javascript:sdemo(this);'>";
                                 result += data[i].name;
                                 result += "</span><br>";
-
                             }
                         }
                         $("#child").html(result);

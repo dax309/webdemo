@@ -26,10 +26,6 @@ public class ClassInfoServiceImpl implements ClassInfoService {
         return this.classMapper.selAll(pcode);
     }
 
-    @Override
-    public List<Classinfo> selAlltwo() {
-        return this.classMapper.selAlltwo();
-    }
 
     @Override
     public PageInfo showPage(String pcode,int pageSize, int pageNumber) {
@@ -39,7 +35,18 @@ public class ClassInfoServiceImpl implements ClassInfoService {
         int pageStart = pageSize * (pageNumber - 1);
         pi.setList(this.classMapper.selByPage(pcode,pageStart,pageSize));
         long count = this.classMapper.selCount();
-        //总条数
+        pi.setTotal(count%pageSize == 0?count/pageSize:count/pageSize+1);
+        return pi;
+    }
+
+    @Override
+    public PageInfo selAlltwoByPage(int flower, int pageSize, int pageNumber) {
+        PageInfo pi = new PageInfo();
+        pi.setPageNumber(pageNumber);
+        pi.setPageSize(pageSize);
+        int pageStart = pageSize * (pageNumber - 1);
+        pi.setList(this.classMapper.selAlltwoByPage(flower,pageStart,pageSize));
+        long count = this.classMapper.seltwoCount();
         pi.setTotal(count%pageSize == 0?count/pageSize:count/pageSize+1);
         return pi;
     }

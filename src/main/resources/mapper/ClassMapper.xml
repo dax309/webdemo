@@ -5,14 +5,24 @@
     <select id="selAllp" resultType="classinfo">
         select * from p_course where pcode = '0'
     </select>
+
     <select id="selAll" resultType="classinfo">
         select * from p_course where pcode = #{pcode}
     </select>
+
     <select id="selCount" resultType="long">
         select * from p_course
     </select>
+
     <select id="selByPage" resultType="classinfo">
         select * from p_course where pcode=#{pcode} limit #{pageStart},#{pageSize}
     </select>
 
+    <select id="selAlltwoByPage" resultType="classinfo">
+        select * from p_course where flower=#{flower} limit #{pageStart},#{pageSize}
+    </select>
+
+    <select id="seltwoCount" resultType="long">
+        select count(*) from p_course where flower = 2
+    </select>
 </mapper>

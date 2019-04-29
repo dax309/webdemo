@@ -11,7 +11,8 @@ import java.util.List;
 public interface ClassMapper {
      List<Classinfo> selAllp();
      List<Classinfo> selAll(String pcode);
-     List<Classinfo> selAlltwo();
      List<Classinfo> selByPage(@Param("pcode") String pcode,@Param("pageStart") int pageStart, @Param("pageSize") int pageSize);
      long selCount();
+     List<Classinfo> selAlltwoByPage(@Param("flower") int flower, @Param("pageStart") int pageStart, @Param("pageSize") int pageSize);
+     long seltwoCount();
 }
