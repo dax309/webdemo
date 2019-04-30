@@ -1,5 +1,7 @@
 package cn.daxalfred.demo.Entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,9 +10,12 @@ public class Classinfo implements Serializable {
     private String name;
     private String code;
     private String pcode;
+    private int flower;
     private int sort;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date createtime;
     private int createuser;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date updatetime;
     private int updateuser;
     private int del;
