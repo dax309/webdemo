@@ -17,9 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <link rel="stylesheet" href="css/paging.css">
-    <script src="js/paging.js"></script>
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="js/paging.min.js"></script>
     <script type="text/javascript">
                 function sdemo(th) {
                     var pcode = $(th).attr('id');
@@ -29,25 +29,30 @@
                             $.each(data.list,function (index,classinfo) {
                                 html+="<span style='float: left'>"+classinfo.name+"</span>";
                                 html+="<span style='float: right'>"+classinfo.createtime+"</span><br>";
-                                html+="<hr><br>";
-
+                                html+="<hr>";
                             });
+                            html+="<br>";
+                            html+="<nav aria-label='Page navigation' style='text-align: center'>\n" +
+                                "  <ul class='pagination'>\n" +
+                                "    <li>\n" +
+                                "      <a href='#' aria-label='Previous'>\n" +
+                                "        <span aria-hidden='true'>&laquo;</span>\n" +
+                                "      </a>\n" +
+                                "    </li>";
+                            for(var i = 1;i<=data.total;i++){
+                               html+=" <li><a href='#'>"+i+"</a></li>";
+                            }
+                            html+="<li>\n" +
+                                "      <a href='#' aria-label='Next'>\n" +
+                                "        <span aria-hidden='true'>&raquo;</span>\n" +
+                                "      </a>\n" +
+                                "    </li>\n" +
+                                "  </ul>\n" +
+                                "</nav>";
                             $("#child").html(html);
-                            pageInfo(data.total);
                     }, "json");
                 }
-                function pageInfo(totalPages){
-                    $('#box').paging({
-                        initPageNo: 1, // 初始页码
-                        totalPages: totalPages, //总页数
-                        /*totalCount: '合计' + setTotalCount + '条数据',*/ // 条目总数
-                        slideSpeed: 600, // 缓动速度。单位毫秒
-                        jump: true, //是否支持跳转
-                        callback: function(page) { // 回调函数
-                            console.log(page);
-                        }
-                    })
-                }
+
 
         $(function () {
 
@@ -75,21 +80,10 @@
     </c:forEach>
 </div>
 <div>
-<div class="col-md-3">
-
-</div>
-<div style="width: 50%;height: 100%;" class="col-md-6">
-    <div id="child" style="text-align: center;">
-        <strong><p style="text-indent:2em">No Contents</p></strong>
+    <div class="col-md-3"></div>
+    <div id="child" style="margin: auto;border: 1px solid red;width: 50%;" class="col-md-6">
     </div>
-    <div class="box" id="box">
-
-    </div>
-</div>
-
-<div class="col-md-3">
-
-</div>
+    <div class="col-md-3"></div>
 </div>
 </body>
 </html>

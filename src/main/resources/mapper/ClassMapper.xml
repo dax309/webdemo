@@ -11,7 +11,7 @@
     </select>
 
     <select id="selCount" resultType="long">
-        select * from p_course
+        select count(*) from p_course
     </select>
 
     <select id="selByPage" resultType="classinfo">

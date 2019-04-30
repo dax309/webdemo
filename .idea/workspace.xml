@@ -90,7 +90,7 @@
       <change afterPath="$PROJECT_DIR$/target/test-classes/cn/daxalfred/demo/DemoApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" afterDir="false" />
     </list>
@@ -121,19 +121,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="174">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#strong#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="e#158#165#1" expanded="true" />
+                <element signature="e#83#90#1" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+            <state relative-caret-position="394">
+              <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,11 +153,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+            <state relative-caret-position="144">
+              <caret line="30" column="41" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -185,8 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            <state relative-caret-position="242">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#captcha#0;class#StudentController#0" />
@@ -198,7 +206,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
+            <state relative-caret-position="198">
               <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -303,10 +311,10 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" />
       </list>
     </option>
   </component>
@@ -343,8 +351,8 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="532" />
-    <option name="y" value="43" />
+    <option name="x" value="531" />
+    <option name="y" value="42" />
     <option name="width" value="1290" />
     <option name="height" value="855" />
   </component>
@@ -496,8 +504,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -650,7 +658,8 @@
       <workItem from="1556506412573" duration="623000" />
       <workItem from="1556508002276" duration="536000" />
       <workItem from="1556526749042" duration="10064000" />
-      <workItem from="1556585248933" duration="13805000" />
+      <workItem from="1556585248933" duration="14003000" />
+      <workItem from="1556632719556" duration="3579000" />
     </task>
     <task id="LOCAL-00001" summary="完成注册">
       <created>1554732943884</created>
@@ -813,11 +822,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556550297657</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="分页查询">
+      <created>1556617086564</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1556617086564</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317000000" />
+    <option name="totallyTimeSpent" value="320777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -830,9 +846,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.2080537" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.21073826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -846,7 +861,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.64387465" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.7738255" weight="0.44301996" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.7738255" visible="true" weight="0.66381764" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32905984" />
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -923,7 +938,8 @@
     <MESSAGE value="登陆验证" />
     <MESSAGE value="主页轮播图" />
     <MESSAGE value="分页后端完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="分页后端完成" />
+    <MESSAGE value="分页查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="分页查询" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/AdminServiceImpl.java">
@@ -1220,13 +1236,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/paging.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1235,8 +1244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        <state relative-caret-position="242">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#captcha#0;class#StudentController#0" />
@@ -1246,28 +1255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
+        <state relative-caret-position="198">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1293,17 +1282,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="174">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#strong#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="e#158#165#1" expanded="true" />
+            <element signature="e#83#90#1" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>

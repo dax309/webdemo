@@ -35,9 +35,9 @@ public class ClassInfoContraller {
         PageInfo pageInfo = null;
         if(pcode.equals("all")){
           pageInfo = classInfoService.selAlltwoByPage(2,5,1);
+        }else {
+            pageInfo = classInfoService.showPage(pcode,5,1);
         }
-        /*String json = "{'data':" + pageInfo + "}";
-        response.getWriter().write(json);*/
         return pageInfo;
     }
 }
