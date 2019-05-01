@@ -5,6 +5,7 @@ import cn.daxalfred.demo.Entity.PageInfo;
 import cn.daxalfred.demo.Servlce.ClassInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,7 +31,7 @@ public class ClassInfoContraller {
     /*获取子目录*/
     @PostMapping("/classinfos")
     @ResponseBody
-    public PageInfo classinfos(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public PageInfo classinfos(ModelMap map, HttpServletRequest request, HttpServletResponse response) throws Exception {
         String pcode = request.getParameter("pcode");
         String pageNumber = request.getParameter("pageNumber");
         PageInfo pageInfo = null;
@@ -48,5 +49,21 @@ public class ClassInfoContraller {
             pageInfo = classInfoService.showPage(pcode,5,Number);
         }
         return pageInfo;
+    }
+
+
+    @RequestMapping("/classinfo")
+    public String classinfo(HttpServletRequest request){
+        String code = request.getParameter("code");
+        String pageNumber = request.getParameter("pageNumber");
+        int Number;
+        if(pageNumber==null){
+            Number =1;
+        }else {
+            Number = Integer.parseInt(pageNumber);
+        }
+        PageInfo pageInfo =classInfoService.showPage(code,5,Number);
+        request.setAttribute("pageInfo",pageInfo);
+        return "forward:/classinfofrower";
     }
 }

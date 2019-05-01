@@ -12,7 +12,7 @@ public interface ClassMapper {
      List<Classinfo> selAllp();
      List<Classinfo> selAll(String pcode);
      List<Classinfo> selByPage(@Param("pcode") String pcode,@Param("pageStart") int pageStart, @Param("pageSize") int pageSize);
-     long selCount();
+     long selCount(@Param("pcode") String pcode);
      List<Classinfo> selAlltwoByPage(@Param("flower") int flower, @Param("pageStart") int pageStart, @Param("pageSize") int pageSize);
      long seltwoCount();
 }

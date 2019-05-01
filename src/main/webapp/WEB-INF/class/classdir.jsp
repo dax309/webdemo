@@ -15,38 +15,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <link rel="stylesheet" href="css/paging.css">
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/paging.min.js"></script>
     <script type="text/javascript">
                 function sdemo(th) {
                     var pcode = $(th).attr('id');
+                    console.log(pcode);
                     $.post("/classinfos", {pcode: pcode}, function (data) {
+                        console.log(data);
                             $("#child").html('');
                             var html = "";
                             $.each(data.list,function (index,classinfo) {
-                                html+="<span style='float: left'>"+classinfo.name+"</span>";
-                                html+="<span style='float: right'>"+classinfo.createtime+"</span><br>";
+                                html+="<a href='/classinfo?code="+classinfo.code+"'> <span style='float: left'>"+classinfo.name+"</span>";
+                                html+="<span style='float: right'>"+classinfo.createtime+"</span></a><br>";
                                 html+="<hr>";
                             });
                             html+="<br>";
                             html+="<nav aria-label='Page navigation' style='text-align: center'>\n" +
                                 "  <ul class='pagination'>\n" +
                                 "    <li>\n" +
-                                "      <a onclick='javascript:flowertwo(this);' id=1 aria-label='Previous'>\n" +
+                                "      <a onclick='javascript:flowertwo(this,"+pcode+");' id=1 aria-label='Previous'>\n" +
                                 "        <span aria-hidden='true'>&laquo;</span>\n" +
                                 "      </a>\n" +
                                 "    </li>";
                             for(var i = 1;i<=data.total;i++){
                                 if (i == 1){
-                                    html+=" <li class='active'><span  onclick='javascript:flowertwo(this);' id= "+i+">"+i+"</span></li>";
+                                    html+=" <li class='active'><span  onclick='javascript:flowertwo(this,"+pcode+");' id= "+i+">"+i+"</span></li>";
                                 } else {
-
-                                    html+=" <li><span  onclick='javascript:flowertwo(this);' id= "+i+">"+i+"</span></li>";
+                                    html+=" <li><span  onclick='javascript:flowertwo(this,"+pcode+");' id= "+i+">"+i+"</span></li>";
                                 }
                             }
                             html+="<li>\n" +
-                                "      <a onclick='javascript:flowertwo(this);' id=2 aria-label='Next'>\n" +
+                                "      <a onclick='javascript:flowertwo(this,"+pcode+");' id=2 aria-label='Next'>\n" +
                                 "        <span aria-hidden='true'>&raquo;</span>\n" +
                                 "      </a>\n" +
                                 "    </li>\n" +
@@ -56,14 +55,16 @@
                     }, "json");
                 }
 
-                function flowertwo(th) {
+                function flowertwo(th,tpcode) {
                     var pageNumber = $(th).attr('id');
-                    $.post("/classinfos", {pcode: "all",pageNumber:pageNumber}, function (data) {
+                    var pcode=$(tpcode).attr("id");
+                    console.log(pcode);
+                    $.post("/classinfos", {pcode:tpcode ,pageNumber:pageNumber}, function (data) {
                         $("#child").html('');
                         var html = "";
                         $.each(data.list,function (index,classinfo) {
-                            html+="<span style='float: left'>"+classinfo.name+"</span>";
-                            html+="<span style='float: right'>"+classinfo.createtime+"</span><br>";
+                            html+="<a href='/classinfo?code="+classinfo.code+"'><span style='float: left'>"+classinfo.name+"</span>";
+                            html+="<span style='float: right'>"+classinfo.createtime+"</span></a><br>";
                             html+="<hr>";
                         });
                         html+="<br>";
@@ -104,12 +105,13 @@
     </script>
 </head>
 <body>
+
 <div>
     <jsp:include page="/header.jsp"></jsp:include>
 </div>
 <div class="col-md-12" style="float: left;">
     <div>
-        <span>课程：</span>
+        <span>课程：${pcode}</span>
     </div>
     <hr style="border: solid red" />
     <div style="text-align: center;float: left;margin: 20px">

@@ -52,6 +52,11 @@ public class RedirectContraller {
 
     /*课程*/
 
+    @RequestMapping("/classinfofrower")
+    public String classinfofrower(){
+        return "/class/classInfo";
+    }
+
 
 
 }

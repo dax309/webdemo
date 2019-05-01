@@ -34,7 +34,7 @@ public class ClassInfoServiceImpl implements ClassInfoService {
         pi.setPageSize(pageSize);
         int pageStart = pageSize * (pageNumber - 1);
         pi.setList(this.classMapper.selByPage(pcode,pageStart,pageSize));
-        long count = this.classMapper.selCount();
+        long count = this.classMapper.selCount(pcode);
         pi.setTotal(count%pageSize == 0?count/pageSize:count/pageSize+1);
         return pi;
     }
