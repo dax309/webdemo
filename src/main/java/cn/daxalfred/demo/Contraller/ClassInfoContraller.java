@@ -30,13 +30,22 @@ public class ClassInfoContraller {
     /*获取子目录*/
     @PostMapping("/classinfos")
     @ResponseBody
-    public PageInfo classinfos(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public PageInfo classinfos(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String pcode = request.getParameter("pcode");
+        String pageNumber = request.getParameter("pageNumber");
         PageInfo pageInfo = null;
-        if(pcode.equals("all")){
-          pageInfo = classInfoService.selAlltwoByPage(2,5,1);
+        int Number;
+        if(pageNumber==null){
+            Number = 1;
         }else {
-            pageInfo = classInfoService.showPage(pcode,5,1);
+            Number = Integer.parseInt(pageNumber);
+        }
+
+        if(pcode.equals("all")){
+            pageInfo = classInfoService.selAlltwoByPage(
+                            2, 5, Number);
+        }else {
+            pageInfo = classInfoService.showPage(pcode,5,Number);
         }
         return pageInfo;
     }

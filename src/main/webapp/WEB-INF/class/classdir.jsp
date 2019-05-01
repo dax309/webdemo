@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<!-- 网页使用的语言 -->
 <html lang="zh-CN">
 <head>
     <title>课程列表</title>
@@ -17,7 +16,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <link rel="stylesheet" href="css/paging.css">
-
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="js/paging.min.js"></script>
     <script type="text/javascript">
@@ -35,15 +33,20 @@
                             html+="<nav aria-label='Page navigation' style='text-align: center'>\n" +
                                 "  <ul class='pagination'>\n" +
                                 "    <li>\n" +
-                                "      <a href='#' aria-label='Previous'>\n" +
+                                "      <a onclick='javascript:flowertwo(this);' id=1 aria-label='Previous'>\n" +
                                 "        <span aria-hidden='true'>&laquo;</span>\n" +
                                 "      </a>\n" +
                                 "    </li>";
                             for(var i = 1;i<=data.total;i++){
-                               html+=" <li><a href='#'>"+i+"</a></li>";
+                                if (i == 1){
+                                    html+=" <li class='active'><span  onclick='javascript:flowertwo(this);' id= "+i+">"+i+"</span></li>";
+                                } else {
+
+                                    html+=" <li><span  onclick='javascript:flowertwo(this);' id= "+i+">"+i+"</span></li>";
+                                }
                             }
                             html+="<li>\n" +
-                                "      <a href='#' aria-label='Next'>\n" +
+                                "      <a onclick='javascript:flowertwo(this);' id=2 aria-label='Next'>\n" +
                                 "        <span aria-hidden='true'>&raquo;</span>\n" +
                                 "      </a>\n" +
                                 "    </li>\n" +
@@ -53,6 +56,47 @@
                     }, "json");
                 }
 
+                function flowertwo(th) {
+                    var pageNumber = $(th).attr('id');
+                    $.post("/classinfos", {pcode: "all",pageNumber:pageNumber}, function (data) {
+                        $("#child").html('');
+                        var html = "";
+                        $.each(data.list,function (index,classinfo) {
+                            html+="<span style='float: left'>"+classinfo.name+"</span>";
+                            html+="<span style='float: right'>"+classinfo.createtime+"</span><br>";
+                            html+="<hr>";
+                        });
+                        html+="<br>";
+                        html+="<nav aria-label='Page navigation' style='text-align: center'>\n" +
+                            "  <ul class='pagination'>\n" +
+                            "    <li>\n" +
+                            "      <a onclick='javascript:flowertwo(this);' id=" + (pageNumber-1)+ " aria-label='Previous'>\n" +
+                            "        <span aria-hidden='true'>&laquo;</span>\n" +
+                            "      </a>\n" +
+                            "    </li>";
+                        for(var i = 1;i<=data.total;i++){
+                            if (i == pageNumber) {
+                                html+=" <li class='active'><span  onclick='javascript:flowertwo(this);' id= "+ i +">"+i+"</span></li>";
+                            }else {
+                                html+=" <li><span  onclick='javascript:flowertwo(this);' id= "+i+">"+i+"</span></li>";
+                            }
+                        }
+                        html+="<li>\n" ;
+                        if(pageNumber == data.total){
+                            html+="      <a onclick='javascript:flowertwo(this);' id=" + pageNumber+ " aria-label=\"Next\">\n";
+                        }else {
+                            html+="      <a onclick='javascript:flowertwo(this);' id=" + (++pageNumber)+ " aria-label=\"Next\">\n";
+                        }
+                        html+=
+
+                            "        <span aria-hidden=\"true\">&raquo;</span>\n" +
+                            "      </a>\n" +
+                            "    </li>\n" +
+                            "  </ul>\n" +
+                            "</nav>";
+                        $("#child").html(html);
+                    }, "json");
+                }
 
         $(function () {
 
@@ -73,9 +117,7 @@
     </div>
     <c:forEach var="classinfo" items="${list}" varStatus="s">
         <div style="text-align: center;float: left;margin: 20px">
-            <a href="#">
                 <button type="button" id="${classinfo.code}" onclick='javascript:sdemo(this);' class="btn btn-primary btn-lg active" >${classinfo.name}</button>
-            </a>
         </div>
     </c:forEach>
 </div>
