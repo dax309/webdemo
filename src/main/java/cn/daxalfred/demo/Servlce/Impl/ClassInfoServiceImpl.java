@@ -50,4 +50,9 @@ public class ClassInfoServiceImpl implements ClassInfoService {
         pi.setTotal(count%pageSize == 0?count/pageSize:count/pageSize+1);
         return pi;
     }
+
+    @Override
+    public Classinfo selcode(String code) {
+        return this.classMapper.selcode(code);
+    }
 }

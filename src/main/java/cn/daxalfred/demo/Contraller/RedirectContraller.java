@@ -14,13 +14,11 @@ public class RedirectContraller {
 
     @RequestMapping("/index")
     public String index(){
-
         return "index";
     }
 
     @RequestMapping("/play")
     public String play(){
-
         return "play";
     }
 
@@ -36,12 +34,9 @@ public class RedirectContraller {
 
 
 
-
-
-
     /*管理员*/
 
-//    管理员主页
+    //管理员主页
     @RequestMapping("/admin")
     public String admin(){
         return "/admin/index";
@@ -58,5 +53,10 @@ public class RedirectContraller {
     }
 
 
+
+    @RequestMapping("/Compiler")
+    public String Compiler(){
+        return "/Compiler/CompilerIndex";
+    }
 
 }

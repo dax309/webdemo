@@ -18,21 +18,24 @@ public class Classinfo implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date updatetime;
     private int updateuser;
+    private String videoaddress;
     private int del;
 
     public Classinfo() {
     }
 
-    public Classinfo(int ID, String name, String code, String pcode, int sort, Date createtime, int createuser, Date updatetime, int updateuser, int del) {
+    public Classinfo(int ID, String name, String code, String pcode, int flower, int sort, Date createtime, int createuser, Date updatetime, int updateuser, String videoaddress, int del) {
         this.ID = ID;
         this.name = name;
         this.code = code;
         this.pcode = pcode;
+        this.flower = flower;
         this.sort = sort;
         this.createtime = createtime;
         this.createuser = createuser;
         this.updatetime = updatetime;
         this.updateuser = updateuser;
+        this.videoaddress = videoaddress;
         this.del = del;
     }
 
@@ -66,6 +69,14 @@ public class Classinfo implements Serializable {
 
     public void setPcode(String pcode) {
         this.pcode = pcode;
+    }
+
+    public int getFlower() {
+        return flower;
+    }
+
+    public void setFlower(int flower) {
+        this.flower = flower;
     }
 
     public int getSort() {
@@ -108,6 +119,14 @@ public class Classinfo implements Serializable {
         this.updateuser = updateuser;
     }
 
+    public String getVideoaddress() {
+        return videoaddress;
+    }
+
+    public void setVideoaddress(String videoaddress) {
+        this.videoaddress = videoaddress;
+    }
+
     public int getDel() {
         return del;
     }
@@ -116,6 +135,7 @@ public class Classinfo implements Serializable {
         this.del = del;
     }
 
+
     @Override
     public String toString() {
         return "Classinfo{" +
@@ -123,11 +143,13 @@ public class Classinfo implements Serializable {
                 ", name='" + name + '\'' +
                 ", code='" + code + '\'' +
                 ", pcode='" + pcode + '\'' +
+                ", flower=" + flower +
                 ", sort=" + sort +
                 ", createtime=" + createtime +
                 ", createuser=" + createuser +
                 ", updatetime=" + updatetime +
                 ", updateuser=" + updateuser +
+                ", videoaddress='" + videoaddress + '\'' +
                 ", del=" + del +
                 '}';
     }

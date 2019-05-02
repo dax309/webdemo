@@ -40,7 +40,7 @@
             </a>
         </div>
         <div class="col-md-2" style="float: left;font-size: 23px">
-            <span style="text-align: center">第一节：课程简介</span>
+            <span style="text-align: center">${classinfo.name}</span>
         </div>
     </div>
     <div class="row" style="border-radius: 15px">
@@ -66,13 +66,12 @@
                                      border-radius: 15px;margin:15px auto auto auto" id="vedio">
             <p align="center" style="margin:10px auto auto auto;border-radius: 10px">
                 <video  id="div" width="80%" height="90%" controls="controls">
-                    <source src="video/001.mp4" type="video/mp4">
+                    <source src="video/${classinfo.videoaddress}.mp4" type="video/mp4">
                     你的播放器不支持本视频播放，建议使用谷歌浏览器电脑版
                 </video>
             </p>
         </div>
         <div class="col-md-3" style="float: right;height: 500px;border-radius: 15px;border: 1px solid red">
-               <h1 style="text-align: center"><span style="color: #fefefb">测试</span></h1>
             <span style="color: white;font-size: 25px">讲师：</span>
         </div>
     </div>

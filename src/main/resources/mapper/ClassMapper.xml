@@ -25,4 +25,8 @@
     <select id="seltwoCount" resultType="long">
         select count(*) from p_course where flower = 2
     </select>
+
+    <select id="selcode" resultType="classinfo">
+        select * from p_course where code=#{code}
+    </select>
 </mapper>

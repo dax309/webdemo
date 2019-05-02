@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%--
   Created by IntelliJ IDEA.
   User: dax30
@@ -27,13 +26,13 @@
             <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
         </button>
     </a>
-
-
 </div>
 <div>
 <c:forEach items="${pageInfo.list}" var="classinfo" varStatus="s" >
     <span style="float: left">${classinfo.name}</span>
+    <a href="/playclass?code=${classinfo.code}">
     <span style="float: right">播放</span>
+    </a>
     <br>
 </c:forEach>
 </div>

@@ -15,4 +15,5 @@ public interface ClassMapper {
      long selCount(@Param("pcode") String pcode);
      List<Classinfo> selAlltwoByPage(@Param("flower") int flower, @Param("pageStart") int pageStart, @Param("pageSize") int pageSize);
      long seltwoCount();
+     Classinfo selcode(String code);
 }

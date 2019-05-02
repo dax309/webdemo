@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -65,5 +64,16 @@ public class ClassInfoContraller {
         PageInfo pageInfo =classInfoService.showPage(code,5,Number);
         request.setAttribute("pageInfo",pageInfo);
         return "forward:/classinfofrower";
+    }
+
+
+
+
+    @RequestMapping("/playclass")
+    public String playclass(HttpServletRequest request,ModelMap map){
+        String code = request.getParameter("code");
+        Classinfo classinfo =classInfoService.selcode(code);
+        map.addAttribute("classinfo",classinfo);
+        return "play";
     }
 }

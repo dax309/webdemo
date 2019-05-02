@@ -10,4 +10,6 @@ public interface ClassInfoService {
      List<Classinfo> selAll(String pcode);
      PageInfo showPage(String pcode,int pageSize,int pageNumber);
      PageInfo selAlltwoByPage(int flower,int pageSize,int pageNumber);
+     Classinfo selcode(String code);
+
 }
