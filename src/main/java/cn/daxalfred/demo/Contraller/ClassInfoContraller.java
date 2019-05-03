@@ -50,30 +50,44 @@ public class ClassInfoContraller {
         return pageInfo;
     }
 
-
     @RequestMapping("/classinfo")
-    public String classinfo(HttpServletRequest request){
+    public String classinfo(HttpServletRequest request,ModelMap map){
         String code = request.getParameter("code");
         String pageNumber = request.getParameter("pageNumber");
         int Number;
-        if(pageNumber==null){
+        if(pageNumber==null||pageNumber.equals("")){
             Number =1;
         }else {
             Number = Integer.parseInt(pageNumber);
+            if (Number<=1){
+                Number = 1;
+            }
         }
         PageInfo pageInfo =classInfoService.showPage(code,5,Number);
-        request.setAttribute("pageInfo",pageInfo);
-        return "forward:/classinfofrower";
+        map.addAttribute("pageInfo",pageInfo);
+        map.addAttribute("code",code);
+        return "/class/classInfo";
     }
-
-
-
 
     @RequestMapping("/playclass")
     public String playclass(HttpServletRequest request,ModelMap map){
         String code = request.getParameter("code");
+        //本节信息
         Classinfo classinfo =classInfoService.selcode(code);
+        //本章信息
+        Classinfo classinfo2 = classInfoService.selcode(classinfo.getPcode());
+        //本课程信息
+        Classinfo classinfo1 = classInfoService.selflowerone(classinfo.getPcode());
+        //本课程所有章
+        List<Classinfo> list1 = classInfoService.selAll(classinfo1.getCode());
+        //本章所有节
+        List<Classinfo> list2 = classInfoService.selAll(classinfo.getPcode());
+
         map.addAttribute("classinfo",classinfo);
+        map.addAttribute("classinfo1",classinfo1);
+        map.addAttribute("classinfo2",classinfo2);
+        map.addAttribute("list1",list1);
+        map.addAttribute("list2",list2);
         return "play";
     }
 }

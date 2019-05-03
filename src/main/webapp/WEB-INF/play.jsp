@@ -40,7 +40,10 @@
             </a>
         </div>
         <div class="col-md-2" style="float: left;font-size: 23px">
-            <span style="text-align: center">${classinfo.name}</span>
+            <a href="">
+            <span style="text-align: center;font-weight: bold">${classinfo2.name}</span>
+            </a>
+            <span style="text-align: center">:${classinfo.name}</span>
         </div>
     </div>
     <div class="row" style="border-radius: 15px">
@@ -59,7 +62,6 @@
                 <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
                 <br>
                 <button type="button" class="btn btn-primary btn-lg active">讨论</button><br>
-
             </div>
         </div>
         <div class="col-md-7" style="height: 450px;float: left;background-color: black;
@@ -72,6 +74,10 @@
             </p>
         </div>
         <div class="col-md-3" style="float: right;height: 500px;border-radius: 15px;border: 1px solid red">
+            <br>
+            <br>
+            <br>
+            <br>
             <span style="color: white;font-size: 25px">讲师：</span>
         </div>
     </div>

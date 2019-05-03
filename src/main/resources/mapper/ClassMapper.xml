@@ -29,4 +29,8 @@
     <select id="selcode" resultType="classinfo">
         select * from p_course where code=#{code}
     </select>
+
+    <select id="selone" resultType="classinfo">
+        select * from p_course where code=#{code}
+    </select>
 </mapper>

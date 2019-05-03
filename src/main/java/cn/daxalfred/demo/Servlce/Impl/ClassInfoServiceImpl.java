@@ -55,4 +55,10 @@ public class ClassInfoServiceImpl implements ClassInfoService {
     public Classinfo selcode(String code) {
         return this.classMapper.selcode(code);
     }
+
+    @Override
+    public Classinfo selflowerone(String code) {
+        Classinfo classinfo = this.classMapper.selone(code);
+        return this.classMapper.selone(classinfo.getPcode());
+    }
 }

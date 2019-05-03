@@ -35,6 +35,37 @@
     </a>
     <br>
 </c:forEach>
+    <br>
+    <br>
+    <br>
+    <br>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li>
+                <a href="${pageContext.request.contextPath}/classinfo?pageNumber=${pageInfo.pageNumber-1}&code=${code}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <c:forEach begin="1" end="${pageInfo.total}" var="i">
+                <c:if test="${pageInfo.pageNumber== i}">
+                    <li class="active"><a href="${pageContext.request.contextPath}/classinfo?pageNumber=${i}&code=${code}">${i}</a></li>
+                </c:if>
+                <c:if test="${pageInfo.pageNumber!= i}">
+                    <li><a href="${pageContext.request.contextPath}/classinfo?pageNumber=${i}&code=${code}">${i}</a></li>
+                </c:if>
+            </c:forEach>
+            <li>
+                <c:if test="${pageInfo.pageNumber<pageInfo.total}">
+                     <a href="${pageContext.request.contextPath}/classinfo?pageNumber=${pageInfo.pageNumber+1}&code=${code}" aria-label="Next">
+                </c:if>
+                 <c:if test="${pageInfo.pageNumber>=pageInfo.total}">
+                    <a href="${pageContext.request.contextPath}/classinfo?pageNumber=${pageInfo.total}&code=${code}" aria-label="Next">
+                    </c:if>
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </div>
 
 </body>

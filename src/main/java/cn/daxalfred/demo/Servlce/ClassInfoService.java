@@ -11,5 +11,6 @@ public interface ClassInfoService {
      PageInfo showPage(String pcode,int pageSize,int pageNumber);
      PageInfo selAlltwoByPage(int flower,int pageSize,int pageNumber);
      Classinfo selcode(String code);
+     Classinfo selflowerone(String pcode);
 
 }
