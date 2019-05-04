@@ -90,4 +90,8 @@ public class ClassInfoContraller {
         map.addAttribute("list2",list2);
         return "play";
     }
+
+
+
+
 }

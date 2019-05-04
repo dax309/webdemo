@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="css/custom.css">
 
+
+
+
 </head>
 <body>
 <div class="row col-md-12">
@@ -59,7 +62,9 @@
                 <br>
                 <button type="button" class="btn btn-primary btn-lg active">章节</button><br>
                 <br>
+                <a href="/testIndex">
                 <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
+                </a>
                 <br>
                 <button type="button" class="btn btn-primary btn-lg active">讨论</button><br>
             </div>
@@ -67,11 +72,46 @@
         <div class="col-md-7" style="height: 450px;float: left;background-color: black;
                                      border-radius: 15px;margin:15px auto auto auto" id="vedio">
             <p align="center" style="margin:10px auto auto auto;border-radius: 10px">
-                <video  id="div" width="80%" height="90%" controls="controls">
+                <video  id="video" width="80%" height="90%" autoplay controls>
                     <source src="video/${classinfo.videoaddress}.mp4" type="video/mp4">
                     你的播放器不支持本视频播放，建议使用谷歌浏览器电脑版
                 </video>
+                <br>
+
+                    <button onclick="playPause()">播放/暂停</button>
+                    <button onclick="setPlaySpeed(1)" id="speen" type="button">普通</button>
+                    <button onclick="setPlaySpeed(1.5)" id="speen" type="button">1.5倍</button>
+                    <button onclick="setPlaySpeed(2)" id="speen" type="button">2倍</button>
+
+
+                <%--<script>
+                    var myVideo=document.getElementById("video");
+                    function setPlaySpeed()  {
+
+                        }
+                        //设定新的播放速度2倍速度
+                    }
+
+                </script>--%>
+
+                <script>
+                    var myVideo=document.getElementById("video");
+
+                    function setPlaySpeed(spend)  {
+                         myVideo.playbackRate=spend;//设定新的播放速度2倍速度
+                    }
+                    function playPause(){
+                        if (myVideo.paused)
+                            myVideo.play(); //播放
+                        else
+                            myVideo.pause(); //暂停播放
+                    }
+
+                </script>
+
             </p>
+
+
         </div>
         <div class="col-md-3" style="float: right;height: 500px;border-radius: 15px;border: 1px solid red">
             <br>

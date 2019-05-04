@@ -59,4 +59,12 @@ public class RedirectContraller {
         return "/Compiler/CompilerIndex";
     }
 
+
+
+    /*试题*/
+    @RequestMapping("/testIndex")
+    public String testIndex(){
+        return "/test/testIndex";
+    }
+
 }

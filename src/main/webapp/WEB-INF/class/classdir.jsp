@@ -14,14 +14,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+
     <script type="text/javascript">
+
                 function sdemo(th) {
                     var pcode = $(th).attr('id');
-                    console.log(pcode);
                     $.post("/classinfos", {pcode: pcode}, function (data) {
-                        console.log(data);
                             $("#child").html('');
                             var html = "";
                             $.each(data.list,function (index,classinfo) {
@@ -33,19 +32,19 @@
                             html+="<nav aria-label='Page navigation' style='text-align: center'>\n" +
                                 "  <ul class='pagination'>\n" +
                                 "    <li>\n" +
-                                "      <a onclick='javascript:flowertwo(this,"+pcode+");' id=1 aria-label='Previous'>\n" +
+                                "      <a onclick='javascript:flowertwo(this,"+pcode+");' id= aria-label='Previous'>\n" +
                                 "        <span aria-hidden='true'>&laquo;</span>\n" +
                                 "      </a>\n" +
                                 "    </li>";
                             for(var i = 1;i<=data.total;i++){
-                                if (i == 1){
-                                    html+=" <li class='active'><span  onclick='javascript:flowertwo(this,"+pcode+");' id= "+i+">"+i+"</span></li>";
+                                if (i ==data.pageNumber ){
+                                    html+=" <li class='active'><span  onclick='javascript:flowertwo(this,"+pcode+");' id=" + i +">"+i+"</span></li>";
                                 } else {
-                                    html+=" <li><span  onclick='javascript:flowertwo(this,"+pcode+");' id= "+i+">"+i+"</span></li>";
+                                    html+=" <li><span  onclick='javascript:flowertwo(this,"+pcode+");' id="  + i + ">"+ i + "</span></li>";
                                 }
                             }
                             html+="<li>\n" +
-                                "      <a onclick='javascript:flowertwo(this,"+pcode+");' id=2 aria-label='Next'>\n" +
+                                "      <a onclick='javascript:flowertwo(this,"+pcode+");'  aria-label='Next'>\n" +
                                 "        <span aria-hidden='true'>&raquo;</span>\n" +
                                 "      </a>\n" +
                                 "    </li>\n" +
@@ -55,11 +54,11 @@
                     }, "json");
                 }
 
-                function flowertwo(th,tpcode) {
+                function flowertwo(th,pcode) {
                     var pageNumber = $(th).attr('id');
-                    var pcode=$(tpcode).attr("id");
-                    console.log(pcode);
-                    $.post("/classinfos", {pcode:tpcode ,pageNumber:pageNumber}, function (data) {
+                    var code = $(pcode).attr("id");
+                    console.log(code);
+                    $.post("/classinfos", {pcode:code ,pageNumber:pageNumber}, function (data) {
                         $("#child").html('');
                         var html = "";
                         $.each(data.list,function (index,classinfo) {
