@@ -72,22 +72,17 @@ public class ClassInfoContraller {
     @RequestMapping("/playclass")
     public String playclass(HttpServletRequest request,ModelMap map){
         String code = request.getParameter("code");
-        //本节信息
         Classinfo classinfo =classInfoService.selcode(code);
-        //本章信息
         Classinfo classinfo2 = classInfoService.selcode(classinfo.getPcode());
-        //本课程信息
         Classinfo classinfo1 = classInfoService.selflowerone(classinfo.getPcode());
-        //本课程所有章
         List<Classinfo> list1 = classInfoService.selAll(classinfo1.getCode());
-        //本章所有节
         List<Classinfo> list2 = classInfoService.selAll(classinfo.getPcode());
 
-        map.addAttribute("classinfo",classinfo);
-        map.addAttribute("classinfo1",classinfo1);
-        map.addAttribute("classinfo2",classinfo2);
-        map.addAttribute("list1",list1);
-        map.addAttribute("list2",list2);
+        map.addAttribute("classinfo",classinfo);     //本节信息
+        map.addAttribute("classinfo1",classinfo1);   //本课程信息
+        map.addAttribute("classinfo2",classinfo2);   //本章信息
+        map.addAttribute("list1",list1);             //本课程所有章
+        map.addAttribute("list2",list2);             //本章所有节
         return "play";
     }
 

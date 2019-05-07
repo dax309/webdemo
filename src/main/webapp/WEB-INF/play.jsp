@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: dax30
@@ -21,8 +22,14 @@
     <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="css/custom.css">
+    <script type="text/javascript">
+       function click(){
+            $(this).siblings().slideToggle(1500);
 
 
+
+       }
+    </script>
 
 
 </head>
@@ -37,7 +44,7 @@
     <div class="row" style="border-radius: 15px">
         <div style="float: left;">
             <a href="javascript:history.back(-1)">
-                <button type="button" class="btn btn-default" aria-label="Left Align">
+                <button type="button" class="btn btn-default" aria-label="Left Align" style="cursor: pointer">
                     <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
                 </button>
             </a>
@@ -54,19 +61,19 @@
     </div>
 
     <div class="row" style="background-color: #1c1b17;border-radius: 15px">
-        <div class="col-md-2"  style="float: left;border-radius: 15px">
+        <div class="col-md-1"  style="float: left;border-radius: 15px">
             <div style="border-radius: 15px;height: 450px">
                 <br>
                 <br>
                 <br>
                 <br>
-                <button type="button" class="btn btn-primary btn-lg active">章节</button><br>
+                <%--<button type="button" class="btn btn-primary btn-lg active">章节</button><br>
                 <br>
                 <a href="/testIndex">
                 <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
                 </a>
                 <br>
-                <button type="button" class="btn btn-primary btn-lg active">讨论</button><br>
+                <button type="button" class="btn btn-primary btn-lg active">讨论</button><br>--%>
             </div>
         </div>
         <div class="col-md-7" style="height: 450px;float: left;background-color: black;
@@ -79,21 +86,10 @@
                 <br>
 
                     <button onclick="playPause()">播放/暂停</button>
-                    <button onclick="setPlaySpeed(1)" id="speen" type="button">普通</button>
-                    <button onclick="setPlaySpeed(1.5)" id="speen" type="button">1.5倍</button>
-                    <button onclick="setPlaySpeed(2)" id="speen" type="button">2倍</button>
-
-
-                <%--<script>
-                    var myVideo=document.getElementById("video");
-                    function setPlaySpeed()  {
-
-                        }
-                        //设定新的播放速度2倍速度
-                    }
-
-                </script>--%>
-
+                    <button id="normal" onclick="setPlaySpeed(0.75)"  type="button">0.75倍速</button>
+                    <button id="normal" onclick="setPlaySpeed(1)"  type="button">普通</button>
+                    <button id="onetimes" onclick="setPlaySpeed(1.5)"  type="button">1.5倍</button>
+                    <button id="twotimes" onclick="setPlaySpeed(2)"  type="button">2倍</button>
                 <script>
                     var myVideo=document.getElementById("video");
 
@@ -106,22 +102,18 @@
                         else
                             myVideo.pause(); //暂停播放
                     }
-
                 </script>
-
             </p>
-
-
         </div>
-        <div class="col-md-3" style="float: right;height: 500px;border-radius: 15px;border: 1px solid red">
-            <br>
-            <br>
-            <br>
-            <br>
-            <span style="color: white;font-size: 25px">讲师：</span>
+        <div class="col-md-4" style="float: right;height: 500px;border-radius: 15px;border: 1px solid red">
+            <c:forEach var="classinfo" items="${list1}" varStatus="s">
+                <button type="button" id="${classinfo.code}" onclick='javascript:click(this);' class="btn btn-primary btn-lg active" >${classinfo.name}</button>
+                <br>
+            </c:forEach>
         </div>
     </div>
 </div>
+<hr style="width:80%;margin:0 auto;border: 0;height: 0;border-top: 1px solid rgba(0, 0, 0, 0.1);border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
 <!-- 引入footer.jsp -->
 <jsp:include page="/footer.jsp"></jsp:include>
 </body>
