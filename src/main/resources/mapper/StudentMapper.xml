@@ -22,4 +22,10 @@
     <update id="updateinfo">
         update student  set email=#{email},realname=#{realname},gender=#{gender},birthday=#{birthday} where username=#{username}
     </update>
+    <select id="selpass" resultType="int">
+        select count(*) from student where username=#{username} and password=#{password}
+    </select>
+    <update id="updatepwd">
+        update student set password=#{password} where username=#{username}
+    </update>
 </mapper>

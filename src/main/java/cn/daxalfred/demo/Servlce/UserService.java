@@ -11,4 +11,6 @@ public interface UserService {
     Student login(String username,String password);
     Student getinfo(String name);
     int updateinfo(String username, String email, String realname, int gender, Date birthday);
+    int selpass(String username,String password);
+    int updatepwd(String username,String password);
 }

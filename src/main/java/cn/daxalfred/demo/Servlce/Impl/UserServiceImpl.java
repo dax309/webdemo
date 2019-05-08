@@ -42,4 +42,16 @@ public class UserServiceImpl implements UserService {
 
         return this.studentMapper.updateinfo(username,email,realname,gender,birthday);
     }
+
+    @Override
+    public int selpass(String username, String password) {
+        return this.studentMapper.selpass(username,password);
+    }
+
+    @Override
+    public int updatepwd(String username, String password) {
+        return this.studentMapper.updatepwd(username,password);
+    }
+
+
 }

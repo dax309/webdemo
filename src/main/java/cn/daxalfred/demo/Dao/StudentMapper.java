@@ -21,4 +21,6 @@ public interface StudentMapper {
                     @Param("realname") String realname,
                     @Param("gender") int gender,
                     @Param("birthday") Date birthday);
+     int selpass(@Param("username")String username,@Param("password")String password);
+     int updatepwd(@Param("username")String username,@Param("password")String password);
 }

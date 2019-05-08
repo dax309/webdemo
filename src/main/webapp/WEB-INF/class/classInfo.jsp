@@ -20,26 +20,26 @@
     <jsp:include page="/header.jsp"></jsp:include>
 </div>
 
-<div style="float: left;">
+<div style="float: left;" class="col-md-12">
     <a href="javascript:history.back(-1)">
         <button type="button" class="btn btn-default" aria-label="Left Align">
             <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
         </button>
     </a>
 </div>
-<div>
+<br>
+<div class="col-md-4"></div>
+<div class="col-md-5">
 <c:forEach items="${pageInfo.list}" var="classinfo" varStatus="s" >
     <span style="float: left">${classinfo.name}</span>
     <a href="/playclass?code=${classinfo.code}">
     <span style="float: right">播放</span>
     </a>
     <br>
+    <hr>
 </c:forEach>
-    <br>
-    <br>
-    <br>
-    <br>
-    <nav aria-label="Page navigation">
+
+    <nav aria-label="Page navigation" style="text-align: center">
         <ul class="pagination">
             <li>
                 <a href="${pageContext.request.contextPath}/classinfo?pageNumber=${pageInfo.pageNumber-1}&code=${code}" aria-label="Previous">
@@ -67,6 +67,8 @@
         </ul>
     </nav>
 </div>
+
+<div class="col-md-3"></div>
 
 </body>
 </html>

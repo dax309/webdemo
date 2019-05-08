@@ -85,14 +85,13 @@
                 </video>
                 <br>
 
-                    <button onclick="playPause()">播放/暂停</button>
-                    <button id="normal" onclick="setPlaySpeed(0.75)"  type="button">0.75倍速</button>
-                    <button id="normal" onclick="setPlaySpeed(1)"  type="button">普通</button>
-                    <button id="onetimes" onclick="setPlaySpeed(1.5)"  type="button">1.5倍</button>
-                    <button id="twotimes" onclick="setPlaySpeed(2)"  type="button">2倍</button>
+                    <button  onclick="playPause()">播放/暂停</button>
+                    <button  onclick="setPlaySpeed(0.75)"  type="button">0.75倍速</button>
+                    <button  onclick="setPlaySpeed(1)"  type="button">普通</button>
+                    <button  onclick="setPlaySpeed(1.5)"  type="button">1.5倍</button>
+                    <button  onclick="setPlaySpeed(2)"  type="button">2倍</button>
                 <script>
                     var myVideo=document.getElementById("video");
-
                     function setPlaySpeed(spend)  {
                          myVideo.playbackRate=spend;//设定新的播放速度2倍速度
                     }
@@ -109,6 +108,7 @@
             <c:forEach var="classinfo" items="${list1}" varStatus="s">
                 <button type="button" id="${classinfo.code}" onclick='javascript:click(this);' class="btn btn-primary btn-lg active" >${classinfo.name}</button>
                 <br>
+
             </c:forEach>
         </div>
     </div>

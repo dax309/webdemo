@@ -59,8 +59,19 @@ public class StudentController {
     //Ajax验证用户名是否已注册
     @PostMapping("/userCentre")
     public void userCentre(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String username = request.getParameter("username");
-        boolean flag = userService.selOne(username)>0?false:true;
+        String usernamer = request.getParameter("username");
+        boolean flag = userService.selOne(usernamer)>0?false:true;
+        String json = "{\"flag\":" + flag + "}";
+        response.getWriter().write(json);
+    }
+
+    //Ajax验证旧密码是否正确
+    @RequestMapping("/passwordCentre")
+    public void passwordCentre(HttpServletRequest request,HttpServletResponse response,HttpSession session) throws IOException {
+        String password = request.getParameter("oldpassword");
+        Student student = (Student) session.getAttribute("student");
+        String username = student.getUsername();
+        boolean flag = userService.selpass(username,MD5Utils.md5(password))<1?false:true;
         String json = "{\"flag\":" + flag + "}";
         response.getWriter().write(json);
     }
@@ -183,6 +194,16 @@ public class StudentController {
             session.setAttribute("student",student);
             info = true;
         }
+        String json = "{\"info\":" + info + "}";
+        response.getWriter().write(json);
+    }
+
+    @RequestMapping("/updatepwd")
+    public void updatepwd(HttpServletRequest request,HttpSession session,HttpServletResponse response) throws IOException {
+        String password = request.getParameter("password");
+        Student student = (Student) session.getAttribute("student");
+        boolean info = userService.updatepwd(student.getUsername(),MD5Utils.md5(password))<0?false:true;
+        System.out.println(info);
         String json = "{\"info\":" + info + "}";
         response.getWriter().write(json);
     }

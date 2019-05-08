@@ -14,13 +14,17 @@
 <body>
 <div class="col-md-12">
     <div style="width: 100%"><jsp:include page="/header.jsp"></jsp:include></div>
-    <div style="float: left;border: 1px solid red">
+    <div style="float: left;">
         <br><br>
         <br>
         <a href="/studentupdate">
             <button type="button" class="btn btn-default btn-lg btn-block">修改个人信息</button>
         </a>
             <br>
+        <a href="/updatepassword">
+            <button type="button" class="btn btn-default btn-lg btn-block">修&nbsp;&nbsp;改&nbsp;&nbsp;密&nbsp;&nbsp;码</button>
+        </a>
+        <br>
             <button type="button" class="btn btn-default btn-lg btn-block">个人学习记录</button>
             <br>
             <button type="button" class="btn btn-default btn-lg btn-block">考试成绩查看</button>

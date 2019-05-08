@@ -67,4 +67,9 @@ public class RedirectContraller {
         return "/test/testIndex";
     }
 
+    @RequestMapping("/updatepassword")
+    public String updatepassword(){
+        return "/student/updatepassword";
+    }
+
 }
