@@ -17,7 +17,6 @@
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-
                 function sdemo(th) {
                     var pcode = $(th).attr('id');
                     $.post("/classinfos", {pcode: pcode}, function (data) {
@@ -32,19 +31,20 @@
                             html+="<nav aria-label='Page navigation' style='text-align: center'>\n" +
                                 "  <ul class='pagination'>\n" +
                                 "    <li>\n" +
-                                "      <a onclick='javascript:flowertwo(this,"+pcode+");' id= aria-label='Previous'>\n" +
+                                "      <a onclick='javascript:flowertwo(this,"+pcode+");' id="+  --data.pageNumber  +"  aria-label='Previous'>\n" +
                                 "        <span aria-hidden='true'>&laquo;</span>\n" +
                                 "      </a>\n" +
                                 "    </li>";
                             for(var i = 1;i<=data.total;i++){
-                                if (i ==data.pageNumber ){
+                                if (i == data.pageNumber ){
                                     html+=" <li class='active'><span  onclick='javascript:flowertwo(this,"+pcode+");' id=" + i +">"+i+"</span></li>";
                                 } else {
-                                    html+=" <li><span  onclick='javascript:flowertwo(this,"+pcode+");' id="  + i + ">"+ i + "</span></li>";
+                                    console.log(i);
+                                    html+=" <li><span  onclick='javascript:flowertwo(this,"+pcode+");' id=" + i + ">"+ i + "</span></li>";
                                 }
                             }
                             html+="<li>\n" +
-                                "      <a onclick='javascript:flowertwo(this,"+pcode+");'  aria-label='Next'>\n" +
+                                "      <a onclick='javascript:flowertwo(this,"+pcode+");' id="+  ++data.pageNumber  +"  aria-label='Next'>\n" +
                                 "        <span aria-hidden='true'>&raquo;</span>\n" +
                                 "      </a>\n" +
                                 "    </li>\n" +
@@ -70,22 +70,22 @@
                         html+="<nav aria-label='Page navigation' style='text-align: center'>\n" +
                             "  <ul class='pagination'>\n" +
                             "    <li>\n" +
-                            "      <a onclick='javascript:flowertwo(this);' id=" + (pageNumber-1)+ " aria-label='Previous'>\n" +
+                            "      <a onclick='javascript:flowertwo(this,"+pcode+");' id=" + (pageNumber-1)+ " aria-label='Previous'>\n" +
                             "        <span aria-hidden='true'>&laquo;</span>\n" +
                             "      </a>\n" +
                             "    </li>";
                         for(var i = 1;i<=data.total;i++){
                             if (i == pageNumber) {
-                                html+=" <li class='active'><span  onclick='javascript:flowertwo(this);' id= "+ i +">"+i+"</span></li>";
+                                html+=" <li class='active'><span  onclick='javascript:flowertwo(this,"+pcode+");' id= "+ i +">"+i+"</span></li>";
                             }else {
-                                html+=" <li><span  onclick='javascript:flowertwo(this);' id= "+i+">"+i+"</span></li>";
+                                html+=" <li><span  onclick='javascript:flowertwo(this,"+pcode+");' id= "+i+">"+i+"</span></li>";
                             }
                         }
                         html+="<li>\n" ;
                         if(pageNumber == data.total){
-                            html+="      <a onclick='javascript:flowertwo(this);' id=" + pageNumber+ " aria-label=\"Next\">\n";
+                            html+="      <a onclick='javascript:flowertwo(this,"+pcode+");' id=" + pageNumber+ " aria-label=\"Next\">\n";
                         }else {
-                            html+="      <a onclick='javascript:flowertwo(this);' id=" + (++pageNumber)+ " aria-label=\"Next\">\n";
+                            html+="      <a onclick='javascript:flowertwo(this,"+pcode+");' id=" + (++pageNumber)+ " aria-label=\"Next\">\n";
                         }
                         html+=
 
@@ -110,7 +110,7 @@
 </div>
 <div class="col-md-12" style="float: left;">
     <div>
-        <span>课程：${pcode}</span>
+        <span>课程：</span>
     </div>
     <hr style="border: solid red" />
     <div style="text-align: center;float: left;margin: 20px">

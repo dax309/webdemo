@@ -72,4 +72,12 @@ public class RedirectContraller {
         return "/student/updatepassword";
     }
 
+
+
+    /*编译*/
+    @RequestMapping("/ctest")
+    public String ctest(){
+        return "/Compiler/test";
+    }
+
 }

@@ -40,7 +40,6 @@ public class ClassInfoContraller {
         }else {
             Number = Integer.parseInt(pageNumber);
         }
-
         if(pcode.equals("all")){
             pageInfo = classInfoService.selAlltwoByPage(
                             2, 5, Number);
@@ -64,6 +63,7 @@ public class ClassInfoContraller {
             }
         }
         PageInfo pageInfo =classInfoService.showPage(code,5,Number);
+        pageInfo.setPageNumber(Number);
         map.addAttribute("pageInfo",pageInfo);
         map.addAttribute("code",code);
         return "/class/classInfo";
@@ -77,7 +77,6 @@ public class ClassInfoContraller {
         Classinfo classinfo1 = classInfoService.selflowerone(classinfo.getPcode());
         List<Classinfo> list1 = classInfoService.selAll(classinfo1.getCode());
         List<Classinfo> list2 = classInfoService.selAll(classinfo.getPcode());
-
         map.addAttribute("classinfo",classinfo);     //本节信息
         map.addAttribute("classinfo1",classinfo1);   //本课程信息
         map.addAttribute("classinfo2",classinfo2);   //本章信息

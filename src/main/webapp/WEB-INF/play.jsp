@@ -67,8 +67,16 @@
                 <br>
                 <br>
                 <br>
-                <%--<button type="button" class="btn btn-primary btn-lg active">章节</button><br>
                 <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="/Compiler">
+                <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
+                </a>
+                <br>
+                <%--
                 <a href="/testIndex">
                 <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
                 </a>
