@@ -5,4 +5,35 @@
     <select id="login" resultType="Admin">
         SELECT * FROM p_admin where username=#{username} AND password=#{password}
     </select>
+
+    <!-- 获取教师数据总量 -->
+    <select id="getTeacherTotal" resultType="int">
+		SELECT COUNT(*) FROM p_admin
+	</select>
+
+
+    <select id="getTeachers" resultType="admin">
+        select * from p_admin limit #{startIndex},#{pageSize}
+    </select>
+
+    <select id="getTeacherById" resultType="admin">
+        select * from p_admin where ID =#{ID}
+    </select>
+
+    <update id="isUpdateTeacherInfo" parameterType="admin">
+        UPDATE p_admin SET realname=#{realname}, username=#{username},
+			password=#{password}, adminPower=#{adminPower}
+		WHERE ID=#{ID}
+    </update>
+
+    <insert id="isAddTeacherInfo" parameterType="admin">
+        INSERT INTO p_admin VALUES(NULL, #{realname}, #{username}, #{password}, #{adminPower})
+    </insert>
+
+    <delete id="isDelTeacherInfo" parameterType="int">
+		DELETE FROM p_admin WHERE id=#{ID}
+	</delete>
+
+
+
 </mapper>

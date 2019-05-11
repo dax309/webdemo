@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface StudentMapper {
@@ -23,4 +25,13 @@ public interface StudentMapper {
                     @Param("birthday") Date birthday);
      int selpass(@Param("username")String username,@Param("password")String password);
      int updatepwd(@Param("username")String username,@Param("password")String password);
+     public List<Student> getStudents(@Param("pageStart")int pageStart,@Param("pageSize")int pageSize);
+
+     int getStudentTotal();
+
+     int isUpdateStudent(Student student);
+     int isAddStudent(Student student);
+     int isDelStudent(int ID);
+     Student getStudentById(int ID);
 }
+

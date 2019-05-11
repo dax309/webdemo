@@ -28,4 +28,32 @@
     <update id="updatepwd">
         update student set password=#{password} where username=#{username}
     </update>
+
+
+    <select id="getStudents" resultType="student">
+        SELECT * FROM student limit #{pageStart},#{pageSize}
+    </select>
+
+    <select id="getStudentTotal" resultType="int">
+        select count(*) from student;
+    </select>
+
+    <update id="isUpdateStudent" parameterType="student">
+		UPDATE student SET
+		realname=#{realname}, username=#{username}, password=#{password},gender=#{gender},email=#{email},birthday=#{birthday}
+		WHERE ID=#{ID}
+	</update>
+
+    <insert id="isAddStudent" parameterType="student">
+		INSERT INTO student VALUES(NULL, #{username}, #{password}, #{reallname}, #{gender},#{email},#{birthday})
+	</insert>
+
+    <delete id="isDelStudent" parameterType="int">
+		DELETE FROM student WHERE ID=#{ID}
+	</delete>
+
+
+    <select id="getStudentById" resultType="student">
+        select * from student where ID=#{ID}
+    </select>
 </mapper>

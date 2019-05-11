@@ -9,8 +9,8 @@ import com.wf.captcha.SpecCaptcha;
 import com.wf.captcha.utils.CaptchaUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +21,9 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 public class StudentController {
@@ -206,5 +209,92 @@ public class StudentController {
         System.out.println(info);
         String json = "{\"info\":" + info + "}";
         response.getWriter().write(json);
+    }
+
+
+    @RequestMapping("/students")
+    public ModelAndView getCourses(@RequestParam(value = "studentId", required = false) Integer studentId,
+                                   @RequestParam(value="startPage", required=false, defaultValue="1") Integer startPage,
+                                   @RequestParam(value="pageShow", required=false, defaultValue="10") Integer pageShow ) {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("/admin/students");
+
+        //查询条件处理
+        Student student = new Student();
+        if (studentId != null)
+            student.setID(studentId);
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        //计算当前查询起始数据索引
+        int startIndex = (startPage-1) * pageShow;
+        map.put("student", student);
+        map.put("startIndex", startIndex);
+        map.put("pageShow", pageShow);
+        List<Student> students = userService.getStudents(startIndex,10);
+        model.addObject("students", students);
+
+        //获取学生总量
+        int studentTotal = userService.getStudentTotal();
+        //计算总页数
+        int pageTotal = 1;
+        if (studentTotal % pageShow == 0)
+            pageTotal = studentTotal / pageShow;
+        else
+            pageTotal = studentTotal / pageShow + 1;
+        model.addObject("pageTotal", pageTotal);
+        model.addObject("pageNow", startPage);
+
+        return model;
+    }
+
+
+    @RequestMapping("/student/{studentId}")
+    public ModelAndView getCourseById(@PathVariable("studentId") Integer studentId) {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("/admin/studentedit");
+
+        Student student = userService.getStudentById(studentId);
+        model.addObject("student", student);
+
+        return model;
+    }
+
+
+
+
+    @RequestMapping(value = "/student/student", method = RequestMethod.POST)
+    public String isUpdateOrAddCourse(
+            @RequestParam(value = "studentId", required = false) Integer studentId,
+            @RequestParam(value = "isupdate", required = false) Integer isUpdate,
+            @RequestParam(value = "studentName", required = false) String studentName,
+            @RequestParam("studentAccount") String studentAccount,
+            @RequestParam("studentPwd") String studentPwd) {
+
+        Student student = new Student();
+        student.setID(studentId);
+        student.setRealname(studentName);
+        student.setUsername(studentAccount);
+        student.setPassword(studentPwd);
+
+        if (isUpdate != null) {
+            int row = userService.isUpdateStudent(student);
+        } else {
+            int row = userService.isAddStudent(student);
+        }
+
+        return "redirect:/students";
+    }
+
+    /**
+     * 删除学生
+     * @param studentId
+     * @return
+     */
+    @RequestMapping(value = "/student/{studentId}", method = RequestMethod.DELETE)
+    public String isDelTeacher(@PathVariable("studentId") Integer studentId) {
+
+        int row = userService.isDelStudent(studentId);
+
+        return "redirect:/students";
     }
 }

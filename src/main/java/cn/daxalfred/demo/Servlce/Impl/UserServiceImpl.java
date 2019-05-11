@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 @Service("UserService")
 public class UserServiceImpl implements UserService {
@@ -51,6 +53,36 @@ public class UserServiceImpl implements UserService {
     @Override
     public int updatepwd(String username, String password) {
         return this.studentMapper.updatepwd(username,password);
+    }
+
+    @Override
+    public List<Student> getStudents(int pageStart,int pageSize) {
+        return this.studentMapper.getStudents(pageStart,pageSize);
+    }
+
+    @Override
+    public int getStudentTotal() {
+        return this.studentMapper.getStudentTotal();
+    }
+
+    @Override
+    public int isUpdateStudent(Student student) {
+        return this.studentMapper.isUpdateStudent(student);
+    }
+
+    @Override
+    public int isAddStudent(Student student) {
+        return this.studentMapper.isAddStudent(student);
+    }
+
+    @Override
+    public int isDelStudent(int ID) {
+        return this.studentMapper.isDelStudent(ID);
+    }
+
+    @Override
+    public Student getStudentById(int ID) {
+        return this.studentMapper.getStudentById(ID);
     }
 
 

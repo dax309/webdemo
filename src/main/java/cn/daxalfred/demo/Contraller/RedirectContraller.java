@@ -37,12 +37,37 @@ public class RedirectContraller {
     /*管理员*/
 
     //管理员主页
-    @RequestMapping("/admin")
+    @RequestMapping("/adminindex")
     public String admin(){
         return "/admin/index";
     }
 
 
+    @RequestMapping("adminhead")
+    public String adminhead(){
+        return "admin/head";
+    }
+
+
+    @RequestMapping("adminleft")
+    public String adminleft(){
+        return "admin/left";
+    }
+
+    @RequestMapping("adminnav")
+    public String adminnav(){
+        return "admin/nav";
+    }
+
+    @RequestMapping("adminhome")
+    public String adminhome(){
+        return "admin/home";
+    }
+
+    @RequestMapping("adminteacheredit")
+    public String adminteacheredit(){
+        return "admin/teacheredit";
+    }
 
 
     /*课程*/
@@ -72,6 +97,11 @@ public class RedirectContraller {
         return "/student/updatepassword";
     }
 
+    @RequestMapping("/home")
+    public String home(){
+        return "/admin/home";
+    }
+
 
 
     /*编译*/
@@ -79,5 +109,8 @@ public class RedirectContraller {
     public String ctest(){
         return "/Compiler/test";
     }
+
+
+
 
 }
