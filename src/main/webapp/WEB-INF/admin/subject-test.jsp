@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Insert title here</title>
+<title></title>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -14,7 +14,7 @@
 			+ path;
 %>
 <c:set var="path" value="<%=basePath%>"></c:set>
-<link href="${path }/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+<link href="${path }/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="${path }/js/bootstrap-select/bootstrap-select.min.css"
 	rel="stylesheet" />
 <link rel="stylesheet" type="text/css"
@@ -238,64 +238,14 @@ function selectType(e){
 						</div>
 						</div>
 						<div class="col-md-6 column">
-						<div class="form-group">
-							<label for="division" class="col-sm-5 control-label">分科情况</label>
-							<div class="col-sm-5">
-								<select class="selectpicker" name="division" id="division"
-									data-live-search="true">
-									<c:if test="${subject == null }">
-									<option value="0" style="display: none;">未分科</option>
-									</c:if>
-									<c:if test="${subject != null }">
-										<option style="display: none;" value="${subject.division }">
-											<c:if test="${subject.division == 0 }">未分科</c:if>
-											<c:if test="${subject.division == 1 }">文科</c:if>
-											<c:if test="${subject.division == 2 }">理科</c:if>
-										</option>
-									</c:if>
-									<option value="0">未分科</option>
-									<option value="1">文科</option>
-									<option value="2">理科</option>
-								</select>
-							</div>
-						</div>
+
 						</div>
 						<div class="row clearfix" >
 						<div class="col-md-6 column" style="margin-top:5px;">
-						<div class="form-group">
-							<label for="courseId" class="col-sm-5 control-label" style="padding-left: 30px;">所属科目</label>
-							<div class="col-sm-5" style="padding-left: 22px;">
-								<select class="selectpicker" name="course.courseId"
-									id="courseId" data-live-search="true">
-									<c:if test="${subject != null }">
-											<option value="${subject.course.courseId }" style="display: none;">
-												${subject.course.courseName }
-											</option>
-										</c:if>
-									<c:forEach items="${courses }" var="course">
-									<option value="${course.courseId }">${course.courseName }</option>
-									</c:forEach>
-								</select>
-							</div>
-						</div>
+
 						</div>
 						<div class="col-md-6 column" style="margin-top:5px;">
-						<div class="form-group">
-							<label for="gradeId" class="col-sm-5 control-label">所属年级</label>
-							<div class="col-sm-5" style="padding-left: 8px;">
-								<select class="selectpicker" name="grade.gradeId" id="gradeId"
-									data-live-search="true">
-									<c:if test="${subject != null }">
-											<option value="${subject.grade.gradeId }" style="display: none;">
-												${subject.grade.gradeName }
-											</option>
-										</c:if>
-									<c:forEach items="${grades }" var="grade">
-									<option value="${grade.gradeId }">${grade.gradeName }</option>
-									</c:forEach>
-								</select>
-							</div>
-						</div>
+
 						</div>
 						<div class="row clearfix">
 						<div class="col-md-12 column" style="margin-top:5px;">
@@ -331,8 +281,8 @@ function selectType(e){
 	</form>
 
 	<!-- js引入 -->
-	<script src="${path }/js/jquery.js"></script>
-	<script src="${path }/js/bootstrap/bootstrap.min.js"></script>
+    <script src="${path }/js/jquery1.10.js"></script>
+	<script src="${path }/bootstrap/js/bootstrap.min.js"></script>
 	<script src="${path }/js/bootstrap-select/bootstrap-select.min.js"></script>
 	<script src="${path }/js/zeroModal/zeroModal.min.js"></script>
 	<script type="text/javascript">

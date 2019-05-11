@@ -74,12 +74,12 @@
 
         <dl class="app">
             <dt onClick="changeImage()">试卷管理<img src="${path }/images/left/select_xl01.png" /></dt>
-            <dd class="first_dd"><a href="../examPapers" target="right" id="6" class="handle-view">&emsp;所有试卷&emsp;&emsp;&emsp;</a></dd>
+            <dd class="first_dd"><a href="/examPapers" target="right" id="6" class="handle-view">&emsp;所有试卷&emsp;&emsp;&emsp;</a></dd>
         </dl>
 
         <dl class="cloud">
             <dt>试题管理<img src="${path }/images/left/select_xl01.png" /></dt>
-            <dd class="first_dd"><a href="../subjects" target="right" id="7" class="handle-view">&emsp;所有试题&emsp;&emsp;&emsp;</a></dd>
+            <dd class="first_dd"><a href="/subjects" target="right" id="7" class="handle-view">&emsp;所有试题&emsp;&emsp;&emsp;</a></dd>
         </dl>
     </div>
 </div>

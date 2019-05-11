@@ -13,7 +13,7 @@
 	    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
     %>
 	<c:set var="path" value="<%=basePath %>"></c:set>
- 	<link href="${path }/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+ 	<link href="${path }/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
  	<link rel="stylesheet" type="text/css" href="${path }/js/zeroModal/zeroModal.css" />
  	<link href="${path }/js/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
  	<link rel="stylesheet" type="text/css" href="${path }/js/zeroModal/zeroModal.css" />
@@ -87,27 +87,6 @@
 							</div>
 						</div>
 						<div class="form-group">
-							 <label for="gradeId" class="col-sm-2 control-label">所属年级</label>
-							<div class="col-sm-5">
-								<select class="selectpicker" name="gradeId" id="gradeId" data-live-search="true">
-									<c:if test="${examPaper != null }">
-										<option value="${examPaper.grade.gradeId }" style="display: none;">
-											${examPaper.grade.gradeName }
-										</option>
-									</c:if>
-									<c:if test="${examPaper == null }">
-										<option value="1" style="display: none;">
-											--请选择--
-										</option>
-									</c:if>
-									
-									<c:forEach items="${grades }" var="grade">
-									<option value="${grade.gradeId }">${grade.gradeName }</option>
-									</c:forEach>
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
 							 <label for="examPaperName" class="col-sm-2 control-label">试卷名称</label>
 							<div class="col-sm-5">
 								<input class="form-control" id="examPaperName" name="examPaperName" type="text" value="${examPaper.examPaperName }" placeholder="试卷名称" />
@@ -135,12 +114,6 @@
 								</c:if>
 							</div>
 						</div>
-						<div class="form-group">
-							 <label for="examPaperTime" class="col-sm-2 control-label">考试时长</label>
-							<div class="col-sm-5">
-								<input class="form-control" id="examPaperTime" name="examPaperTime" type="text" value="${examPaper.examPaperTime }" placeholder="当前试卷考试时长" />
-							</div>
-						</div>
 						<br />
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-4">
@@ -157,8 +130,8 @@
 
 
 	<!-- js引入 -->
-    <script src="${path }/js/jquery.js"></script>
-    <script src="${path }/js/bootstrap/bootstrap.min.js"></script>
+    <script src="${path }/js/jquery1.10.js"></script>
+    <script src="${path }/bootstrap/js/bootstrap.min.js"></script>
     <script src="${path }/js/zeroModal/zeroModal.min.js"></script>
     <script src="${path }/js/add-update.js"></script>
     <script src="${path }/js/bootstrap-select/bootstrap-select.min.js"></script>

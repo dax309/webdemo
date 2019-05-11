@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.daxalfred.demo.Dao.ExamPaperMapper">
+
+
+    <select id="pageShow" resultType="exampaper">
+        select * from ExamPaperInfo limit #{startIndex}, #{pageShow}
+    </select>
+
+    <select id="getExamPpaerTotal" resultType="int">
+        select count(*) from ExamPaperInfo
+    </select>
+
+    <select id="getExamPaperById" resultType="exampaper">
+        select * from ExamPaperInfo where examPaperId=#{examPaperId}
+    </select>
+
+
+    <delete id="isDelExamPaper">
+       DELETE FROM ExamPaperInfo WHERE examPaperId=#{examPaperId}
+    </delete>
+
+    <update id="isUpdateExamPaper" parameterType="exampaper">
+		UPDATE ExamPaperInfo SET
+		examPaperName=#{examPaperName}, subjectNum=#{subjectNum},
+		examPaperScore=#{examPaperScore}, division=#{division}, examPaperEasy=#{examPaperEasy}
+		WHERE examPaperId=#{examPaperId}
+	</update>
+
+    <insert id="isAddExamPaper" parameterType="exampaper">
+		INSERT INTO ExamPaperInfo VALUES(NULL, #{examPaperName}, #{subjectNum}, #{examPaperTime}, #{examPaperScore}, #{division}, #{examPaperEasy})
+	</insert>
+
+
+
+
+
+
+
+
+</mapper>

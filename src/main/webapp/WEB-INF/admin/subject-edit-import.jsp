@@ -12,7 +12,7 @@
 	    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
     %>
 	<c:set var="path" value="<%=basePath %>"></c:set>
- 	<link href="${path }/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+ 	<link href="${path }/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
  	<link href="${path }/js/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
  	<link rel="stylesheet" type="text/css" href="${path }/js/zeroModal/zeroModal.css" />
  	<style type="text/css">
@@ -26,8 +26,8 @@
 
 
 	<!-- js引入 -->
-    <script src="${path }/js/jquery.js"></script>
-    <script src="${path }/js/bootstrap/bootstrap.min.js"></script>
+    <script src="${path }/js/jquery1.10.js"></script>
+    <script src="${path }/bootstrap/js/bootstrap.min.js"></script>
     <script src="${path }/js/bootstrap-select/bootstrap-select.min.js"></script>
     <script type="text/javascript">
     	$('.selectpicker').selectpicker({

@@ -23,6 +23,9 @@ public class loginInterceptor implements HandlerInterceptor {
             return true;
         }else if (requestURI.endsWith("login")||requestURI.endsWith("checkCode")||requestURI.endsWith("register")||requestURI.contains("userCentre")) {
             return true;
+        }else if (requestURI.endsWith("adminindex")){
+            httpServletResponse.sendRedirect("/adminlogin.jsp");
+            return false;
         }else{
                 httpServletResponse.sendRedirect("/login.jsp");
                 return false;

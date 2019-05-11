@@ -2,6 +2,7 @@ package cn.daxalfred.demo.Contraller;
 
 
 import cn.daxalfred.demo.Entity.Admin;
+import cn.daxalfred.demo.Entity.ExamPaper;
 import cn.daxalfred.demo.Entity.PageInfo;
 import cn.daxalfred.demo.Entity.Student;
 import cn.daxalfred.demo.Servlce.AdminService;
@@ -146,6 +147,7 @@ public class AdminContraller {
 
         return "redirect:/teachers";
     }
+
 
 
 

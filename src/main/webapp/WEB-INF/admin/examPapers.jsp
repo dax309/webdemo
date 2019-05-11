@@ -12,7 +12,7 @@
 	    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
     %>
 	<c:set var="path" value="<%=basePath %>"></c:set>
- 	<link href="${path }/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+ 	<link href="${path }/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
  	<link rel="stylesheet" type="text/css" href="${path }/js/zeroModal/zeroModal.css" />
 </head>
 <body>
@@ -26,9 +26,8 @@
 					<th>题目数量</th>
 					<th>总分</th>
 					<th>考试时长</th>
-					<th>分科情况</th>
-					<th>难易程度</th>
-					<th>所属年级</th>
+                    <th>所属章节</th>
+                    <th>难易程度</th>
 					<th>操作
 						<button type="button" class="btn btn-xs btn-info" onclick="_iframe(0, 'preAddExamPaper', 'examPapers')">添加</button>
 					</th>
@@ -43,7 +42,7 @@
 								<td>${ep.examPaperName }</td>
 								<td id="examPaper-sn${ep.examPaperId }">${ep.subjectNum }</td>
 								<td id="examPaper-score${ep.examPaperId }">${ep.examPaperScore }</td>
-								<td>${ep.examPaperTime }</td>
+                                <td>${ep.examPaperTime }</td>
 								<td>
 									<c:if test="${ep.division == 0 }">
 										未分科
@@ -66,14 +65,12 @@
 										困难
 									</c:if>
 								</td>
-								<td>${ep.grade.gradeName }</td>
 								<td>
 									<div class="btn-group">
 										<button type="button" class="btn btn-info btn-sm" onclick="_iframe(1, 'examPaper/${ep.examPaperId }', 'examPapers')">修改</button>
 										<button type="button" class="btn btn-danger btn-sm" onclick="del('examPaper/${ep.examPaperId }')">删除</button>
 										<button type="button" id="${ep.examPaperId }" class="btn btn-info btn-sm examPaper-subjects">查看试题</button>
 										<button type="button" onclick="examPaperAddSubjects(${ep.examPaperId })" class="btn btn-info btn-sm">添加试题</button>
-										<button type="button" onclick="autoAddSubjects(${ep.examPaperId })" class="btn btn-info btn-sm">生成试题</button>
 									</div>
 								</td>
 							</tr>
@@ -109,8 +106,8 @@
 
 
 	<!-- js引入 -->
-    <script src="${path }/js/jquery.js"></script>
-    <script src="${path }/js/bootstrap/bootstrap.min.js"></script>
+    <script src="${path }/js/jquery1.10.js"></script>
+    <script src="${path }/bootstrap/js/bootstrap.min.js"></script>
     <script src="${path }/js/handle.js"></script>
     <script src="${path }/js/zeroModal/zeroModal.min.js"></script>
     <script src="${path }/js/add-update.js"></script>

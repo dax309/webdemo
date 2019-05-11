@@ -13,7 +13,7 @@
 	    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
     %>
 	<c:set var="path" value="<%=basePath %>"></c:set>
- 	<link href="${path }/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+ 	<link href="${path }/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
  	<link rel="stylesheet" type="text/css" href="${path }/js/zeroModal/zeroModal.css" />
 </head>
 <body>
@@ -39,8 +39,7 @@
 					<th>分值</th>
 					<th>试题类型</th>
 					<th>难易程度</th>
-					<th>所属科目</th>
-					<th>所属年级</th>
+
 					<c:if test="${handAdd == null }">
 						<th>操作
 							&emsp;
@@ -97,8 +96,6 @@
 									<c:if test="${subject.subjectEasy == 1 }">普通</c:if>
 									<c:if test="${subject.subjectEasy == 2 }">困难</c:if>
 								</td>
-								<td>${subject.course.courseName }</td>
-								<td>${subject.grade.gradeName }</td>
 								<td>
 									<c:if test="${handAdd == null }">
 										<div class="btn-group">
@@ -123,9 +120,6 @@
 						<button id="isAddHandle" type="button" class="btn btn-default">添加</button>
 					</c:if>
 				</li>
-				<!-- 
-					分页中，需要将 handAdd(是否为手动添加)、examPaperId(试卷编号) 一直传递，以保持查询条件
-				 --> 
 				
 				<li><a href="subjects?startPage=1&handAdd=${handAdd }&examPaperId=${examPaperId }">首页</a></li>
 				<c:if test="${pageNow-1 > 0 }">
@@ -168,9 +162,9 @@
 
 
 	<!-- js引入 -->
-    <script src="${path }/js/jquery.js"></script>
+    <script src="${path }/js/jquery1.10.js"></script>
     <script src="${path }/js/kindeditor/kindeditor-min.js"></script>
-    <script src="${path }/js/bootstrap/bootstrap.min.js"></script>
+    <script src="${path }/bootstrap/js/bootstrap.min.js"></script>
     <script src="${path }/js/zeroModal/zeroModal.min.js"></script>
    	<script src="${path }/js/add-update.js"></script>
    	<script src="${path }/js/handle.js"></script>

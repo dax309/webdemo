@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.daxalfred.demo.Dao.SubjectInfoMapper">
+
+
+    <select id="getSubjects" resultType="subjectinfo">
+        select * from SubjectInfo limit #{startIndex}, #{pageShow}
+    </select>
+
+
+    <select id="getSubjectTotal" resultType="int">
+        select count(*) from SubjectInfo
+    </select>
+
+    <delete id="isDelSubject">
+        DELETE FROM SubjectInfo WHERE subjectId=#{subjectId}
+    </delete>
+
+    <insert id="isAddSubject" parameterType="subjectinfo">
+		INSERT INTO SubjectInfo VALUES
+		(NULL, #{subjectName}, #{optionA}, #{optionB}, #{optionC}, #{optionD}, #{rightResult}, #{subjectScore}, #{subjectType}, #{courseId},  #{subjectEasy}, #{division})
+	</insert>
+
+
+    <select id="getSubjectWithId" resultType="subjectinfo">
+        select * from SubjectInfo WHERE subjectId=#{subjectId}
+    </select>
+
+</mapper>
