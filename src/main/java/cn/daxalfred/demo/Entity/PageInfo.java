@@ -1,7 +1,11 @@
 package cn.daxalfred.demo.Entity;
 
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+
+@Component
 public class PageInfo {
     //页面大小
     private int pageSize;

@@ -69,12 +69,12 @@
                     </ul>
                 </li>
             </ul>
-            <form class="navbar-form navbar-left">
+            <%--<form class="navbar-form navbar-left">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="课程查找">
                 </div>
                 <button type="submit" class="btn btn-default">搜索</button>
-            </form>
+            </form>--%>
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Link</a></li>

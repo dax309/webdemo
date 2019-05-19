@@ -12,5 +12,7 @@ public interface ClassInfoService {
      PageInfo selAlltwoByPage(int flower,int pageSize,int pageNumber);
      Classinfo selcode(String code);
      Classinfo selflowerone(String pcode);
+     List<Classinfo> sellflower();
+
 
 }

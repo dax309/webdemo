@@ -12,21 +12,31 @@
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/AdminContraller.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/ClassInfoContraller.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/CompilerContraller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/ExamPaperContraller.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/RedirectContraller.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/StudentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/SubjectInfoContraller.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Dao/AdminMapper.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Dao/ClassMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Dao/ExamPaperMapper.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Dao/StudentMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Dao/SubjectInfoMapper.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/DemoApplication.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/Admin.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/Classinfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/ExamPaper.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/PageInfo.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/SubjectInfo.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/AdminService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/ClassInfoService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/ExamPaperService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/AdminServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/SubjectInfoServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/SubjectInfoService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/UserService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/ServletInitializer.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Utils/LogConfig.class" afterDir="false" />
@@ -36,7 +46,9 @@
       <change afterPath="$PROJECT_DIR$/target/classes/logback-spring.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/mapper/AdminMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/mapper/ClassMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ExamPaper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/SubjectInfoMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
@@ -141,10 +153,276 @@
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery404/img/bubble.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery404/img/sign.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery404/js/404.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp.net/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp.net/bin/LitJSON.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp.net/demo.aspx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp.net/file_manager_json.ashx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp.net/upload_json.ashx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp/JSON_2.0.4.asp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp/UpLoad_Class.asp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp/demo.asp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp/file_manager_json.asp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/asp/upload_json.asp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/auto-height.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/colorpicker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/custom-plugin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/custom-theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/dynamic-load.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/file-dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/file-manager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/filter-mode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/image-dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/js/jquery-ui-1.9.2.custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery-ui/js/jquery-ui-1.9.2.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/multi-image-dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/multi-language.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/newline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/node.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/paste-type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/qqstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/readonly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/simple.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/uploadbutton.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/url-type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/examples/word-count.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/jsp/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/jsp/demo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/jsp/file_manager_json.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/jsp/lib/commons-fileupload-1.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/jsp/lib/commons-io-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/jsp/lib/json_simple-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/jsp/upload_json.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/kindeditor-all-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/kindeditor-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/kindeditor-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/kindeditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/lang/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/lang/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/lang/zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/lang/zh_TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/php/JSON.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/php/demo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/php/file_manager_json.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/php/upload_json.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/anchor/anchor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/autoheight/autoheight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/baidumap/baidumap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/baidumap/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/baidumap/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/clearhtml/clearhtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/code/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/code/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/code/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/emoticons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/100.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/101.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/102.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/103.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/104.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/105.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/106.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/107.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/108.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/109.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/110.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/111.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/112.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/113.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/114.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/115.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/116.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/117.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/118.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/119.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/120.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/121.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/122.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/123.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/124.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/125.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/126.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/127.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/128.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/129.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/130.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/131.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/132.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/133.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/134.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/72.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/73.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/74.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/75.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/76.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/77.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/78.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/79.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/80.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/81.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/82.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/83.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/84.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/85.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/86.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/87.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/88.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/89.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/90.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/91.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/92.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/93.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/94.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/95.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/96.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/97.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/98.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/99.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/emoticons/images/static.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/filemanager/filemanager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/filemanager/images/file-16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/filemanager/images/file-64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/filemanager/images/folder-16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/filemanager/images/folder-64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/filemanager/images/go-up.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/flash/flash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/image/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/image/images/align_left.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/image/images/align_right.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/image/images/align_top.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/image/images/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/insertfile/insertfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/lineheight/lineheight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/link/link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/map/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/map/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/media/media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/images/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/images/select-files-en.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/images/select-files-zh_CN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/images/swfupload.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/multiimage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/pagebreak/pagebreak.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/plainpaste/plainpaste.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/preview/preview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/quickformat/quickformat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/table/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/template/html/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/template/html/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/template/html/3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/template/template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/wordpaste/wordpaste.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/common/anchor.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/common/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/common/flash.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/common/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/common/media.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/common/rm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/default/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/default/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/default/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/qq/editor.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/qq/qq.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/simple/simple.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/login.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/paging.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/python.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/swiper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/view-link.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/zeroModal/img/close.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/zeroModal/img/loading1.gif" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/zeroModal/img/loading2.gif" afterDir="false" />
@@ -300,7 +578,6 @@
       <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/student/infoindex.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/student/update.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/student/updatepassword.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/test/testIndex.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/adminlogin.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/footer.jsp" afterDir="false" />
@@ -311,18 +588,46 @@
       <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/register.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/pythononlineteaching.war" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/cn/daxalfred/demo/DemoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/webdemo_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/webdemo_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamPaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/PageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/PageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/loginbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/loginbg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/view-link.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/view-link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Compiler/CompilerIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Compiler/CompilerIndex.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPaperedit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPaperedit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/left.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply/reply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply/reply.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/test/testIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/test/testIndex.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/adminlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminlogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index_test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/index_test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webdemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webdemo.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -354,95 +659,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/exam.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="244" column="24" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="116" column="21" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/SubjectInfoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#786#787#0" expanded="true" />
-                <element signature="e#810#811#0" expanded="true" />
-                <element signature="e#918#919#0" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
-                <element signature="e#1081#1082#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="164" column="4" selection-start-line="164" selection-start-column="4" selection-end-line="164" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-            </state>
+            <state relative-caret-position="-264" />
           </provider>
         </entry>
       </file>
@@ -453,43 +673,43 @@
       <list>
         <option value="XML" />
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>div1</find>
-      <find>div3</find>
-      <find>height</find>
-      <find>style.css</find>
-      <find>inn</find>
-      <find>images</find>
-      <find>al</find>
-      <find>flowertwo</find>
-      <find>classinfos</find>
-      <find>sdemo</find>
-      <find>fonts/fontawesome-webfont.woff2?v=4.6.3</find>
-      <find>checked</find>
-      <find>codemirror</find>
-      <find>btn</find>
-      <find>migrate</find>
-      <find>runcode</find>
-      <find>sel1</find>
-      <find>1</find>
-      <find>dropdown</find>
-      <find>fork</find>
-      <find>_</find>
-      <find>_iframe</find>
-      <find>添加</find>
-      <find>js/bootstrap/bootstrap.min.js</find>
-      <find>del</find>
-      <find>map</find>
-      <find>Map</find>
-      <find>studentId</find>
       <find>preAddSubject</find>
       <find>sub</find>
+      <find>preAddExamPaper</find>
+      <find>border</find>
+      <find>ima</find>
+      <find>提</find>
+      <find>提交</find>
+      <find>new</find>
+      <find>pageShow</find>
+      <find>getExamPaper</find>
+      <find>/examPaper/{examPaperId}</find>
+      <find>isa</find>
+      <find>getChooseSubId</find>
+      <find>getEsm</find>
+      <find>handAdd</find>
+      <find>selallname</find>
+      <find>isd</find>
+      <find>esms</find>
+      <find>gson</find>
+      <find>gso</find>
+      <find>getESM</find>
+      <find>getExamPaperWithSubject</find>
+      <find>examPaperAddSubjects</find>
+      <find>添加</find>
+      <find>试题已成功</find>
+      <find>试题</find>
+      <find>al</find>
+      <find>alert</find>
+      <find>关闭</find>
+      <find>isUpdateExamPaperScore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -498,57 +718,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Compiler/CompilerIndex.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/CompilerContraller.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/errors/500.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/errors/404.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/nav.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/head.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/teachers.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/RedirectContraller.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/teacheredit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/AdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/StudentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/studentedit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/students.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPaperedit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamPaper.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/left.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/adminlogin.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/SubjectInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPaperedit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Compiler/CompilerIndex.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply/reply.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/adminlogin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamSubjectMiddleInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamSubjectMiddleInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamSubjectMiddleInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExamSubjectMiddleInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamSubjectMiddleInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamChooseInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamPaper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/PageInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/view-link.js" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java" />
       </list>
     </option>
   </component>
@@ -665,15 +885,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="Servlce" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -706,6 +917,33 @@
               <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="zeroModal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -715,15 +953,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
@@ -738,8 +967,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -766,19 +995,19 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="cn.daxalfred.demo.Servlce.Impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\ideaProject\ponlineteaching\src\main\webapp" />
-      <recent name="G:\ideaProject\webdemo\src\main\webapp" />
-      <recent name="G:\ideaProject\webdemo\src\main\resources\static\js" />
-      <recent name="G:\ideaProject\webdemo\src\main\resources\static\bootstrap\css" />
-      <recent name="G:\ideaProject\webdemo\src\main\resources\static\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\ideaProject\ponlineteaching\src\main\webapp\WEB-INF\admin" />
       <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\js" />
       <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\bootstrap\js" />
       <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\css" />
       <recent name="G:\ideaProject\ponlineteaching\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\ideaProject\ponlineteaching\src\main\webapp" />
+      <recent name="G:\ideaProject\webdemo\src\main\webapp" />
+      <recent name="G:\ideaProject\webdemo\src\main\resources\static\js" />
+      <recent name="G:\ideaProject\webdemo\src\main\resources\static\bootstrap\css" />
+      <recent name="G:\ideaProject\webdemo\src\main\resources\static\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -927,7 +1156,18 @@
       <workItem from="1557535757643" duration="2329000" />
       <workItem from="1557538133747" duration="8055000" />
       <workItem from="1557554518556" duration="7418000" />
-      <workItem from="1557562070913" duration="6819000" />
+      <workItem from="1557562070913" duration="7147000" />
+      <workItem from="1557621295728" duration="7210000" />
+      <workItem from="1558001184908" duration="1988000" />
+      <workItem from="1558079212822" duration="6743000" />
+      <workItem from="1558138857513" duration="6035000" />
+      <workItem from="1558160136069" duration="6118000" />
+      <workItem from="1558166431156" duration="4559000" />
+      <workItem from="1558171336585" duration="1172000" />
+      <workItem from="1558179974002" duration="9923000" />
+      <workItem from="1558190846272" duration="138000" />
+      <workItem from="1558226747684" duration="10297000" />
+      <workItem from="1558245656089" duration="1351000" />
     </task>
     <task id="LOCAL-00001" summary="完成注册">
       <created>1554732943884</created>
@@ -1167,11 +1407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557546899898</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="课程信息查询">
+      <created>1557569212130</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1557569212130</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="485739000" />
+    <option name="totallyTimeSpent" value="541601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1186,7 +1433,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.22147651" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.2261745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1197,20 +1444,20 @@
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32905984" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32905984" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.64387465" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.84757835" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32905984" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.7724832" visible="true" weight="0.5071225" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.22751679" side_tool="true" weight="0.43589744" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.22818792" side_tool="true" weight="0.5071225" />
+      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.7718121" weight="0.48290598" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.51282054" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32905984" />
-      <window_info anchor="bottom" id="Problems" order="16" />
+      <window_info anchor="bottom" id="Problems" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.32905984" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1280,515 +1527,399 @@
     <MESSAGE value="分页查询" />
     <MESSAGE value="页面显示" />
     <MESSAGE value="分页" />
-    <MESSAGE value="课程信息查询" />
     <MESSAGE value="部分后台" />
-    <option name="LAST_COMMIT_MESSAGE" value="部分后台" />
+    <MESSAGE value="课程信息查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程信息查询" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/zeroModal/zeroModal.js">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractHandlerMethodMapping.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="183" column="19" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="19" />
+        <state relative-caret-position="55">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/mvc/method/RequestMappingInfoHandlerMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/mvc/method/RequestMappingInfo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.23.RELEASE/spring-web-4.3.23.RELEASE.jar!/org/springframework/web/accept/HeaderContentNegotiationStrategy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.23.RELEASE/spring-web-4.3.23.RELEASE.jar!/org/springframework/web/context/request/ServletWebRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.23.RELEASE/spring-core-4.3.23.RELEASE.jar!/org/springframework/util/ObjectUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="e#187#193#0" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Admin.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-          <folding>
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="118">
+          <caret line="476" selection-start-line="476" selection-end-line="476" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="55">
+          <caret line="360" column="19" selection-start-line="360" selection-start-column="19" selection-end-line="360" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="495" column="27" selection-start-line="495" selection-start-column="27" selection-end-line="495" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="27" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+        <state>
+          <caret selection-end-line="3" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/handle.js">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.23.RELEASE/spring-web-4.3.23.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/teacheredit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1516">
-          <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#1655#1656#0" expanded="true" />
-            <element signature="e#1712#1713#0" expanded="true" />
-            <element signature="e#1778#1779#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <element signature="e#1906#1907#0" expanded="true" />
-            <element signature="e#1930#1931#0" expanded="true" />
-            <element signature="e#2022#2023#0" expanded="true" />
-            <element signature="e#2046#2047#0" expanded="true" />
-            <element signature="e#2166#2167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state relative-caret-position="2332">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="252" column="13" selection-start-line="252" selection-start-column="13" selection-end-line="252" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#captcha#0;class#StudentController#0" />
-            <element signature="method#register#0;class#StudentController#0" />
-            <element signature="e#9352#9368#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="208">
+          <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="165" column="82" selection-start-line="165" selection-start-column="72" selection-end-line="165" selection-end-column="82" />
+        <state relative-caret-position="40">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/studentedit.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/annotations/Mapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="54" lean-forward="true" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="9" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="41" selection-end-column="9" />
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#classinfo#0;class#ClassInfoContraller#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamSubjectMiddleInfoService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamSubjectMiddleInfoServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamSubjectMiddleInfoMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExamSubjectMiddleInfoMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/PageInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/AdminServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="92">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#547#548#0" expanded="true" />
             <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#843#844#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/AdminService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamChooseInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/view-link.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#3#9#1" expanded="true" />
-            <element signature="e#7#13#0" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPaperedit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="110">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamPaper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/add-update.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="108" column="29" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/gradeedit.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/importSubject.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/students.jsp">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/left.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+        <state relative-caret-position="232">
+          <caret line="118" column="17" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#180#186#1" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="e#210#217#1" expanded="true" />
+            <element signature="e#112#119#1" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="e#209#216#1" expanded="true" />
+            <element signature="e#35#42#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-266">
+          <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/SubjectInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamSubjectMiddleInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
-          <folding>
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-            <element signature="e#1460#1461#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1536#1537#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1608#1609#0" expanded="true" />
-            <element signature="e#1638#1639#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1722#1723#0" expanded="true" />
-            <element signature="e#1756#1757#0" expanded="true" />
-            <element signature="e#1786#1787#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#1934#1935#0" expanded="true" />
-            <element signature="e#1980#1981#0" expanded="true" />
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2144#2145#0" expanded="true" />
-            <element signature="e#2190#2191#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#2261#2262#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2362#2363#0" expanded="true" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2431#2432#0" expanded="true" />
-            <element signature="e#2482#2483#0" expanded="true" />
-            <element signature="e#2528#2529#0" expanded="true" />
-            <element signature="e#2563#2564#0" expanded="true" />
-            <element signature="e#2597#2598#0" expanded="true" />
-            <element signature="e#2648#2649#0" expanded="true" />
-            <element signature="e#2694#2695#0" expanded="true" />
-            <element signature="e#2726#2727#0" expanded="true" />
-            <element signature="e#2757#2758#0" expanded="true" />
-            <element signature="e#2802#2803#0" expanded="true" />
-            <element signature="e#2842#2843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="638">
+          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/StudentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/teachers.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="121" column="3" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/adminlogin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/kindeditor/asp/demo.asp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="116" column="21" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/SubjectInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1081#1082#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="164" column="4" selection-start-line="164" selection-start-column="4" selection-end-line="164" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        <state relative-caret-position="91">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+        <state relative-caret-position="-29">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/zeroModal/zeroModal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="244" column="24" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
+        <state relative-caret-position="260">
+          <caret line="564" column="15" selection-start-line="564" selection-start-column="13" selection-end-line="564" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/handle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="115" column="13" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="70" column="137" selection-start-line="70" selection-start-column="135" selection-end-line="70" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/add-update.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/view-link.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="299" column="45" selection-start-line="299" selection-start-column="19" selection-end-line="299" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#11042#11058#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="102" column="61" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#2244#2257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="72" column="67" lean-forward="true" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/suc.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/login.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/exam.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264" />
       </provider>
     </entry>
   </component>

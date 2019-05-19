@@ -79,7 +79,7 @@
 </head>
 <body>
     <div class="col-md-12"><jsp:include page="/header.jsp"></jsp:include></div>
-    <div style="float: left;border: 1px solid red">
+    <div style="float: left;">
         <br>
         <br>
         <br>
@@ -98,7 +98,7 @@
         <button type="button" class="btn btn-default btn-lg btn-block">我&nbsp;&nbsp;的&nbsp;&nbsp;提&nbsp;&nbsp;问</button>
     </div>
 <div style="float: left">
-    <div  style="margin-left: 150px;border: 1px solid red;width: 500px">
+    <div  style="margin-left: 150px;width: 500px">
         <form id="myform" class="form-horizontal" style="margin-top: 5px;"
               method="post" autocomplete="off">
 

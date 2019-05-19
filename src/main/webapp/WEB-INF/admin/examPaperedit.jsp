@@ -39,26 +39,15 @@
 							</div>
 						</c:if>
 						<div class="form-group">
-							 <label for="division" class="col-sm-2 control-label">分科情况</label>
+							 <label for="division" class="col-sm-2 control-label">所属章节</label>
 							<div class="col-sm-5">
 								<select class="selectpicker" name="division" id="division" data-live-search="true">
 										<c:if test="${examPaper.division == null }">
 											<option value="0" style="display: none;">--请选择--</option>
 										</c:if>
-										<option value="${examPaper.division }" style="display: none;">
-											<c:if test="${examPaper.division == 0 }">
-												暂未分科
-											</c:if>
-											<c:if test="${examPaper.division == 1 }">
-												文科
-											</c:if>
-											<c:if test="${examPaper.division == 2 }">
-												理科
-											</c:if>
-										</option>
-										<option value="0">不分科</option>
-										<option value="1">文科</option>
-										<option value="2">理科</option>
+                                    <c:forEach items="${classes}" var="classinfo" varStatus="s">
+                                        <option value="${classinfo.ID}">${classinfo.name}</option>
+                                    </c:forEach>
 								</select>
 							</div>
 						</div>
@@ -114,6 +103,12 @@
 								</c:if>
 							</div>
 						</div>
+                        <div class="form-group">
+                            <label for="examPaperTime" class="col-sm-2 control-label">考试时长</label>
+                            <div class="col-sm-5">
+                                <input class="form-control" id="examPaperTime" name="examPaperTime" type="text" value="${examPaper.examPaperTime }" placeholder="当前试卷考试时长" />
+                            </div>
+                        </div>
 						<br />
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-4">

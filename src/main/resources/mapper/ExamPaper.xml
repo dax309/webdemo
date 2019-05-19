@@ -33,7 +33,45 @@
 	</insert>
 
 
+    <select id="getEsmByExamIdWithSubject"  resultType="Integer">
+		SELECT esmId FROM ExamSubjectMiddleInfo WHERE examPaperId=#{examPaperId} AND subjectId=#{subjectId}
+	</select>
 
+    <!-- 修改试卷总分 -->
+    <update id="isUpdateExamPaperScore" parameterType="java.util.Map">
+		UPDATE ExamPaperInfo SET examPaperScore=examPaperScore+#{score}
+		WHERE examPaperId=#{examPaperId}
+	</update>
+
+
+    <!-- 修改试卷试题总量 -->
+    <update id="isUpdateExamPaperSubjects" parameterType="java.util.Map">
+		UPDATE ExamPaperInfo SET subjectNum=subjectNum+#{subjectNum}
+		WHERE examPaperId=#{examPaperId}
+	</update>
+
+    <insert id="isAddESM" parameterType="java.util.Map">
+        INSERT INTO ExamSubjectMiddleInfo VALUES
+        <if test="examPaperId != null">
+            <if test="subjectIds != null">
+                <foreach collection="subjectIds" item="subjectId" close=";" separator=",">
+                    (NULL, #{examPaperId}, #{subjectId})
+                </foreach>
+            </if>
+        </if>
+    </insert>
+
+   <select id="getExamPaperWithSubject" resultType="int">
+        SELECT subjectid
+        FROM ExamSubjectMiddleInfo where examPaperId=#{examPaperId}
+    </select>
+
+
+    <!-- 移除试卷中的试题 -->
+    <delete id="removeSubjectWithExamPaper" parameterType="java.util.Map">
+		DELETE FROM ExamSubjectMiddleInfo
+		WHERE examPaperId=#{examPaperId} AND subjectId=#{subjectId}
+	</delete>
 
 
 

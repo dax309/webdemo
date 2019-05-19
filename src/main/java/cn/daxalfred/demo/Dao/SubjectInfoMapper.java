@@ -14,10 +14,12 @@ public interface SubjectInfoMapper {
 
     int getSubjectTotal();
     int isDelSubject(int ID);
-
     int isAddSubject(SubjectInfo subjectInfo);
-
     SubjectInfo getSubjectWithId(int ID);
+
+
+
+
 
 
 

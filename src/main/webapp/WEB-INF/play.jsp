@@ -76,10 +76,11 @@
                 <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
                 </a>
                 <br>
-                <%--
+
                 <a href="/testIndex">
-                <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
+                <button type="button" class="btn btn-primary btn-lg active">考试</button><br>
                 </a>
+                <%--
                 <br>
                 <button type="button" class="btn btn-primary btn-lg active">讨论</button><br>--%>
             </div>

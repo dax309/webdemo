@@ -17,5 +17,7 @@ public interface ClassMapper {
      long seltwoCount();
      Classinfo selcode(String code);
      Classinfo selone(String pcode);
+     List<Classinfo> sellflower(int flower);
+     List<Classinfo> selallname();
 
 }

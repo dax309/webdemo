@@ -29,6 +29,7 @@ public class ClassInfoServiceImpl implements ClassInfoService {
 
     @Override
     public PageInfo showPage(String pcode,int pageSize, int pageNumber) {
+
         PageInfo pi = new PageInfo();
         pi.setPageNumber(pageNumber);
         pi.setPageSize(pageSize);
@@ -60,5 +61,11 @@ public class ClassInfoServiceImpl implements ClassInfoService {
     public Classinfo selflowerone(String code) {
         Classinfo classinfo = this.classMapper.selone(code);
         return this.classMapper.selone(classinfo.getPcode());
+    }
+
+    @Override
+    public List<Classinfo> sellflower() {
+
+        return this.classMapper.sellflower(3);
     }
 }

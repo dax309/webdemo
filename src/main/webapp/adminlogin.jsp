@@ -89,7 +89,7 @@
 
 
 <div class="container"
-     style="width: 100%; height: 460px; background: #FF2C4C url('images/loginbg.jpg') no-repeat;">
+     style="width: 100%; height: 460px; background: url('images/timg.jpg') no-repeat;">
     <div class="row">
         <div class="col-md-7">
 

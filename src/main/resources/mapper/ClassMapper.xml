@@ -33,4 +33,13 @@
     <select id="selone" resultType="classinfo">
         select * from p_course where code=#{code}
     </select>
+
+    <select id="sellflower" resultType="classinfo">
+        select * from p_course where flower = #{flower}
+    </select>
+
+    <select id="selallname" resultType="classinfo">
+        select * from p_course where flower=3
+    </select>
+
 </mapper>

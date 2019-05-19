@@ -1,11 +1,16 @@
 package cn.daxalfred.demo.Entity;
 
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ExamPaper{
     private Integer examPaperId;
     private String examPaperName;
     private int subjectNum;
     private int examPaperScore;
+
+    //起错名了，错用 章节ID
     private int division;
     private int examPaperEasy;
     private int examPaperTime;

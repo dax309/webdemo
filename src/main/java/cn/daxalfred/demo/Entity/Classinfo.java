@@ -1,10 +1,12 @@
 package cn.daxalfred.demo.Entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.util.Date;
 
+@Component
 public class Classinfo implements Serializable {
     private int ID;
     private String name;

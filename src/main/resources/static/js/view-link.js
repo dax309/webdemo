@@ -87,25 +87,25 @@ $(function() {
 			}
 			$.each(data, function(i, item) {
 				//试题名称、选项长度控制
-				var subjectId = item.subject.subjectId;
+				var subjectId = item.subjectId;
 				var LENFTH_SUFFIX = "<a href='subjects?subjectId='+"+subjectId+">[...]</a>";
-				var subjectName = item.subject.subjectName;
+				var subjectName = item.subjectName;
 				if (subjectName.length > 8)
 					subjectName = subjectName.substring(0, 8)+LENFTH_SUFFIX;
-				var optionA = item.subject.optionA;
+				var optionA = item.optionA;
 				if (optionA.length > 5)
 					optionA = optionA.substring(0, 5)+LENFTH_SUFFIX;
-				var optionB = item.subject.optionB;
+				var optionB = item.optionB;
 				if (optionB.length > 5)
 					optionB = optionB.substring(0, 5)+LENFTH_SUFFIX;
-				var optionC = item.subject.optionC;
+				var optionC = item.optionC;
 				if (optionC.length > 5)
 					optionC = optionC.substring(0, 5)+LENFTH_SUFFIX;
-				var optionD = item.subject.optionD;
+				var optionD = item.optionD;
 				if (optionD.length > 5)
 					optionD = optionD.substring(0, 5)+LENFTH_SUFFIX;
-				var subjectScore = item.subject.subjectScore;
-				var easy = item.subject.subjectEasy;
+				var subjectScore = item.subjectScore;
+				var easy = item.subjectEasy;
 				var subjectEasy = "简单";
 				if (easy == 0) {
 					subjectEasy = "简单";
@@ -123,7 +123,7 @@ $(function() {
 						"<td>"+subjectScore+"</td>" +
 						"<td>"+subjectEasy+"</td>" +
 						/*指定从试卷中移除试题需要的参数：试题编号，试卷编号，试题分数*/
-						"<td><button class='btn btn-default btn-xs' onclick='removeSubjectWithExamPaper("+subjectId+", "+item.examPaper.examPaperId+", "+subjectScore+")'>移除</button></td>" +
+						"<td><button class='btn btn-default btn-xs' onclick='removeSubjectWithExamPaper("+subjectId+", "+item.subjectId+", "+subjectScore+")'>移除</button></td>" +
 						"</tr>";
 				$("#addtable-title-tr").after(sontr);
 			});

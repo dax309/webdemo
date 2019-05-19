@@ -102,7 +102,13 @@ print("Hello, World!");</textarea>
             code = editor.getValue();
             $.post("editorcode",{code:code},function(data){
                 console.log(data);
-                $("#compiler-textarea-result").val(data);
+                if (data ==""){
+                    var error ="运行错误！"
+                    $("#compiler-textarea-result").val(error);
+                } else {
+
+                    $("#compiler-textarea-result").val(data);
+                }
             });
             setTimeout(function(){
                 btn.prop('disabled', false);

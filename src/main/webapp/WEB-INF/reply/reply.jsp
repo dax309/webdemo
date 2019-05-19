@@ -1,5 +1,7 @@
 <%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %><%--
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%--
   Created by IntelliJ IDEA.
   User: dax30
   Date: 2019/5/4

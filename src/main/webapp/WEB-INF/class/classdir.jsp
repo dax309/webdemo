@@ -124,7 +124,7 @@
 </div>
 <div>
     <div class="col-md-3"></div>
-    <div id="child" style="margin: auto;border: 1px solid red;width: 50%;" class="col-md-6">
+    <div id="child" style="margin: auto;width: 50%;" class="col-md-6">
     </div>
     <div class="col-md-3"></div>
 </div>

@@ -9,6 +9,11 @@
     </select>
 
 
+    <select id="selallname" resultType="classinfo">
+        select * from SubjectInfo
+    </select>
+
+
     <select id="getSubjectTotal" resultType="int">
         select count(*) from SubjectInfo
     </select>
@@ -16,6 +21,7 @@
     <delete id="isDelSubject">
         DELETE FROM SubjectInfo WHERE subjectId=#{subjectId}
     </delete>
+
 
     <insert id="isAddSubject" parameterType="subjectinfo">
 		INSERT INTO SubjectInfo VALUES

@@ -1,8 +1,12 @@
 package cn.daxalfred.demo.Entity;
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.Date;
 
+
+@Component
 public class Student implements Serializable {
     private int ID;
     private String username;

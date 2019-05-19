@@ -103,6 +103,7 @@ public class SubjectInfoContraller {
     }
 
 
+    //预添加信息
     @RequestMapping("/preAddSubject")
     public ModelAndView preAddStudent() {
         ModelAndView model = new ModelAndView();
@@ -123,11 +124,18 @@ public class SubjectInfoContraller {
         return model;
     }
 
+
+
+
+
+
     private String trimChar(String str){
         if(str != null){
             return str.replaceAll("^,*|,*$", "");
         }
         return str;
     }
+
+
 
 }

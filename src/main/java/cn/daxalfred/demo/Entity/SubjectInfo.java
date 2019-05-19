@@ -1,7 +1,11 @@
 package cn.daxalfred.demo.Entity;
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 
+
+@Component
 public class SubjectInfo implements Serializable {
 
     private Integer subjectId;

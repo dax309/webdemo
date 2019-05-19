@@ -44,15 +44,14 @@
 								<td id="examPaper-score${ep.examPaperId }">${ep.examPaperScore }</td>
                                 <td>${ep.examPaperTime }</td>
 								<td>
-									<c:if test="${ep.division == 0 }">
-										未分科
+									<c:if test="${not empty ep.division  }">
+										<c:forEach var="s" items="${subjects}">
+                                            <c:if test="${s.ID==ep.division}">
+                                                ${s.name}
+                                            </c:if>
+                                        </c:forEach>
 									</c:if>
-									<c:if test="${ep.division == 1 }">
-										文科
-									</c:if>
-									<c:if test="${ep.division == 2 }">
-										理科
-									</c:if>
+
 								</td>
 								<td>
 									<c:if test="${ep.examPaperEasy == 0 }">
@@ -93,11 +92,11 @@
 							<li class="active"><a href="examPapers?startPage=${pageNo }">${pageNo }</a></li>
 						</c:if>
 						<c:if test="${pageNow != pageNo }">
-							<li><a href="teachers?startPage=${pageNo }" class="pageLink">${pageNo }</a></li>
+							<li><a href="examPapers?startPage=${pageNo }" class="pageLink">${pageNo }</a></li>
 						</c:if>
 					</c:forEach>
 					<c:if test="${pageNow+1 <= pageTotal }">
-						<li><a href="teachers?startPage=${pageNow+1 }">&raquo;</a></li>
+						<li><a href="examPapers?startPage=${pageNow+1 }">&raquo;</a></li>
 					</c:if>
 				</ul>
 			</div>
