@@ -25,7 +25,7 @@
 
     <insert id="isAddSubject" parameterType="subjectinfo">
 		INSERT INTO SubjectInfo VALUES
-		(NULL, #{subjectName}, #{optionA}, #{optionB}, #{optionC}, #{optionD}, #{rightResult}, #{subjectScore}, #{subjectType}, #{courseId},  #{subjectEasy}, #{division})
+		(NULL, #{subjectName}, #{optionA}, #{optionB}, #{optionC}, #{optionD}, #{rightResult}, #{subjectScore}, #{subjectType},  #{subjectEasy})
 	</insert>
 
 

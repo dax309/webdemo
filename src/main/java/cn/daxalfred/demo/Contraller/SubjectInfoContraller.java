@@ -42,7 +42,6 @@ public class SubjectInfoContraller {
         //map.put("subject", subject);
         List<SubjectInfo> subjects = subjectInfoService.getSubjects(startIndex,pageShow);
         model.addObject("subjects", subjects);
-
         //获取试题总量
         int subjectTotal = subjectInfoService.getSubjectTotal();
         //计算总页数
@@ -89,16 +88,8 @@ public class SubjectInfoContraller {
 
     @RequestMapping(value="/addSubject", method=RequestMethod.POST)
     public void addSubject(SubjectInfo subject, HttpServletResponse response) throws IOException {
-        if(subject != null){
-            subject.setSubjectName(trimChar(subject.getSubjectName()));
-            subject.setRightResult(trimChar(subject.getRightResult()));
-            subject.setOptionA(trimChar(subject.getOptionA()));
-            subject.setOptionB(trimChar(subject.getOptionB()));
-            subject.setOptionC(trimChar(subject.getOptionC()));
-            subject.setOptionD(trimChar(subject.getOptionD()));
-        }
+        issubject(subject);
         int row = subjectInfoService.isAddSubject(subject);
-
         response.getWriter().print("试题添加成功!");
     }
 
@@ -108,7 +99,6 @@ public class SubjectInfoContraller {
     public ModelAndView preAddStudent() {
         ModelAndView model = new ModelAndView();
         model.setViewName("/admin/subject-test");
-        /*model.addObject("courses", courseInfoService.getCourses(null));*/
         return model;
     }
 
@@ -126,7 +116,28 @@ public class SubjectInfoContraller {
 
 
 
+    /*@RequestMapping(value="/updateSubject", method=RequestMethod.POST)
+    public void updateSubject(SubjectInfo subject, HttpServletResponse response) throws IOException {
 
+        issubject(subject);
+        int row = subjectInfoService.isUpdateSubject(subject);
+        if (row > 0) {
+            response.getWriter().print("试题修改成功!");
+        } else {
+            response.getWriter().print("试题修改失败!");
+        }
+    }*/
+
+    private void issubject(SubjectInfo subject) {
+        if(subject != null){
+            subject.setSubjectName(trimChar(subject.getSubjectName()));
+            subject.setRightResult(trimChar(subject.getRightResult()));
+            subject.setOptionA(trimChar(subject.getOptionA()));
+            subject.setOptionB(trimChar(subject.getOptionB()));
+            subject.setOptionC(trimChar(subject.getOptionC()));
+            subject.setOptionD(trimChar(subject.getOptionD()));
+        }
+    }
 
 
     private String trimChar(String str){

@@ -16,10 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Controller
 public class ExamPaperContraller {
@@ -44,6 +42,9 @@ public class ExamPaperContraller {
 
     @Autowired
     private Gson gson;
+
+    @Autowired
+    private ExamChooseInfo examChoose;
 
     @RequestMapping("/examPapers")
     public ModelAndView getCourses(@RequestParam(value="startPage", required=false, defaultValue="1") Integer startPage,
@@ -125,43 +126,6 @@ public class ExamPaperContraller {
         return model;
     }
 
-
-   /* @RequestMapping(value="/choose", method=RequestMethod.POST)
-    public void examChooseHandler(
-            @RequestParam("studentId") Integer studentId,
-            @RequestParam("examPaperId") Integer examPaperId,
-            @RequestParam("subjectId") Integer subjectId,
-            @RequestParam(value="index", required=false) Integer index,
-            @RequestParam("chooseAswer") String chooseAswer,
-            HttpServletResponse response) throws IOException {
-
-        //判断该考生是否已经选择过该试题
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("studentId", studentId);
-        map.put("examPaperId", examPaperId);
-        map.put("subjectId", subjectId);
-        examChoose = examChooseInfoService.getChooseWithIds(map);
-        if (examChoose == null) {
-            map.put("chooseResult", chooseAswer);
-            *//** 添加选择记录 *//*
-            examChooseInfoService.addChoose(map);
-        } else if (examChoose.getChooseId() != null && examChoose != null) {
-            *//*
-             * 如果选择了和上次相同的答案，则不做修改操作
-             * 优化 -- 前台判断选择了相同答案则不发出请求
-             *//*
-            if(!chooseAswer.equals(examChoose.getChooseResult())) {
-                examChoose.setChooseResult(chooseAswer);
-                *//** 当前选择答案和之前选择答案不同 修改答案记录 *//*
-                examChooseInfoService.updateChooseWithIds(examChoose);
-            }
-        } else {
-            response.getWriter().print("f");
-            return;
-        }
-        response.getWriter().print("t");
-    }
-*/
 
     @RequestMapping("/getChooseSubId")
     public void getChooseSubjectId(
@@ -273,8 +237,7 @@ public class ExamPaperContraller {
         /*条件处理*/
         if (examPaperId != null) examPaper.setExamPaperId(examPaperId);
         esm.setExamPaper(examPaper);
-        List<SubjectInfo> esms = esmService.getExamPaperWithSubject(examPaperId);
-        /*List<ExamSubjectMiddleInfo> esms = esmService.getExamPaperWithSubject(examPaper.getExamPaperId());*/
+        List<SubjectInfo> esms = esmService.getExamPaperSubject(examPaperId);
         response.getWriter().print(gson.toJson(esms));
     }
 
@@ -299,6 +262,90 @@ public class ExamPaperContraller {
         //从试卷中移除试题
         esmService.removeSubjectWithExamPaper(map);
 
+        response.getWriter().print("t");
+    }
+
+
+    @RequestMapping("/begin")
+    public ModelAndView beginExam(
+            @RequestParam("classId") Integer classId,
+            HttpSession session) {
+        ModelAndView model = new ModelAndView();
+        Student student = (Student) session.getAttribute("student");
+        Date beginTime = new Date();
+        /*SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd ");
+        String beginTime = formatter.format(beginTimes);*/
+        ExamPaper examPaper1 = examPaperService.getExamPaperbyclassid(classId);
+        /*
+         * 查询该考试当前进入的试卷是否已经在历史记录中存在
+         * 如果存在，则不能再次进入考试； 反之进入考试
+         */
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("studentId", student.getID());
+        map.put("examPaperId", examPaper1.getExamPaperId());
+        int count = examPaperService.getHistoryInfoWithIds(map);
+        if (count >= 1) {
+            model.addObject("error", "你已经考试过了");
+            model.setViewName("error");
+            return model;
+        } else {
+            model.setViewName("/reception/exam");
+
+            esm.setExamPaper(examPaper1);
+            //获取试卷 试题集合
+            List<ExamSubjectMiddleInfo> esms = examPaperService.getExamPaperWithSubject(classId);
+            //获取当前考生在当前试卷中已选答案记录
+            Map<String, Object> choosedMap = new HashMap<String, Object>();
+            choosedMap.put("studentId", student.getID());
+            choosedMap.put("examPaperId", examPaper1.getExamPaperId());
+            List<ExamChooseInfo> chooses = examPaperService.getChooseInfoWithSumScore(choosedMap);
+            if (chooses == null || chooses.size() == 0) {
+                model.addObject("chooses", null);
+            } else {
+                model.addObject("chooses", chooses);
+            }
+
+            model.addObject("esms", esms);
+            model.addObject("sumSubject", esms.size());
+            model.addObject("examPaperId", examPaper1.getExamPaperId());
+            model.addObject("examTime", examPaper1.getExamPaperTime());
+            model.addObject("beginTime", beginTime);
+            return model;
+        }
+    }
+
+
+    @RequestMapping(value="/choose", method=RequestMethod.POST)
+    public void examChooseHandler(
+            @RequestParam("studentId") Integer studentId,
+            @RequestParam("examPaperId") Integer examPaperId,
+            @RequestParam("subjectId") Integer subjectId,
+            @RequestParam(value="index", required=false) Integer index,
+            @RequestParam("chooseAswer") String chooseAswer,
+            HttpServletResponse response) throws IOException {
+
+        //判断该考生是否已经选择过该试题
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("studentId", studentId);
+        map.put("examPaperId", examPaperId);
+        map.put("subjectId", subjectId);
+        examChoose = examPaperService.getChooseWithIds(map);
+        if (examChoose == null) {
+            map.put("chooseResult", chooseAswer);
+            examPaperService.addChoose(map);
+        } else if (examChoose.getChooseId() != null && examChoose != null) {
+            /*
+             * 如果选择了和上次相同的答案，则不做修改操作
+             * 优化 -- 前台判断选择了相同答案则不发出请求
+             */
+            if(!chooseAswer.equals(examChoose.getChooseResult())) {
+                examChoose.setChooseResult(chooseAswer);
+                examPaperService.updateChooseWithIds(examChoose);
+            }
+        } else {
+            response.getWriter().print("f");
+            return;
+        }
         response.getWriter().print("t");
     }
 

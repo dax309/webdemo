@@ -37,6 +37,12 @@
 		SELECT esmId FROM ExamSubjectMiddleInfo WHERE examPaperId=#{examPaperId} AND subjectId=#{subjectId}
 	</select>
 
+
+
+    <select id="getExamPaperbyclassid" resultType="exampaper">
+        select * from ExamPaperInfo where division=#{a}
+    </select>
+
     <!-- 修改试卷总分 -->
     <update id="isUpdateExamPaperScore" parameterType="java.util.Map">
 		UPDATE ExamPaperInfo SET examPaperScore=examPaperScore+#{score}
@@ -61,10 +67,17 @@
         </if>
     </insert>
 
-   <select id="getExamPaperWithSubject" resultType="int">
+   <select id="getExamPaperWithSubject" resultType="ExamSubjectMiddle">
+        SELECT * FROM ExamSubjectMiddleInfo where examPaperId=#{examPaperId}
+    </select>
+
+    <select id="getExamPaperSubject" resultType="int">
         SELECT subjectid
         FROM ExamSubjectMiddleInfo where examPaperId=#{examPaperId}
-    </select>
+</select>
+
+
+
 
 
     <!-- 移除试卷中的试题 -->
@@ -73,8 +86,49 @@
 		WHERE examPaperId=#{examPaperId} AND subjectId=#{subjectId}
 	</delete>
 
+    <select id="getHistoryInfoWithIds" parameterType="java.util.Map" resultType="int">
+		SELECT COUNT(*) FROM ExamHistoryInfo WHERE studentId=#{studentId} AND examPaperId=#{examPaperId}
+	</select>
+
+    <select id="getChooseInfoWithSumScore" parameterType="java.util.Map" resultType="examchooseinfo">
+	 	SELECT
+		a.chooseId,
+		a.chooseResult,
+		a.subjectId,
+		b.rightResult,
+		b.subjectScore
+		FROM ExamChooseInfo a
+		INNER JOIN subjectInfo b ON a.subjectId=b.subjectId
+		WHERE studentId=#{studentId} AND examPaperId=#{examPaperId};
+	 </select>
+
+    <select id="getChooseWithIds" parameterType="java.util.Map" resultType="ExamChooseInfo">
+		SELECT * FROM ExamChooseInfo
+		WHERE studentId=#{studentId} AND examPaperId=#{examPaperId} AND subjectId=#{subjectId}
+	</select>
+
+    <insert id="addChoose" parameterType="java.util.Map">
+		INSERT INTO ExamChooseInfo VALUES
+		(NULL, #{studentId}, #{examPaperId}, #{subjectId}, #{chooseResult})
+	</insert>
+
+    <update id="updateChooseWithIds" parameterType="ExamChooseInfo">
+		UPDATE ExamChooseInfo SET chooseResult=#{chooseResult}
+		WHERE chooseId=#{chooseId}
+	</update>
 
 
-
+    <select id="getExamPaperWithSubjects" parameterType="ExamSubjectMiddleInfo" resultType="ExamSubjectMiddleinfo">
+        SELECT a.esmId, a.exampaperId, b.examPaperName, b.examPaperTime, c.*
+        FROM ExamSubjectMiddleInfo a
+        INNER JOIN ExamPaperInfo b ON a.examPaperId=b.examPaperId
+        INNER JOIN SubjectInfo c ON a.subjectId=c.subjectId
+        <where>
+            <!-- 根据试卷查询当前试卷中的所有试题 -->
+            <if test="examPaper != null">
+                <if test="examPaper.examPaperId != null">a.examPaperId=#{examPaper.examPaperId}</if>
+            </if>
+        </where>
+    </select>
 
 </mapper>

@@ -190,10 +190,6 @@
 	                fn: function(opt) {
 	                	//获取 iframe中表单数据
 	                	var doc = $("iframe").get(0).contentWindow.document.getElementById("radio-form");
-	                	//var textAreas = $(doc).children("textarea");
-	                	
-	                	//alert($(doc).serialize());
-	                	//提交
 	                	$.ajax({
 	                		type : "POST",
 	                		data : $(doc).serialize(),

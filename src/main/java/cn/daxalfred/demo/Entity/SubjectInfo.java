@@ -1,11 +1,14 @@
 package cn.daxalfred.demo.Entity;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
 
 @Component
+@Scope("prototype")
+@SuppressWarnings("serial")
 public class SubjectInfo implements Serializable {
 
     private Integer subjectId;
@@ -15,7 +18,7 @@ public class SubjectInfo implements Serializable {
     private String optionC;
     private String optionD;
     private String rightResult;
-    private int subjectScore;
+    private Integer subjectScore;
     private int subjectType;
     private int subjectEasy;
     private int division;
@@ -94,11 +97,11 @@ public class SubjectInfo implements Serializable {
         this.rightResult = rightResult;
     }
 
-    public int getSubjectScore() {
+    public Integer getSubjectScore() {
         return subjectScore;
     }
 
-    public void setSubjectScore(int subjectScore) {
+    public void setSubjectScore(Integer subjectScore) {
         this.subjectScore = subjectScore;
     }
 

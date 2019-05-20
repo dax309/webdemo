@@ -111,6 +111,13 @@ public class RedirectContraller {
     }
 
 
+    /*回复*/
+    @RequestMapping("/reply")
+    public String reply(){
+        return "/reply/reply";
+    }
+
+
 
 
 }

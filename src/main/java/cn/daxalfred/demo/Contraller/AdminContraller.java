@@ -52,10 +52,10 @@ public class AdminContraller {
     }
 
     @RequestMapping("/exitTeacher")
-    public void exitTeacher(HttpSession session, HttpServletResponse response) throws IOException {
+    public String exitTeacher(HttpSession session, HttpServletResponse response) throws IOException {
         session.removeAttribute("admin");
         session.removeAttribute("adminPower");
-        response.sendRedirect("admin/login.jsp");
+        return "forward:adminlogin.jsp";
     }
 
 
@@ -82,7 +82,6 @@ public class AdminContraller {
         int startIndex = (Number-1) * pageShow;
         teachers = adminService.getTeachers(startIndex,pageShow);
         model.addObject("teachers", teachers);
-
         //获取教师总量
         int teacherTotal = adminService.getTeacherTotal();
         //计算总页数

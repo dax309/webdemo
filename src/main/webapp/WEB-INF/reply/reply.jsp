@@ -25,7 +25,7 @@
 
 <!-- 留言的表单 -->
 <form class="layui-form" action="<%=basePath%>/article/saveWords.do" method="post" style="width:80%;">
-    <input name="lw_name" value="${sessionScope.name}" hidden="hidden"/>
+    <input name="lw_sid" value="${sessionScope.student.ID}" hidden="hidden"/>
     <input name="lw_date" value="<%=nowDate%>" hidden="hidden"/>
     <input name="lw_for_article_id" value="${article.r_id}" hidden="hidden"/>
     <div class="layui-input-block" style="margin-left: 0;">

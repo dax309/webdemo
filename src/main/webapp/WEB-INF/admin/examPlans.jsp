@@ -63,7 +63,7 @@
 
 
 	<!-- js引入 -->
-    <script src="${path }/js/jquery.js"></script>
+    <script src="${path }/js/jquery1.10.js"></script>
     <script src="${path }/js/zeroModal/zeroModal.min.js"></script>
     <script src="${path }/js/bootstrap/bootstrap.min.js"></script>
     <script src="${path }/js/handle.js"></script>

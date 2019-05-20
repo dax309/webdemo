@@ -22,9 +22,6 @@
  	</style>
 </head>
 <body>
-	
-
-
 	<!-- js引入 -->
     <script src="${path }/js/jquery1.10.js"></script>
     <script src="${path }/bootstrap/js/bootstrap.min.js"></script>

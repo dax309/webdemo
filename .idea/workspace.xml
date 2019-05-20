@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="04395201-3319-4dba-b1f4-5938f6a9c24e" name="Default Changelist" comment="课程信息查询">
       <change afterPath="$PROJECT_DIR$/src/main/resources/static/video/001.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/webdemo.kotlin_module" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/AdminContraller.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Contraller/ClassInfoContraller.class" afterDir="false" />
@@ -24,7 +25,9 @@
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/DemoApplication.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/Admin.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/Classinfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/ExamChooseInfo.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/ExamPaper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/ExamSubjectMiddleInfo.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/PageInfo.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/Student.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Entity/SubjectInfo.class" afterDir="false" />
@@ -33,7 +36,6 @@
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/ExamPaperService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/AdminServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/SubjectInfoServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/Impl/UserServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/cn/daxalfred/demo/Servlce/SubjectInfoService.class" afterDir="false" />
@@ -131,6 +133,7 @@
       <change afterPath="$PROJECT_DIR$/target/classes/static/images/swiper/certify04.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/images/swiper/certify05.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/images/swiper/wm_button_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/images/user.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/add-update.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap-select/bootstrap-select.min.css" afterDir="false" />
@@ -588,46 +591,27 @@
       <change afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/register.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/pythononlineteaching.war" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/cn/daxalfred/demo/DemoApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/webdemo_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/webdemo_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/RedirectContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/RedirectContraller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Classinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamPaper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/PageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/PageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ClassInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/loginbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/loginbg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/view-link.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/view-link.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Compiler/CompilerIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Compiler/CompilerIndex.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPaperedit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPaperedit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPlans.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPlans.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/exam.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/exam.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/login.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply/reply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply/reply.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/test/testIndex.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/test/testIndex.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminlogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index_test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/index_test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webdemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webdemo.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -659,10 +643,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/exam.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-264" />
+            <state relative-caret-position="594">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+              <folding>
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="239" column="24" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3059#3060#0" expanded="true" />
+                <element signature="e#3111#3112#0" expanded="true" />
+                <element signature="e#4398#4411#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="521">
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -673,43 +719,43 @@
       <list>
         <option value="XML" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>preAddSubject</find>
-      <find>sub</find>
-      <find>preAddExamPaper</find>
-      <find>border</find>
-      <find>ima</find>
-      <find>提</find>
+      <find>chooseId</find>
+      <find>gradeId</find>
+      <find>exitTeacher</find>
+      <find>reply</find>
+      <find>classid</find>
+      <find>ExamSubjectMiddleInfo</find>
+      <find>examSubjectMiddleInfo</find>
+      <find>hi</find>
+      <find>be</find>
+      <find>getExamPaperbyclassid</find>
       <find>提交</find>
-      <find>new</find>
-      <find>pageShow</find>
-      <find>getExamPaper</find>
-      <find>/examPaper/{examPaperId}</find>
-      <find>isa</find>
-      <find>getChooseSubId</find>
-      <find>getEsm</find>
-      <find>handAdd</find>
-      <find>selallname</find>
-      <find>isd</find>
-      <find>esms</find>
-      <find>gson</find>
-      <find>gso</find>
-      <find>getESM</find>
+      <find>aUrl</find>
+      <find>uUrl</find>
+      <find>delSubject</find>
+      <find>subjectUpdate</find>
+      <find>addSubject</find>
+      <find>subjects</find>
+      <find>courseId</find>
+      <find>subject</find>
+      <find>updateSubject</find>
+      <find>subjectAdd</find>
+      <find>iframe</find>
+      <find>radio-form</find>
+      <find>serialize</find>
+      <find>subjectScore</find>
+      <find>preAddSubject</find>
+      <find>sys</find>
+      <find>syst</find>
+      <find>class</find>
       <find>getExamPaperWithSubject</find>
-      <find>examPaperAddSubjects</find>
-      <find>添加</find>
-      <find>试题已成功</find>
-      <find>试题</find>
-      <find>al</find>
-      <find>alert</find>
-      <find>关闭</find>
-      <find>isUpdateExamPaperScore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -718,18 +764,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/studentedit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/students.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/left.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/SubjectInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ClassInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPaperedit.jsp" />
@@ -738,10 +776,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/class/classdir.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/play.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply/reply.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/adminlogin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamSubjectMiddleInfoService.java" />
@@ -755,20 +791,30 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamPaper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/PageInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ClassMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/view-link.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPlans.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/RedirectContraller.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply/reply.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamSubjectMiddle.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/exam.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -937,6 +983,16 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="kindeditor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="zeroModal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -961,7 +1017,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="reception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ponlineteaching" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ponlineteaching" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="reply" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -981,7 +1055,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -995,19 +1070,19 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="cn.daxalfred.demo.Servlce.Impl" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\ideaProject\ponlineteaching\src\main\webapp\WEB-INF\admin" />
-      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\js" />
-      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\bootstrap\js" />
-      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\css" />
-      <recent name="G:\ideaProject\ponlineteaching\src\main\webapp\WEB-INF" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\ideaProject\ponlineteaching\src\main\webapp" />
       <recent name="G:\ideaProject\webdemo\src\main\webapp" />
       <recent name="G:\ideaProject\webdemo\src\main\resources\static\js" />
       <recent name="G:\ideaProject\webdemo\src\main\resources\static\bootstrap\css" />
       <recent name="G:\ideaProject\webdemo\src\main\resources\static\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\js" />
+      <recent name="G:\ideaProject\ponlineteaching\src\main\webapp\WEB-INF\admin" />
+      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\bootstrap\js" />
+      <recent name="G:\ideaProject\ponlineteaching\src\main\resources\static\css" />
+      <recent name="G:\ideaProject\ponlineteaching\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1167,7 +1242,10 @@
       <workItem from="1558179974002" duration="9923000" />
       <workItem from="1558190846272" duration="138000" />
       <workItem from="1558226747684" duration="10297000" />
-      <workItem from="1558245656089" duration="1351000" />
+      <workItem from="1558245656089" duration="10863000" />
+      <workItem from="1558263186480" duration="4766000" />
+      <workItem from="1558317824118" duration="1635000" />
+      <workItem from="1558339067310" duration="15460000" />
     </task>
     <task id="LOCAL-00001" summary="完成注册">
       <created>1554732943884</created>
@@ -1414,11 +1492,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557569212130</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="后台大更新">
+      <created>1558247129857</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1558247129857</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="541601000" />
+    <option name="totallyTimeSpent" value="572974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1433,7 +1518,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.2261745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.23624161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1452,7 +1537,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.22818792" side_tool="true" weight="0.5071225" />
-      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.7718121" weight="0.48290598" />
+      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.7718121" weight="0.54843307" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.51282054" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -1529,131 +1614,10 @@
     <MESSAGE value="分页" />
     <MESSAGE value="部分后台" />
     <MESSAGE value="课程信息查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="课程信息查询" />
+    <MESSAGE value="后台大更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台大更新" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractHandlerMethodMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/mvc/method/RequestMappingInfoHandlerMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/mvc/method/RequestMappingInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.23.RELEASE/spring-web-4.3.23.RELEASE.jar!/org/springframework/web/accept/HeaderContentNegotiationStrategy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.23.RELEASE/spring-web-4.3.23.RELEASE.jar!/org/springframework/web/context/request/ServletWebRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.23.RELEASE/spring-core-4.3.23.RELEASE.jar!/org/springframework/util/ObjectUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#1746#1747#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="476" selection-start-line="476" selection-end-line="476" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="360" column="19" selection-start-line="360" selection-start-column="19" selection-end-line="360" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.23.RELEASE/spring-webmvc-4.3.23.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="495" column="27" selection-start-line="495" selection-start-column="27" selection-end-line="495" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/interceptor/loginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.23.RELEASE/spring-web-4.3.23.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2332">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/annotations/Mapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamSubjectMiddleInfoService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamSubjectMiddleInfoServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamSubjectMiddleInfoMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExamSubjectMiddleInfoMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1685,13 +1649,6 @@
           <folding>
             <element signature="e#606#607#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamChooseInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1738,27 +1695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
           <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -1776,134 +1716,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamSubjectMiddleInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/zeroModal/zeroModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="564" column="15" selection-start-line="564" selection-start-column="13" selection-end-line="564" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/handle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="115" column="13" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPapers.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="70" column="137" selection-start-line="70" selection-start-column="135" selection-end-line="70" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/add-update.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/view-link.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="299" column="45" selection-start-line="299" selection-start-column="19" selection-end-line="299" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11042#11058#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="102" column="61" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1553#1554#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
-            <element signature="e#2244#2257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="72" column="67" lean-forward="true" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1914,12 +1730,344 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ClassInfoContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/student/update.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="158" column="46" lean-forward="true" selection-start-line="157" selection-start-column="4" selection-end-line="158" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPlanedit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1848" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/AdminMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/teachers.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="27" selection-start-line="28" selection-start-column="19" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/exam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4950">
+          <caret line="225" column="4" selection-start-line="225" selection-start-column="4" selection-end-line="225" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/reply/reply.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/RedirectContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
+          <folding>
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamSubjectMiddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/login.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/examPlans.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="65" column="40" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamSubjectMiddleInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/kindeditor/kindeditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/handle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/view-link.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2342">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#3#9#1" expanded="true" />
+            <element signature="e#7#13#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/add-update.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/AdminContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-edit-import.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/SubjectInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/zeroModal/zeroModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="562" column="9" lean-forward="true" selection-start-line="562" selection-start-column="9" selection-end-line="562" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#187#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/SubjectInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="103" column="39" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#147#174#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SubjectInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="27" column="143" selection-start-line="27" selection-start-column="143" selection-end-line="27" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subject-test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="256" column="62" selection-start-line="256" selection-start-column="62" selection-end-line="256" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/reception/exam.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264" />
+        <state relative-caret-position="87">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery1.10.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7462" column="43" selection-start-line="7462" selection-start-column="34" selection-end-line="7462" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/subjects.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="169" column="49" selection-start-line="169" selection-start-column="49" selection-end-line="169" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/SubjectInfoContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-395">
+          <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5466">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Entity/ExamChooseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/SubjectInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/ExamPaperService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Contraller/ExamPaperContraller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="239" column="24" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Dao/ExamPaperMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExamPaper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/daxalfred/demo/Servlce/Impl/ExamPaperServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#3111#3112#0" expanded="true" />
+            <element signature="e#4398#4411#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

@@ -35,7 +35,7 @@ function subjectUpdate() {
 	$.ajax({
 		type : "POST",
 		data : $("form").serialize(),
-		url : "../updateSubject",
+		url : "/updateSubject",
 		success : function(data) {
 			zeroModal.show({
 				title : "操作成功",

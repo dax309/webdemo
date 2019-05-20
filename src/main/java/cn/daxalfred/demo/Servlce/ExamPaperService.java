@@ -1,9 +1,6 @@
 package cn.daxalfred.demo.Servlce;
 
-import cn.daxalfred.demo.Entity.Classinfo;
-import cn.daxalfred.demo.Entity.ExamPaper;
-import cn.daxalfred.demo.Entity.ExamSubjectMiddleInfo;
-import cn.daxalfred.demo.Entity.SubjectInfo;
+import cn.daxalfred.demo.Entity.*;
 
 import java.util.List;
 import java.util.Map;
@@ -18,8 +15,15 @@ public interface ExamPaperService {
     int isUpdateExamPaperSubjects(Map<String, Object> scoreWithNum);
     int isAddExamPaper(ExamPaper examPaper);
     Integer getEsm(int a, int b);
-    List<SubjectInfo> getExamPaperWithSubject(int a);
+    List<ExamSubjectMiddleInfo> getExamPaperWithSubject(int a);
     int isAddESM(Map<String, Object> map);
     List<Classinfo> selallname();
-    public int removeSubjectWithExamPaper(Map<String, Object> map);
+    int removeSubjectWithExamPaper(Map<String, Object> map);
+    ExamPaper getExamPaperbyclassid(int a);
+    int getHistoryInfoWithIds(Map<String, Object> map);
+    List<ExamChooseInfo> getChooseInfoWithSumScore(Map<String, Object> map);
+    int addChoose(Map<String, Object> map);
+    ExamChooseInfo getChooseWithIds(Map<String, Object> map);
+    int updateChooseWithIds(ExamChooseInfo examChoose);
+    List<SubjectInfo> getExamPaperSubject(int a);
 }
