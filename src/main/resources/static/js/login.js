@@ -39,7 +39,7 @@ $(function() {
 		if($("input").first().val().trim() == "" || $("input").last().val().trim() == "") {
 			return false;
 		}
-		return;
+		// return;
 		if(loginTrue) {
 			return true;
 		} else {
@@ -92,7 +92,7 @@ $(function() {
 			loginTrue = false;
 			return;
 		}
-		return;
+
 		if(studentPwd != pwd) {
 			$(this).val("");
 			$("#studentPwdMsg").text("密码错误");
@@ -100,6 +100,7 @@ $(function() {
 		} else {
 			loginTrue = true;
 		}
+        return;
 	}).focus(function() {
 		$("#studentPwdMsg").text("");
 	});

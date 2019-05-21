@@ -2,6 +2,7 @@ package cn.daxalfred.demo.Servlce.Impl;
 
 import cn.daxalfred.demo.Dao.ClassMapper;
 import cn.daxalfred.demo.Dao.ExamPaperMapper;
+import cn.daxalfred.demo.Dao.StudentMapper;
 import cn.daxalfred.demo.Dao.SubjectInfoMapper;
 import cn.daxalfred.demo.Entity.*;
 import cn.daxalfred.demo.Servlce.ExamPaperService;
@@ -25,16 +26,10 @@ public class ExamPaperServiceImpl implements ExamPaperService {
     private SubjectInfoMapper subjectInfoMapper;
 
     @Autowired
-    private ExamSubjectMiddleInfo examSubjectMiddleInfo;
-
-
-
-    @Autowired
     private List<ExamSubjectMiddle> list;
 
-
     @Autowired
-    private SubjectInfo subjectInfo;
+    private StudentMapper studentMapper;
 
     @Override
     public List<ExamPaper> getExamPapers(int startIndex, int pageShow) {
@@ -86,20 +81,15 @@ public class ExamPaperServiceImpl implements ExamPaperService {
         ExamPaper examPaper=this.examPaperMapper.getExamPaperbyclassid(a);
         list=examPaperMapper.getExamPaperWithSubject(examPaper.getExamPaperId());
         List<ExamSubjectMiddleInfo> examSubjectMiddleInfos = new ArrayList<>();
-        examSubjectMiddleInfo.setExamPaper(examPaper);
         for (ExamSubjectMiddle i:list){
-            SubjectInfo subjectWithId = this.subjectInfoMapper.getSubjectWithId(i.getSubjectid());
-            System.out.println(subjectWithId);
-            examSubjectMiddleInfo.setSubject(subjectWithId);
+            ExamSubjectMiddleInfo examSubjectMiddleInfo = new ExamSubjectMiddleInfo();
+            examSubjectMiddleInfo.setExamPaper(examPaper);
+            examSubjectMiddleInfo.setSubject(this.subjectInfoMapper.getSubjectWithId(i.getSubjectid()));
             examSubjectMiddleInfo.setEsmId(i.getEsmId());
             examSubjectMiddleInfos.add(examSubjectMiddleInfo);
         }
         return examSubjectMiddleInfos;
     }
-
-
-
-
 
     @Override
     public int isAddESM(Map<String, Object> map) {
@@ -126,6 +116,23 @@ public class ExamPaperServiceImpl implements ExamPaperService {
     }
 
     @Override
+    public List<ExamChooseInfo> getChooseInfoSumScore(int a,int b) {
+        List<ExamChoose> chooseInfoWithSumScore = examPaperMapper.getChooseInfoSumScore(a, b);
+        List<ExamChooseInfo> examChooseInfoList = new ArrayList<>();
+        for (ExamChoose e:chooseInfoWithSumScore){
+            ExamChooseInfo examChooseInfo = new ExamChooseInfo();
+            examChooseInfo.setSubject(subjectInfoMapper.getSubjectWithId(e.getSubjectId()));
+            examChooseInfo.setStudent(studentMapper.getStudentById(a));
+            examChooseInfo.setExamPaper(examPaperMapper.getExamPaperById(b));
+            examChooseInfo.setChooseId(e.getChooseId());
+            examChooseInfo.setChooseResult(e.getChooseResult());
+            examChooseInfoList.add(examChooseInfo);
+        }
+        System.out.println(examChooseInfoList);
+        return examChooseInfoList;
+    }
+
+    @Override
     public List<ExamChooseInfo> getChooseInfoWithSumScore(Map<String, Object> map) {
         return examPaperMapper.getChooseInfoWithSumScore(map);
     }
@@ -148,7 +155,6 @@ public class ExamPaperServiceImpl implements ExamPaperService {
     @Override
     public List<SubjectInfo> getExamPaperSubject(int a) {
         List<Integer> list=examPaperMapper.getExamPaperSubject(a);
-
         List<SubjectInfo> subjectInfos = new ArrayList<SubjectInfo>();
         for (int i:list){
             SubjectInfo subjectWithId = this.subjectInfoMapper.getSubjectWithId(i);
@@ -158,4 +164,15 @@ public class ExamPaperServiceImpl implements ExamPaperService {
         }
         return subjectInfos;
     }
+
+    @Override
+    public int isAddExamHistory(Map<String, Object> map) {
+        return examPaperMapper.isAddExamHistory(map);
+    }
+
+    @Override
+    public int getClassid(int a) {
+        return this.examPaperMapper.getClassid(a);
+    }
+
 }

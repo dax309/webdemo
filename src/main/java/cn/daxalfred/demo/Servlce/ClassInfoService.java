@@ -13,6 +13,6 @@ public interface ClassInfoService {
      Classinfo selcode(String code);
      Classinfo selflowerone(String pcode);
      List<Classinfo> sellflower();
-
+     String getclassinfobyid(int a);
 
 }

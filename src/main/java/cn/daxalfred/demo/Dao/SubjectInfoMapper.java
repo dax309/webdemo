@@ -16,6 +16,7 @@ public interface SubjectInfoMapper {
     int isDelSubject(int ID);
     int isAddSubject(SubjectInfo subjectInfo);
     SubjectInfo getSubjectWithId(int ID);
+    int isUpdateSubject(SubjectInfo subjectInfo);
 
 
 

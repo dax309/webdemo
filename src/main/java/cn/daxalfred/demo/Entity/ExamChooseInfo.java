@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ExamChooseInfo {
-
-
         private Integer chooseId;
         private Student student;
         private ExamPaper examPaper;

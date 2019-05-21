@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -83,6 +84,13 @@ public class ClassInfoContraller {
         map.addAttribute("list1",list1);             //本课程所有章
         map.addAttribute("list2",list2);             //本章所有节
         return "play";
+    }
+
+    @RequestMapping("/playclassbyid")
+    public String playclassbyid(@RequestParam("id") Integer id){
+        String code = classInfoService.getclassinfobyid(id);
+        return "redirect:playclass?code="+code;
+
     }
 
 

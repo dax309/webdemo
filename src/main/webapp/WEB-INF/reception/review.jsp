@@ -13,7 +13,7 @@
 	    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
     %>
 	<c:set var="path" value="<%=basePath %>"></c:set>
- 	<link href="${path }/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+ 	<link href="${path }/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
  	<link rel="stylesheet" type="text/css" href="${path }/js/zeroModal/zeroModal.css" />
  	<style type="text/css">
  		li {
@@ -23,6 +23,11 @@
 </head>
 <body style="background-color: #F7F7F7;">
 	<div class="container" style="margin-top: 100px;">
+        <a href="javascript:history.back(-1)">
+            <button type="button" class="btn btn-default" aria-label="Left Align" style="cursor: pointer">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+            </button>
+        </a>
 		<div class="row clearfix">
 			<div class="col-md-12 column">
 				<div class="row">
@@ -116,8 +121,8 @@
 	</div>
 
 	<!-- js引入 -->
-    <script src="${path }/js/jquery.js"></script>
-    <script src="${path }/js/bootstrap/bootstrap.min.js"></script>
+    <script src="${path }/js/jquery1.10.js"></script>
+    <script src="${path }/bootstrap/js/bootstrap.min.js"></script>
     <script src="${path }/js/zeroModal/zeroModal.min.js"></script>
     <script type="text/javascript">
     	$(function() {

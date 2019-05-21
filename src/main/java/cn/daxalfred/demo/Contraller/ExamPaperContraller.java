@@ -74,6 +74,8 @@ public class ExamPaperContraller {
     public ModelAndView getCourseById(@PathVariable("examPaperId") Integer examPaperId) {
         ModelAndView model = new ModelAndView();
         model.setViewName("/admin/examPaperedit");
+        List<Classinfo> classes = classInfoService.sellflower();
+        model.addObject("classes",classes);
         ExamPaper paper = examPaperService.getExamPaper(examPaperId);
         model.addObject("examPaper", paper);
 
@@ -267,34 +269,32 @@ public class ExamPaperContraller {
 
 
     @RequestMapping("/begin")
-    public ModelAndView beginExam(
+    public String beginExam(
             @RequestParam("classId") Integer classId,
             HttpSession session) {
         ModelAndView model = new ModelAndView();
         Student student = (Student) session.getAttribute("student");
-        Date beginTime = new Date();
-        /*SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd ");
-        String beginTime = formatter.format(beginTimes);*/
+        Date beginTimes = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String beginTime = formatter.format(beginTimes);
         ExamPaper examPaper1 = examPaperService.getExamPaperbyclassid(classId);
         /*
          * 查询该考试当前进入的试卷是否已经在历史记录中存在
          * 如果存在，则不能再次进入考试； 反之进入考试
          */
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
         map.put("studentId", student.getID());
         map.put("examPaperId", examPaper1.getExamPaperId());
         int count = examPaperService.getHistoryInfoWithIds(map);
         if (count >= 1) {
-            model.addObject("error", "你已经考试过了");
-            model.setViewName("error");
-            return model;
+            return "redirect:review?studentId="+student.getID()+"&examPaperId="+examPaper1.getExamPaperId()+"&classId="+classId;
         } else {
             model.setViewName("/reception/exam");
-
             esm.setExamPaper(examPaper1);
             //获取试卷 试题集合
             List<ExamSubjectMiddleInfo> esms = examPaperService.getExamPaperWithSubject(classId);
             //获取当前考生在当前试卷中已选答案记录
+            System.out.println(esms);
             Map<String, Object> choosedMap = new HashMap<String, Object>();
             choosedMap.put("studentId", student.getID());
             choosedMap.put("examPaperId", examPaper1.getExamPaperId());
@@ -304,13 +304,12 @@ public class ExamPaperContraller {
             } else {
                 model.addObject("chooses", chooses);
             }
-
             model.addObject("esms", esms);
             model.addObject("sumSubject", esms.size());
             model.addObject("examPaperId", examPaper1.getExamPaperId());
             model.addObject("examTime", examPaper1.getExamPaperTime());
             model.addObject("beginTime", beginTime);
-            return model;
+            return "/reception/exam";
         }
     }
 

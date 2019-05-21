@@ -19,5 +19,6 @@ public interface ClassMapper {
      Classinfo selone(String pcode);
      List<Classinfo> sellflower(int flower);
      List<Classinfo> selallname();
+     String getclassinfobyid(int a);
 
 }

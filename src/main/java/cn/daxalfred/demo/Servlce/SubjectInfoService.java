@@ -11,6 +11,6 @@ public interface SubjectInfoService {
     int isDelSubject(int ID);
 
     int isAddSubject(SubjectInfo subjectInfo);
-
+    int isUpdateSubject(SubjectInfo subject);
     SubjectInfo getSubjectWithId(int ID);
 }

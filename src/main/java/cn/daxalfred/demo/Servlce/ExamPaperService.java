@@ -22,8 +22,11 @@ public interface ExamPaperService {
     ExamPaper getExamPaperbyclassid(int a);
     int getHistoryInfoWithIds(Map<String, Object> map);
     List<ExamChooseInfo> getChooseInfoWithSumScore(Map<String, Object> map);
+    List<ExamChooseInfo> getChooseInfoSumScore(int a,int b);
     int addChoose(Map<String, Object> map);
     ExamChooseInfo getChooseWithIds(Map<String, Object> map);
     int updateChooseWithIds(ExamChooseInfo examChoose);
     List<SubjectInfo> getExamPaperSubject(int a);
+    int isAddExamHistory(Map<String, Object> map);
+    int getClassid(int a);
 }

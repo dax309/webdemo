@@ -56,4 +56,9 @@
     <select id="getStudentById" resultType="student">
         select * from student where ID=#{ID}
     </select>
+
+
+
+
+
 </mapper>

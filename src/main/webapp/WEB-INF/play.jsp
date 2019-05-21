@@ -76,8 +76,7 @@
                 <button type="button" class="btn btn-primary btn-lg active">练习</button><br>
                 </a>
                 <br>
-
-                <a href="/testIndex">
+                <a href="/begin?classId=${classinfo.ID}">
                 <button type="button" class="btn btn-primary btn-lg active">考试</button><br>
                 </a>
                 <%--

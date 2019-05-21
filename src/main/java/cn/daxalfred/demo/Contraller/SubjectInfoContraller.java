@@ -102,11 +102,8 @@ public class SubjectInfoContraller {
         return model;
     }
 
-
-
     @RequestMapping("/subject/{subjectId}")
     public ModelAndView updateSubject(@PathVariable("subjectId") Integer subjectId) {
-
         SubjectInfo subject = subjectInfoService.getSubjectWithId(subjectId);
 
         ModelAndView model = new ModelAndView("/admin/subject-test");
@@ -116,7 +113,7 @@ public class SubjectInfoContraller {
 
 
 
-    /*@RequestMapping(value="/updateSubject", method=RequestMethod.POST)
+    @RequestMapping(value="/updateSubject", method=RequestMethod.POST)
     public void updateSubject(SubjectInfo subject, HttpServletResponse response) throws IOException {
 
         issubject(subject);
@@ -126,7 +123,7 @@ public class SubjectInfoContraller {
         } else {
             response.getWriter().print("试题修改失败!");
         }
-    }*/
+    }
 
     private void issubject(SubjectInfo subject) {
         if(subject != null){

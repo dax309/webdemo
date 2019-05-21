@@ -117,13 +117,11 @@
                 <h2>答题卡</h2>
             </div>
             <div style="float: right; width: 55%;height: 100%;line-height: 63px; text-align: left;">
-                <a href="submit?studentId=${sessionScope.loginStudent.studentId }&examPaperId=${examPaperId }&classId=${classId }&gradeId=${gradeId }" type="button" class="btn btn-default btn-sm" onclick="return confirm('确定提交吗?')">提交</a>
+                <a href="submit?studentId=${sessionScope.student.ID}&examPaperId=${examPaperId}" type="button" class="btn btn-default btn-sm" onclick="return confirm('确定提交吗?')">提交</a>
                 <%--隐藏表单，用于考试结束且考生未手动提交试卷 自动提交 --%>
                 <form action="submit"method="post" style="display: none;">
-                    <input type="hidden" value="${sessionScope.loginStudent.studentId }" name="studentId" />
+                    <input type="hidden" value="${sessionScope.student.ID}" name="studentId" />
                     <input type="hidden" value="${examPaperId }" name="examPaperId" />
-                    <input type="hidden" value="${classId }" name="classId" />
-                    <input type="hidden" value="${gradeId }" name="gradeId" />
                 </form>
                 <span style="font-weight: 600;">剩余时间：
 						<span id="lastTime" style="color: #00A06B;font-size: 16px;font-weight: 900;">

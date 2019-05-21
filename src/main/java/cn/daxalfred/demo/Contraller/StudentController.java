@@ -1,6 +1,8 @@
 package cn.daxalfred.demo.Contraller;
 
-import cn.daxalfred.demo.Entity.Student;
+import cn.daxalfred.demo.Entity.*;
+import cn.daxalfred.demo.Servlce.Impl.ExamPaperServiceImpl;
+import cn.daxalfred.demo.Servlce.Impl.UserServiceImpl;
 import cn.daxalfred.demo.Servlce.UserService;
 import cn.daxalfred.demo.Utils.MD5Utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,6 +33,17 @@ public class StudentController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ExamPaperServiceImpl examPaperService;
+
+    @Autowired
+    private ExamSubjectMiddleInfo esm;
+
+    @Autowired
+    private ExamPaper examPaper;
+    @Autowired
+    private UserServiceImpl studentService;
 
     //生成验证码
     @RequestMapping("/checkCode")
@@ -297,4 +311,69 @@ public class StudentController {
 
         return "redirect:/students";
     }
+
+
+    @RequestMapping(value="/submit", method={RequestMethod.POST, RequestMethod.GET})
+    public String examSubmit(
+            @RequestParam("studentId") Integer studentId,
+            @RequestParam("examPaperId") Integer examPaperId){
+        //获取当前学生当前试卷所选择的全部答案
+        Map<String, Object> map = new HashMap<>();
+        map.put("studentId", studentId);
+        map.put("examPaperId", examPaperId);
+        List<ExamChooseInfo> chooses = examPaperService.getChooseInfoSumScore(studentId,examPaperId);
+        //总分记录
+        int sumScore = 0;
+        for (ExamChooseInfo choose : chooses) {
+            SubjectInfo subject = choose.getSubject();
+            String chooseResult = choose.getChooseResult();
+            String rightResult = subject.getRightResult();
+            if (chooseResult.equals(rightResult)) {	//答案正确
+                sumScore += subject.getSubjectScore();
+            }
+        }
+        /*
+         * 首先判断当前记录是否已经添加过
+         * 防止当前学生点击提交后，系统倒计时再次进行提交
+         */
+        int count = examPaperService.getHistoryInfoWithIds(map);
+        System.out.println(count);
+        if (count == 0) {
+            //添加到历史记录
+            map.put("examScore", sumScore);
+            int row = examPaperService.isAddExamHistory(map);
+        }
+        return "redirect:playclassbyid?id="+examPaperService.getClassid(examPaperId);
+    }
+
+
+    @RequestMapping("/review")
+    public ModelAndView reViewExam(
+            @RequestParam("studentId") Integer studentId,
+            @RequestParam("examPaperId") Integer examPaperId,
+            @RequestParam("classId") Integer classId){
+        ModelAndView model = new ModelAndView();
+        examPaper.setExamPaperId(examPaperId);
+        esm.setExamPaper(examPaper);
+        List<ExamSubjectMiddleInfo> esms = examPaperService.getExamPaperWithSubject(classId);
+        Map<String, Object> map = new HashMap<>();
+        map.put("studentId", studentId);
+        map.put("examPaperId", examPaperId);
+        ExamPaper examPaper = examPaperService.getExamPaper(examPaperId);
+        Student stud = studentService.getStudentById(studentId);
+        //获取当前回顾试卷 试题、选择答案 信息
+        List<ExamChooseInfo> reviews = examPaperService.getChooseInfoSumScore(studentId,examPaperId);
+        //设置试卷名称、试卷总分
+        model.addObject("examPaperName", examPaper.getExamPaperName());
+        model.addObject("score", examPaper.getExamPaperScore());
+        model.setViewName("reception/review");
+        model.addObject("views", reviews);
+        model.addObject("esms", esms);
+        model.addObject("studentName", stud.getRealname());
+        model.addObject("ExamedPaper", examPaper);
+        return model;
+
+    }
+
+
 }

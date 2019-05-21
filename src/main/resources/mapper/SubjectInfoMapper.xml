@@ -33,4 +33,12 @@
         select * from SubjectInfo WHERE subjectId=#{subjectId}
     </select>
 
+
+    <!-- 修改试题 -->
+    <update id="isUpdateSubject" parameterType="SubjectInfo">
+		UPDATE SubjectInfo SET
+		subjectName=#{subjectName}, optionA=#{optionA}, optionB=#{optionB}, optionC=#{optionC}, optionD=#{optionD}, rightResult=#{rightResult}, subjectScore=#{subjectScore}, subjectType=#{subjectType}, subjectEasy=#{subjectEasy}
+		WHERE subjectId=#{subjectId}
+	</update>
+
 </mapper>

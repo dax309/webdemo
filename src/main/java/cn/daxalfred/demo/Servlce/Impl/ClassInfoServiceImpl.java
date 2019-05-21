@@ -68,4 +68,9 @@ public class ClassInfoServiceImpl implements ClassInfoService {
 
         return this.classMapper.sellflower(3);
     }
+
+    @Override
+    public String getclassinfobyid(int a) {
+        return this.classMapper.getclassinfobyid(a);
+    }
 }

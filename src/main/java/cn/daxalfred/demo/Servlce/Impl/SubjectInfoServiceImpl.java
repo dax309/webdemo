@@ -35,6 +35,11 @@ public class SubjectInfoServiceImpl implements SubjectInfoService {
     }
 
     @Override
+    public int isUpdateSubject(SubjectInfo subject) {
+        return subjectInfoMapper.isUpdateSubject(subject);
+    }
+
+    @Override
     public SubjectInfo getSubjectWithId(int ID) {
         return this.subjectInfoMapper.getSubjectWithId(ID);
     }

@@ -14036,7 +14036,7 @@ if ( $.uiBackCompat !== false ) {
 						// called after the user has selected another tab.
 						// Pass the anchor that initiated this request allows
 						// loadError to manipulate the tab content panel via $(a.hash)
-						ajaxOptions.error(
+						ajaxOptions.err(
 							xhr, status, ui.tab.closest( "li" ).index(), ui.tab[ 0 ] );
 					}
 					catch ( error ) {}

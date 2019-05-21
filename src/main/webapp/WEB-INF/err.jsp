@@ -17,11 +17,11 @@
 
 <div style="margin-top: 100px;text-align: center;">
     <h1>ERROR</h1>
-    <p>message: <span style="color: red;">${error }</span></p>
+    <p>message: <span style="color: red;">${error}</span></p>
 </div>
 
 <!-- js引入 -->
-<script src="${path }/js/jquery.js"></script>
+<script src="${path }/js/jquery1.10.js"></script>
 <script src="${path }/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

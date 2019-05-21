@@ -39,7 +39,7 @@
   }
 
   CodeMirror.defineMode("python", function(conf, parserConf) {
-    var ERRORCLASS = "error";
+    var ERRORCLASS = "err.jsp";
 
     var singleDelimiters = parserConf.singleDelimiters || /^[\(\)\[\]\{\}@,:`=;\.]/;
     var doubleOperators = parserConf.doubleOperators || /^([!<>]==|<>|<<|>>|\/\/|\*\*)/;

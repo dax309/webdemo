@@ -6890,7 +6890,7 @@ KindEditor.plugin('flash', function(K) {
 					url : K.addParam(uploadJson, 'dir=flash'),
 					afterUpload : function(data) {
 						dialog.hideLoading();
-						if (data.error === 0) {
+						if (data.err === 0) {
 							var url = data.url;
 							if (formatUploadUrl) {
 								url = K.formatUrl(url, 'absolute');
@@ -7149,7 +7149,7 @@ KindEditor.plugin('image', function(K) {
 			width: 60,
 			afterUpload : function(data) {
 				dialog.hideLoading();
-				if (data.error === 0) {
+				if (data.err === 0) {
 					var url = data.url;
 					if (formatUploadUrl) {
 						url = K.formatUrl(url, 'absolute');
@@ -7362,7 +7362,7 @@ KindEditor.plugin('insertfile', function(K) {
 				extraParams : extraParams,
 				afterUpload : function(data) {
 					dialog.hideLoading();
-					if (data.error === 0) {
+					if (data.err === 0) {
 						var url = data.url;
 						if (formatUploadUrl) {
 							url = K.formatUrl(url, 'absolute');
@@ -7766,7 +7766,7 @@ KindEditor.plugin('media', function(K) {
 					url : K.addParam(uploadJson, 'dir=media'),
 					afterUpload : function(data) {
 						dialog.hideLoading();
-						if (data.error === 0) {
+						if (data.err === 0) {
 							var url = data.url;
 							if (formatUploadUrl) {
 								url = K.formatUrl(url, 'absolute');
@@ -7945,7 +7945,7 @@ K.extend(KSWFUpload, {
 				} catch (e) {
 					self.options.afterError.call(this, '<!doctype html><html>' + serverData + '</html>');
 				}
-				if (data.error !== 0) {
+				if (data.err !== 0) {
 					showError(itemDiv, K.DEBUG ? data.message : self.options.errorMessage);
 					return;
 				}

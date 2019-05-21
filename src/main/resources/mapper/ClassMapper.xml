@@ -42,4 +42,8 @@
         select * from p_course where flower=3
     </select>
 
+    <select id="getclassinfobyid" resultType="String">
+        select code from p_course where ID=#{a}
+    </select>
+
 </mapper>
