@@ -9,7 +9,6 @@ public class ExamPaper{
     private String examPaperName;
     private int subjectNum;
     private int examPaperScore;
-
     //起错名了，错用 章节ID
     private int division;
     private int examPaperEasy;

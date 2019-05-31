@@ -42,12 +42,10 @@ public class RedirectContraller {
         return "/admin/index";
     }
 
-
     @RequestMapping("adminhead")
     public String adminhead(){
         return "admin/head";
     }
-
 
     @RequestMapping("adminleft")
     public String adminleft(){
@@ -69,7 +67,6 @@ public class RedirectContraller {
         return "admin/teacheredit";
     }
 
-
     /*课程*/
 
     @RequestMapping("/classinfofrower")
@@ -77,14 +74,10 @@ public class RedirectContraller {
         return "/class/classInfo";
     }
 
-
-
     @RequestMapping("/Compiler")
     public String Compiler(){
         return "/Compiler/CompilerIndex";
     }
-
-
 
     /*试题*/
     @RequestMapping("/testIndex")
@@ -102,22 +95,9 @@ public class RedirectContraller {
         return "/admin/home";
     }
 
-
-
     /*编译*/
     @RequestMapping("/ctest")
     public String ctest(){
         return "/Compiler/test";
     }
-
-
-    /*回复*/
-    @RequestMapping("/reply")
-    public String reply(){
-        return "/reply/reply";
-    }
-
-
-
-
 }

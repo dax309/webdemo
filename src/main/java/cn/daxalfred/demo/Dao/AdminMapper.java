@@ -21,4 +21,6 @@ public interface AdminMapper {
     public int isAddTeacherInfo(Admin admin);
 
     int isDelTeacherInfo(int ID);
+
+    String getadminName(int uid);
 }

@@ -15,4 +15,5 @@ public interface ClassInfoService {
      List<Classinfo> sellflower();
      String getclassinfobyid(int a);
 
+    List<Classinfo> presellflower();
 }

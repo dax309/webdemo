@@ -1,9 +1,12 @@
 package cn.daxalfred.demo.Servlce.Impl;
 
 import cn.daxalfred.demo.Dao.ClassMapper;
+import cn.daxalfred.demo.Dao.ExamPaperMapper;
 import cn.daxalfred.demo.Entity.Classinfo;
+import cn.daxalfred.demo.Entity.ExamPaper;
 import cn.daxalfred.demo.Entity.PageInfo;
 import cn.daxalfred.demo.Servlce.ClassInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -15,6 +18,15 @@ public class ClassInfoServiceImpl implements ClassInfoService {
 
     @Resource
     private ClassMapper classMapper;
+
+    @Autowired
+    private ExamPaperMapper examPaperMapper;
+
+    @Autowired
+    private List<Classinfo> classes;
+
+    @Autowired
+    private List<ExamPaper> examPapers;
 
     @Override
     public List<Classinfo> selAllp() {
@@ -65,12 +77,30 @@ public class ClassInfoServiceImpl implements ClassInfoService {
 
     @Override
     public List<Classinfo> sellflower() {
-
         return this.classMapper.sellflower(3);
     }
 
     @Override
     public String getclassinfobyid(int a) {
         return this.classMapper.getclassinfobyid(a);
+    }
+
+    @Override
+    public List<Classinfo> presellflower() {
+        classes=this.classMapper.sellflower(3);
+        System.out.println(classes);
+        examPapers=this.examPaperMapper.selall();
+        System.out.println(examPapers);
+        for (int i = 0;i<classes.size();i++ ){
+            for (ExamPaper e:examPapers){
+                if (classes.get(i).getID()==e.getDivision()){
+                    System.out.println(classes.get(i));
+                    classes.remove(i);
+                }
+
+
+            }
+        }
+        return classes;
     }
 }

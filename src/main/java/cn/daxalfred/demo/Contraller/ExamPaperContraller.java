@@ -116,18 +116,14 @@ public class ExamPaperContraller {
         return "redirect:/examPapers";
     }
 
-
     @RequestMapping("/preAddExamPaper")
     public ModelAndView preAddStudent() {
         ModelAndView model = new ModelAndView();
         model.setViewName("/admin/examPaperedit");
-
-        List<Classinfo> classes = classInfoService.sellflower();
-
+        List<Classinfo> classes = classInfoService.presellflower();
         model.addObject("classes",classes);
         return model;
     }
-
 
     @RequestMapping("/getChooseSubId")
     public void getChooseSubjectId(
@@ -192,7 +188,6 @@ public class ExamPaperContraller {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("examPaperId", examPaperId);
         ArrayList<Integer> subjectIds = new ArrayList<Integer>();
-
         //试题信息
         List<String> ids = (List<String>) session.getAttribute("ids");
         if (ids != null) {
@@ -208,11 +203,9 @@ public class ExamPaperContraller {
             /** 需要添加试题集合 */
             map.put("subjectIds", subjectIds);
         } else {
-
             response.getWriter().print("需要添加的试题为空，操作失败！");
             return;
         }
-
         //总分和题目数量信息
         Map<String, Object> scoreWithNum = new HashMap<String, Object>();
         scoreWithNum.put("subjectNum", subjectSum);
@@ -222,13 +215,10 @@ public class ExamPaperContraller {
         examPaperService.isUpdateExamPaperScore(scoreWithNum);
         /** 修改试卷试题总量 */
         examPaperService.isUpdateExamPaperSubjects(scoreWithNum);
-
         /** 添加试题到试卷中 */
         esmService.isAddESM(map);
-
         response.getWriter().print("试题已成功添加到试卷中！");
     }
-
 
     @RequestMapping(value="/getESM", method={RequestMethod.GET, RequestMethod.POST})
     public void getExamPaperWithSubject(
@@ -250,7 +240,6 @@ public class ExamPaperContraller {
             @RequestParam("examPaperId") Integer examPaperId,
             @RequestParam("score") Integer score,
             HttpServletResponse response) throws IOException {
-
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("subjectNum", (-1));
         map.put("score", (-score));
@@ -260,10 +249,8 @@ public class ExamPaperContraller {
         examPaperService.isUpdateExamPaperScore(map);
         //修改试卷题目数量
         examPaperService.isUpdateExamPaperSubjects(map);
-
         //从试卷中移除试题
         esmService.removeSubjectWithExamPaper(map);
-
         response.getWriter().print("t");
     }
 
@@ -313,7 +300,6 @@ public class ExamPaperContraller {
         }
     }
 
-
     @RequestMapping(value="/choose", method=RequestMethod.POST)
     public void examChooseHandler(
             @RequestParam("studentId") Integer studentId,
@@ -322,7 +308,6 @@ public class ExamPaperContraller {
             @RequestParam(value="index", required=false) Integer index,
             @RequestParam("chooseAswer") String chooseAswer,
             HttpServletResponse response) throws IOException {
-
         //判断该考生是否已经选择过该试题
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("studentId", studentId);
@@ -347,6 +332,4 @@ public class ExamPaperContraller {
         }
         response.getWriter().print("t");
     }
-
-
 }

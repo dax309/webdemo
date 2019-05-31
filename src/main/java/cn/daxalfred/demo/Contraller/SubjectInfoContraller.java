@@ -32,11 +32,9 @@ public class SubjectInfoContraller {
 
         ModelAndView model = new ModelAndView();
         model.setViewName("admin/subjects");
-
         SubjectInfo subject = new SubjectInfo();
         //条件处理
         if (subjectId != null) subject.setSubjectId(subjectId);
-
         //计算当前查询起始数据索引
         int startIndex = (startPage-1) * pageShow;
         //map.put("subject", subject);
@@ -67,7 +65,6 @@ public class SubjectInfoContraller {
                 model.addObject("choosed", ids.size());
             }
         }
-
         return model;
     }
 
@@ -85,14 +82,12 @@ public class SubjectInfoContraller {
         }
     }
 
-
     @RequestMapping(value="/addSubject", method=RequestMethod.POST)
     public void addSubject(SubjectInfo subject, HttpServletResponse response) throws IOException {
         issubject(subject);
         int row = subjectInfoService.isAddSubject(subject);
         response.getWriter().print("试题添加成功!");
     }
-
 
     //预添加信息
     @RequestMapping("/preAddSubject")
@@ -111,11 +106,8 @@ public class SubjectInfoContraller {
         return model;
     }
 
-
-
     @RequestMapping(value="/updateSubject", method=RequestMethod.POST)
     public void updateSubject(SubjectInfo subject, HttpServletResponse response) throws IOException {
-
         issubject(subject);
         int row = subjectInfoService.isUpdateSubject(subject);
         if (row > 0) {
@@ -136,14 +128,10 @@ public class SubjectInfoContraller {
         }
     }
 
-
     private String trimChar(String str){
         if(str != null){
             return str.replaceAll("^,*|,*$", "");
         }
         return str;
     }
-
-
-
 }

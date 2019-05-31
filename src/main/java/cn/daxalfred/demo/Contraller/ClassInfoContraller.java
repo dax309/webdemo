@@ -2,7 +2,10 @@ package cn.daxalfred.demo.Contraller;
 
 import cn.daxalfred.demo.Entity.Classinfo;
 import cn.daxalfred.demo.Entity.PageInfo;
+import cn.daxalfred.demo.Entity.Replywords;
+import cn.daxalfred.demo.Entity.Words;
 import cn.daxalfred.demo.Servlce.ClassInfoService;
+import cn.daxalfred.demo.Servlce.Impl.WordsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,6 +23,9 @@ public class ClassInfoContraller {
 
     @Autowired
     private ClassInfoService classInfoService;
+
+    @Autowired
+    private WordsServiceImpl wordsService;
 
     @RequestMapping("/classdir")
     public String classdir(HttpServletRequest request){
@@ -77,12 +83,14 @@ public class ClassInfoContraller {
         Classinfo classinfo2 = classInfoService.selcode(classinfo.getPcode());
         Classinfo classinfo1 = classInfoService.selflowerone(classinfo.getPcode());
         List<Classinfo> list1 = classInfoService.selAll(classinfo1.getCode());
-        List<Classinfo> list2 = classInfoService.selAll(classinfo.getPcode());
+        List<Words> words = wordsService.selall(classinfo.getID());
+        List<Replywords> replywords = wordsService.selallrp(classinfo.getID());
         map.addAttribute("classinfo",classinfo);     //本节信息
         map.addAttribute("classinfo1",classinfo1);   //本课程信息
         map.addAttribute("classinfo2",classinfo2);   //本章信息
         map.addAttribute("list1",list1);             //本课程所有章
-        map.addAttribute("list2",list2);             //本章所有节
+        map.addAttribute("words",words);
+        map.addAttribute("replywords",replywords);
         return "play";
     }
 

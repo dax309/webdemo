@@ -33,4 +33,6 @@ public interface ExamPaperMapper {
     List<ExamChooseInfo> getChooseInfoWithSumScore(Map<String, Object> map);
     List<ExamChoose> getChooseInfoSumScore(@Param("studentId") int a,@Param("examPaperId") int b);
     List<Integer> getExamPaperSubject(int a);
+
+    List<ExamPaper> selall();
 }

@@ -37,8 +37,6 @@
 		SELECT esmId FROM ExamSubjectMiddleInfo WHERE examPaperId=#{examPaperId} AND subjectId=#{subjectId}
 	</select>
 
-
-
     <select id="getExamPaperbyclassid" resultType="exampaper">
         select * from ExamPaperInfo where division=#{a}
     </select>
@@ -80,8 +78,6 @@
     <insert id="isAddExamHistory" parameterType="java.util.Map">
 		INSERT INTO ExamHistoryInfo VALUES(NULL, #{studentId}, #{examPaperId}, #{examScore});
 	</insert>
-
-
 
     <!-- 移除试卷中的试题 -->
     <delete id="removeSubjectWithExamPaper" parameterType="java.util.Map">
@@ -140,9 +136,12 @@
         </where>
     </select>
 
-
     <select id="getClassid" resultType="int">
         select division from exampaperinfo where exampaperid=#{a}
+    </select>
+
+    <select id="selall" resultType="exampaper">
+        select * from exampaperinfo
     </select>
 
 </mapper>

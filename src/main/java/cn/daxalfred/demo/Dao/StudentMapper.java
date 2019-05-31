@@ -33,5 +33,7 @@ public interface StudentMapper {
      int isAddStudent(Student student);
      int isDelStudent(int ID);
      Student getStudentById(int ID);
+
+    String getStudentName(int uid);
 }
 

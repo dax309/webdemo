@@ -1,6 +1,7 @@
 <%@ page import="cn.daxalfred.demo.Entity.Student" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %><%--
+<%@ page import="java.text.SimpleDateFormat" %>
+<%--
   Created by IntelliJ IDEA.
   User: dax30
   Date: 2019/4/24
@@ -9,6 +10,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <html>
 <head>
     <title>个人信息</title>

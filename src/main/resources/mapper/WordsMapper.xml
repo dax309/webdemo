@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.daxalfred.demo.Dao.WordsMapper">
+
+    <select id="selall" resultType="words">
+        select * from words where ClassID = #{classid}
+    </select>
+
+    <select id="selallrp" resultType="replywords">
+        select * from reply where classID = #{id}
+    </select>
+
+    <insert id="wordsadd">
+        insert into words value
+        (null ,#{uid},#{date},#{content},#{classId},#{wordstype})
+    </insert>
+
+    <insert id="replywords">
+        insert into reply value
+        (null ,#{uid},#{date},#{content},#{classId},#{replyID},#{wordstype})
+    </insert>
+
+
+</mapper>
