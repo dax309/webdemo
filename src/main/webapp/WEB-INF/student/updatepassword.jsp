@@ -124,11 +124,11 @@
         <button type="button" class="btn btn-default btn-lg btn-block">修&nbsp;&nbsp;改&nbsp;&nbsp;密&nbsp;&nbsp;码</button>
     </a>
     <br>
+    <a href="/learnhistory?studentid=${sessionScope.student.ID}">
     <button type="button" class="btn btn-default btn-lg btn-block">个人学习记录</button>
+    </a>
     <br>
-    <button type="button" class="btn btn-default btn-lg btn-block">考试成绩查看</button>
-    <br>
-    <button type="button" class="btn btn-default btn-lg btn-block">我&nbsp;&nbsp;的&nbsp;&nbsp;提&nbsp;&nbsp;问</button>
+
 </div>
 <div style="float: left">
     <div  style="margin-left: 150px;border: 1px solid red;width: 500px">
@@ -168,7 +168,5 @@
         </form>
     </div>
 </div>
-
-
 </body>
 </html>

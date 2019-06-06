@@ -29,4 +29,8 @@ public interface ExamPaperService {
     List<SubjectInfo> getExamPaperSubject(int a);
     int isAddExamHistory(Map<String, Object> map);
     int getClassid(int a);
+
+    int gethistoryScore(Integer studentId, Integer examPaperId);
+
+    int getPaperInfoWithIds(Integer classId);
 }

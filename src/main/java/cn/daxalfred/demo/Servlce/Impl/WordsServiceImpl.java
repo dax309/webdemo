@@ -6,7 +6,6 @@ import cn.daxalfred.demo.Dao.WordsMapper;
 import cn.daxalfred.demo.Entity.Replywords;
 import cn.daxalfred.demo.Entity.Words;
 import cn.daxalfred.demo.Servlce.WordsService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

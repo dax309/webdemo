@@ -1,16 +1,10 @@
 package cn.daxalfred.demo.interceptor;
 
-import cn.daxalfred.demo.Entity.Student;
-import cn.daxalfred.demo.Servlce.Impl.UserServiceImpl;
-import cn.daxalfred.demo.Utils.MD5Utils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 @Component
 public class loginInterceptor implements HandlerInterceptor {
@@ -31,14 +25,10 @@ public class loginInterceptor implements HandlerInterceptor {
                 return false;
         }
     }
-
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-
     }
-
     @Override
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
-
     }
 }

@@ -35,4 +35,8 @@ public interface ExamPaperMapper {
     List<Integer> getExamPaperSubject(int a);
 
     List<ExamPaper> selall();
+
+    int gethistoryScore(@Param("studentId") Integer studentId,@Param("examPaperId") Integer examPaperId);
+
+    int getPaperInfoWithIds(Integer classId);
 }

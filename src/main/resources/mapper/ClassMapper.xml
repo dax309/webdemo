@@ -46,4 +46,35 @@
         select code from p_course where ID=#{a}
     </select>
 
+    <select id="selallnotices" resultType="notice">
+        select * from notice
+    </select>
+
+    <select id="selAllpbycode" resultType="classinfo">
+        select * from p_course where pcode = #{code}
+    </select>
+
+    <select id="sellearinhistory" resultType="int">
+        select count(*) from learnhistory where UserID = #{UserID}
+    </select>
+
+    <insert id="learnhistory">
+        insert into learnhistory values (default,#{UserID},#{ClassID})
+    </insert>
+
+    <update id="updatelearnhistory">
+        update learnhistory set ClassID = #{ClassID} where UserID =#{UserID}
+    </update>
+
+    <select id="sellearnhistory" resultType="learnhistory">
+        select ClassID from learnhistory where UserID =#{a}
+    </select>
+
+
+    <select id="getdownfile" resultType="String">
+        select down from p_course where ID = #{a}
+    </select>
+
+
+
 </mapper>

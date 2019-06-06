@@ -2,10 +2,6 @@ package cn.daxalfred.demo.Contraller;
 
 
 import cn.daxalfred.demo.Entity.Admin;
-import cn.daxalfred.demo.Entity.ExamPaper;
-import cn.daxalfred.demo.Entity.PageInfo;
-import cn.daxalfred.demo.Entity.Student;
-import cn.daxalfred.demo.Servlce.AdminService;
 import cn.daxalfred.demo.Servlce.Impl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

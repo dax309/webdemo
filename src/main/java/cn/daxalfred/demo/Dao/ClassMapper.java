@@ -2,6 +2,8 @@ package cn.daxalfred.demo.Dao;
 
 
 import cn.daxalfred.demo.Entity.Classinfo;
+import cn.daxalfred.demo.Entity.learnhistory;
+import cn.daxalfred.demo.Entity.notice;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -20,5 +22,12 @@ public interface ClassMapper {
      List<Classinfo> sellflower(int flower);
      List<Classinfo> selallname();
      String getclassinfobyid(int a);
+    List<notice> selallnotices();
+    List<Classinfo> selAllpbycode(String code);
+    int learnhistory(@Param("ClassID") int id,@Param("UserID") int studentid);
+    int sellearinhistory(int studentid);
+    int updatelearnhistory(@Param("ClassID")int id,@Param("UserID") int studentid);
+    learnhistory  sellearnhistory(int parseInt);
 
+    String getdownfile(int parseInt);
 }

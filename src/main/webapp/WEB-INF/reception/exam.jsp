@@ -125,8 +125,8 @@
                 </form>
                 <span style="font-weight: 600;">剩余时间：
 						<span id="lastTime" style="color: #00A06B;font-size: 16px;font-weight: 900;">
-							<span id="time_min">${examTime }</span>"
-							<span id="time_sec">00</span>'
+							<span id="time_min">${examTime }</span>
+							<span id="time_sec">00</span>
 						</span>
 					</span>
             </div>
@@ -167,10 +167,9 @@
         var temp_results = $(".temp-result").text();
         var subjectArr = temp_subjectIds.split(",");
         var resultArr = temp_results.split(",");
-        for(var i=0; i<subjectArr.length-1; i++) {
+        for(var i=0; i < subjectArr.length-1; i++) {
             $(".aswer-option[name=chooseRight-"+subjectArr[i]+"][value="+resultArr[i]+"]").attr("checked", "checked");
         }
-
         //将已选多选试题对应题号变为已选状态
         $(".temp-checkbox-subjectId").each(function(i,e){
             var rst = $(e).next("span.temp-checkbox--result").text();
@@ -179,16 +178,14 @@
                 $(".aswer-option[name=chooseRight-"+$(e).text()+"][value="+rstArr[i]+"]").attr("checked", "checked");
             }
         });
-
         //将已做简答试题对应题号变为已选状态
         $(".temp-textarea-subjectId").each(function(i,e){
             var rst = $(e).next("span.temp-textarea--result").text();
             $(".aswer-textarea[name=chooseRight-"+$(e).text()+"]").val(rst);
         });
-
         //加载已选试题对应答题卡信息
-        for(var i=0; i<$("li").size(); i++) {
-            for(var j=0; j<4; j++) {
+        for(var i=0; i < $("li").size(); i++) {
+            for(var j=0; j < 4; j++) {
                 //如果是简答
                 if($("dd").eq(i).children("div").eq(1).children("p").eq(j).attr('data-type') == 'textarea'){
                     var e = $("dd").eq(i).children("div").eq(1).children("p").eq(j).children("textarea");

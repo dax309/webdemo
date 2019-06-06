@@ -7,6 +7,7 @@ import cn.daxalfred.demo.Servlce.Impl.ExamPaperServiceImpl;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -254,11 +255,10 @@ public class ExamPaperContraller {
         response.getWriter().print("t");
     }
 
-
     @RequestMapping("/begin")
     public String beginExam(
             @RequestParam("classId") Integer classId,
-            HttpSession session) {
+            HttpSession session, ModelMap mapp) {
         ModelAndView model = new ModelAndView();
         Student student = (Student) session.getAttribute("student");
         Date beginTimes = new Date();
@@ -269,34 +269,37 @@ public class ExamPaperContraller {
          * 查询该考试当前进入的试卷是否已经在历史记录中存在
          * 如果存在，则不能再次进入考试； 反之进入考试
          */
-        Map<String, Object> map = new HashMap<>();
-        map.put("studentId", student.getID());
-        map.put("examPaperId", examPaper1.getExamPaperId());
-        int count = examPaperService.getHistoryInfoWithIds(map);
-        if (count >= 1) {
-            return "redirect:review?studentId="+student.getID()+"&examPaperId="+examPaper1.getExamPaperId()+"&classId="+classId;
+        if (examPaper1 == null){
+            return "redirect:/playclassbyid?id="+ classId;
         } else {
-            model.setViewName("/reception/exam");
-            esm.setExamPaper(examPaper1);
-            //获取试卷 试题集合
-            List<ExamSubjectMiddleInfo> esms = examPaperService.getExamPaperWithSubject(classId);
-            //获取当前考生在当前试卷中已选答案记录
-            System.out.println(esms);
-            Map<String, Object> choosedMap = new HashMap<String, Object>();
-            choosedMap.put("studentId", student.getID());
-            choosedMap.put("examPaperId", examPaper1.getExamPaperId());
-            List<ExamChooseInfo> chooses = examPaperService.getChooseInfoWithSumScore(choosedMap);
-            if (chooses == null || chooses.size() == 0) {
-                model.addObject("chooses", null);
+            Map<String, Object> map = new HashMap<>();
+            map.put("studentId", student.getID());
+            map.put("examPaperId", examPaper1.getExamPaperId());
+            int count = examPaperService.getHistoryInfoWithIds(map);
+            if (count >= 1) {
+                return "redirect:review?studentId=" + student.getID() + "&examPaperId=" + examPaper1.getExamPaperId() + "&classId=" + classId;
             } else {
-                model.addObject("chooses", chooses);
+                model.setViewName("/reception/exam");
+                esm.setExamPaper(examPaper1);
+                //获取试卷 试题集合
+                List<ExamSubjectMiddleInfo> esms = examPaperService.getExamPaperWithSubject(classId);
+                //获取当前考生在当前试卷中已选答案记录
+                Map<String, Object> choosedMap = new HashMap<String, Object>();
+                choosedMap.put("studentId", student.getID());
+                choosedMap.put("examPaperId", examPaper1.getExamPaperId());
+                List<ExamChooseInfo> chooses = examPaperService.getChooseInfoWithSumScore(choosedMap);
+                if (chooses == null || chooses.size() == 0) {
+                    model.addObject("chooses", null);
+                } else {
+                    model.addObject("chooses", chooses);
+                }
+                mapp.addAttribute("esms",esms);
+                mapp.addAttribute("sumSubject", esms.size());
+                mapp.addAttribute("examPaperId", examPaper1.getExamPaperId());
+                mapp.addAttribute("examTime", examPaper1.getExamPaperTime());
+                mapp.addAttribute("beginTime", beginTime);
+                return "/reception/exam";
             }
-            model.addObject("esms", esms);
-            model.addObject("sumSubject", esms.size());
-            model.addObject("examPaperId", examPaper1.getExamPaperId());
-            model.addObject("examTime", examPaper1.getExamPaperTime());
-            model.addObject("beginTime", beginTime);
-            return "/reception/exam";
         }
     }
 

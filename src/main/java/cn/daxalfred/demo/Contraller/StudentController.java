@@ -346,7 +346,6 @@ public class StudentController {
         return "redirect:playclassbyid?id="+examPaperService.getClassid(examPaperId);
     }
 
-
     @RequestMapping("/review")
     public ModelAndView reViewExam(
             @RequestParam("studentId") Integer studentId,
@@ -360,19 +359,19 @@ public class StudentController {
         map.put("studentId", studentId);
         map.put("examPaperId", examPaperId);
         ExamPaper examPaper = examPaperService.getExamPaper(examPaperId);
+        int score = examPaperService.gethistoryScore(studentId,examPaperId);
         Student stud = studentService.getStudentById(studentId);
         //获取当前回顾试卷 试题、选择答案 信息
         List<ExamChooseInfo> reviews = examPaperService.getChooseInfoSumScore(studentId,examPaperId);
         //设置试卷名称、试卷总分
         model.addObject("examPaperName", examPaper.getExamPaperName());
-        model.addObject("score", examPaper.getExamPaperScore());
+        model.addObject("score", score);
         model.setViewName("reception/review");
         model.addObject("views", reviews);
         model.addObject("esms", esms);
         model.addObject("studentName", stud.getRealname());
         model.addObject("ExamedPaper", examPaper);
         return model;
-
     }
 
 

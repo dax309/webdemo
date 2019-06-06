@@ -1,10 +1,6 @@
 package cn.daxalfred.demo.Contraller;
-
-import cn.daxalfred.demo.Entity.Classinfo;
-import cn.daxalfred.demo.Entity.PageInfo;
-import cn.daxalfred.demo.Entity.Replywords;
-import cn.daxalfred.demo.Entity.Words;
-import cn.daxalfred.demo.Servlce.ClassInfoService;
+import cn.daxalfred.demo.Entity.*;
+import cn.daxalfred.demo.Servlce.Impl.ClassInfoServiceImpl;
 import cn.daxalfred.demo.Servlce.Impl.WordsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,13 +12,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
 public class ClassInfoContraller {
 
     @Autowired
-    private ClassInfoService classInfoService;
+    private ClassInfoServiceImpl classInfoService;
 
     @Autowired
     private WordsServiceImpl wordsService;
@@ -77,18 +74,24 @@ public class ClassInfoContraller {
     }
 
     @RequestMapping("/playclass")
-    public String playclass(HttpServletRequest request,ModelMap map){
+    public String playclass(HttpServletRequest request, ModelMap map, HttpSession session){
         String code = request.getParameter("code");
         Classinfo classinfo =classInfoService.selcode(code);
+        List<Classinfo> classinfo1 = classInfoService.selflowerone(classinfo.getPcode());
         Classinfo classinfo2 = classInfoService.selcode(classinfo.getPcode());
-        Classinfo classinfo1 = classInfoService.selflowerone(classinfo.getPcode());
-        List<Classinfo> list1 = classInfoService.selAll(classinfo1.getCode());
+        Classinfo classinfo3 = classInfoService.selcode(classinfo2.getPcode());
+        List<Classinfo> classinfo4 = classInfoService.selallpbycode(classinfo3.getCode());
         List<Words> words = wordsService.selall(classinfo.getID());
         List<Replywords> replywords = wordsService.selallrp(classinfo.getID());
+        Student student = (Student) session.getAttribute("student");
+        if (student !=null){
+            classInfoService.learnhistory(classinfo.getID(),student.getID());
+        }
         map.addAttribute("classinfo",classinfo);     //本节信息
-        map.addAttribute("classinfo1",classinfo1);   //本课程信息
+        map.addAttribute("classinfo1",classinfo1);   //本课程所有信息
         map.addAttribute("classinfo2",classinfo2);   //本章信息
-        map.addAttribute("list1",list1);             //本课程所有章
+        map.addAttribute("classinfo3",classinfo3);   //本课程信息
+        map.addAttribute("classinfo4",classinfo4);   //本课程章信息
         map.addAttribute("words",words);
         map.addAttribute("replywords",replywords);
         return "play";
@@ -98,10 +101,5 @@ public class ClassInfoContraller {
     public String playclassbyid(@RequestParam("id") Integer id){
         String code = classInfoService.getclassinfobyid(id);
         return "redirect:playclass?code="+code;
-
     }
-
-
-
-
 }

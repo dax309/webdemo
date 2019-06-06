@@ -6,6 +6,7 @@ import cn.daxalfred.demo.Dao.StudentMapper;
 import cn.daxalfred.demo.Dao.SubjectInfoMapper;
 import cn.daxalfred.demo.Entity.*;
 import cn.daxalfred.demo.Servlce.ExamPaperService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -129,6 +130,7 @@ public class ExamPaperServiceImpl implements ExamPaperService {
             examChooseInfoList.add(examChooseInfo);
         }
         System.out.println(examChooseInfoList);
+        System.out.println("exam测试");
         return examChooseInfoList;
     }
 
@@ -173,6 +175,16 @@ public class ExamPaperServiceImpl implements ExamPaperService {
     @Override
     public int getClassid(int a) {
         return this.examPaperMapper.getClassid(a);
+    }
+
+    @Override
+    public int gethistoryScore(Integer studentId, Integer examPaperId) {
+        return this.examPaperMapper.gethistoryScore(studentId,examPaperId);
+    }
+
+    @Override
+    public int getPaperInfoWithIds(Integer classId) {
+        return this.examPaperMapper.getPaperInfoWithIds(classId);
     }
 
 }

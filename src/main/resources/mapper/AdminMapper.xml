@@ -37,7 +37,4 @@
     <select id="getadminName" resultType="string">
         select realname  from p_admin where ID=#{uid}
     </select>
-
-
-
 </mapper>

@@ -152,7 +152,9 @@
                     <br>
                 </a>
                 <br>
+                <a href="/download?classId=${classinfo.ID}">
                 <button type="button" class="btn btn-primary btn-lg active">课件下载</button><br>
+                </a>
             </div>
         </div>
         <div class="col-md-7" style="height: 450px;float: left;background-color: black;
@@ -187,25 +189,22 @@
             </p>
         </div>
         <div class="col-md-4" style="float: right;height: 500px;border-radius: 15px;border: 1px solid red">
-            <span class="list"></span>
-            <ul id="side_nav">
-                <c:forEach var="classinfo" items="${list1}" varStatus="s">
-                    <li>
-                        <span id="${classinfo.code}" onclick='javascript:click(this);'>
-                                ${classinfo.name}
+            <ul>
+                <c:forEach var="s" items="${classinfo4}">
+                        <li>
+                        <span style="color: white">
+                                ${s.name}
                         </span>
-                        <ul>
-                            <c:forEach var="classinf" items="${list2}" varStatus="s">
-                                <c:if test="${classinf.pcode eq classinfo.code}">
-                                    <li><a href="#">菜单1-0</a></li>
-                                    <li><span onclick="javascript:classinfos(this);">${classinf.name}</span></li>
-                                </c:if>
-                            </c:forEach>
-                        </ul>
-                    </li>
+                            <ul>
+                                <c:forEach var="a" items="${classinfo1}" >
+                                    <c:if test="${a.pcode eq s.code}">
+                                        <li><a href="/playclass?code=${a.code}" >${a.name}</a></li>
+                                    </c:if>
+                                </c:forEach>
+                            </ul>
+                        </li>
                 </c:forEach>
             </ul>
-
         </div>
     </div>
 </div>
@@ -325,25 +324,7 @@
             </ul>
         </div>
     </div>
-    <script type="text/javascript">
-        //设置目录
-        (function () {
-            var navWrap = document.getElementById("side_nav");
-            var nav1s = navWrap.getElementsByTagName("span");
-            var nav2s = navWrap.getElementsByTagName("ul");
-            for (var i = 0, len = nav1s.length; i < len; i++) {
-                nav1s[i].onclick = (function (i) {
-                    return function () {
-                        for (var j = 0; j < len; j++) {
-                            nav2s[j].style.display = "none";
-                        }
-                        nav2s[i].style.display = "block";
-                    }
-                })(i)
-            }
-        })()
 
-    </script>
     <!-- 引入footer.jsp -->
     <jsp:include page="/footer.jsp"></jsp:include>
 </body>

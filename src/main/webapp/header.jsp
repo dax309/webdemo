@@ -54,7 +54,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/index">Link1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="/notices">公告 <span class="sr-only">(current)</span></a></li>
                 <li><a href="/classdir">课程目录</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下拉菜单 <span class="caret"></span></a>
@@ -84,7 +84,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="/studentinfo">个人中心</a></li>
                         <li><a href="#">退出登录</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="/learnhistory?studentid=${sessionScope.student.ID}">学习记录</a></li>
                         <li role="separator" class="divider"></li>
 
                         <li><a href="javascript:void(0)"  onclick="loginOut()" ><span style="text-align: center;">退出</span></a></li>

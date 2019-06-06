@@ -107,6 +107,12 @@
 		WHERE studentId=#{studentId} AND examPaperId=#{examPaperId};
 	 </select>
 
+    <select id="gethistoryScore" resultType="int">
+        select examScore from examhistoryinfo where studentId=#{studentId} AND examPaperId=#{examPaperId};
+    </select>
+
+
+
     <select id="getChooseWithIds" parameterType="java.util.Map" resultType="ExamChooseInfo">
 		SELECT * FROM ExamChooseInfo
 		WHERE studentId=#{studentId} AND examPaperId=#{examPaperId} AND subjectId=#{subjectId}
@@ -143,5 +149,10 @@
     <select id="selall" resultType="exampaper">
         select * from exampaperinfo
     </select>
+
+    <select id="getPaperInfoWithIds" resultType="int">
+        select count(*) from exampaperinfo where division=#{classId}
+    </select>
+
 
 </mapper>
